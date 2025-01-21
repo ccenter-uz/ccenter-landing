@@ -8,11 +8,10 @@
 }
 
 :root {
-  --base-font-size: 16px; /* Default base font size */
-  --h1-font-size: 2rem; /* Example for h1 */
-  --h2-font-size: 1.75rem; /* Example for h2 */
-  --p-font-size: 20px; /* Example for paragraph */
-  /* Add more variables as needed */
+  --base-font-size: 16px;
+  --h1-font-size: 2rem;
+  --h2-font-size: 1.75rem;
+  --p-font-size: 20px;
 }
 html {
   width: 100%;
@@ -29,7 +28,7 @@ body {
   color: white;
   overflow-x: hidden;
 
-  scroll-behavior: smooth; /* Ensures smooth scrolling */
+  scroll-behavior: smooth;
   font-size: var(--base-font-size);
   line-height: 1.8;
 }
@@ -46,7 +45,6 @@ p {
   font-size: var(--p-font-size);
 }
 
-/* Header Styles */
 header {
   width: 100%;
   padding: 20px 0;
@@ -102,7 +100,7 @@ aside {
   height: auto;
   margin-bottom: 126px;
 }
-/* SECTION-1 */
+
 #section1 {
   width: 80%;
   margin-left: auto;
