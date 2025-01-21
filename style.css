@@ -1,6 +1,4 @@
 @import url("adaptive.css");
-
-/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -70,9 +68,8 @@ header {
   font-weight: normal;
   cursor: pointer;
   outline: none;
-  transition: background 0.2s linear;
+  transition: all 0.2s linear;
   &:hover {
-    background: #4169e1;
     box-shadow: 0 5px 10px #4169e1;
   }
 }
@@ -102,7 +99,8 @@ aside {
 }
 
 .section {
-  height: 100dvh;
+  height: auto;
+  margin-bottom: 126px;
 }
 /* SECTION-1 */
 #section1 {
@@ -115,7 +113,7 @@ aside {
 
   .section-content {
     position: relative;
-    h2 {
+    h1 {
       text-align: end;
       font-size: 112px;
       font-weight: normal;
@@ -148,6 +146,81 @@ aside {
       left: -3%;
       mix-blend-mode: screen;
       z-index: -1;
+    }
+  }
+}
+
+#section2 {
+  width: 80%;
+  margin-left: auto;
+  height: auto;
+  .section-content {
+    h1 {
+      text-align: end;
+      font-size: 100px;
+      font-weight: normal;
+    }
+    .second-section-box {
+      h2 {
+        font-size: 22px;
+        opacity: 0.5;
+      }
+      p {
+        font-size: 14px;
+        opacity: 0.5;
+      }
+      hr {
+        margin: 15px 0;
+        opacity: 0.5;
+        border: 1px solid #fff;
+      }
+    }
+  }
+  .video-placeholder {
+    width: 1030px;
+    height: 380px;
+    margin: 61px auto;
+    border-radius: 20px;
+    border: 1px solid rgba(245, 245, 245, 0.404);
+    background-color: rgba(255, 255, 255, 0.26);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    cursor: pointer;
+    transition: all 0.2s linear;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.527);
+    }
+  }
+}
+
+#section3 {
+  width: 80%;
+  margin-left: auto;
+  height: auto;
+  .section-content {
+    h1 {
+      text-align: end;
+      font-size: 80px;
+      font-weight: normal;
+    }
+    .services-grid {
+      .service-item {
+        width: 220px;
+        height: 283px;
+        cursor: pointer;
+        border-radius: 10px;
+        border: 1px solid rgba(245, 245, 245, 0.151);
+        background-color: rgba(255, 255, 255, 0.13);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        .service-icon {
+          border-radius: 10px;
+          background-color: rgba(255, 255, 255, 0.096);
+        }
+        p {
+          font-size: 14px;
+        }
+      }
     }
   }
 }
