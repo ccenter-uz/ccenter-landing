@@ -1,0 +1,59 @@
+/* Extra Small Devices (Phones, less than 576px) */
+@media (max-width: 575.98px) {
+  :root {
+    --base-font-size: 14px;
+    --h1-font-size: 1.8rem;
+    --h2-font-size: 1.5rem;
+    --p-font-size: 0.9rem;
+  }
+}
+
+/* Small Devices (Tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  :root {
+    --base-font-size: 15px;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.6rem;
+    --p-font-size: 1rem;
+  }
+}
+
+/* Medium Devices (Desktops, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  :root {
+    --base-font-size: 16px;
+    --h1-font-size: 2.2rem;
+    --h2-font-size: 1.8rem;
+    --p-font-size: 1.1rem;
+  }
+}
+
+/* Large Devices (Large Desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  :root {
+    --base-font-size: 17px;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 2rem;
+    --p-font-size: 1.2rem;
+  }
+}
+
+/* Extra Large Devices (Extra Large Desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  :root {
+    --base-font-size: 18px;
+    --h1-font-size: 3rem;
+    --h2-font-size: 2.2rem;
+    --p-font-size: 1.3rem;
+  }
+}
+
+/* Extra Large Devices (1440px and up) */
+@media (min-width: 1440px) {
+  :root {
+    --base-font-size: 20px;
+    --h1-font-size: 3.5rem;
+    --h2-font-size: 2.5rem;
+    --p-font-size: 1.5rem;
+  }
+}

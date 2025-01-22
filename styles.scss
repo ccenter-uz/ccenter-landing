@@ -1,0 +1,374 @@
+@use "basic-styles.scss";
+@use "adaptive.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+:root {
+  --base-font-size: 16px;
+  --h1-font-size: 2rem;
+  --h2-font-size: 1.75rem;
+  --p-font-size: 20px;
+  --min-height-section: 90dvh;
+}
+
+/* Glass box */
+@mixin GLASS-BOX {
+  border: 1px solid rgba(245, 245, 245, 0.103);
+  background-color: rgba(255, 255, 255, 0.068);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+@mixin SECTION {
+  width: 80%;
+  margin-left: auto;
+  height: auto;
+}
+
+@mixin LINE {
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 10px #4169e1);
+}
+
+@mixin BUTTON {
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  border: 2px solid #4169e1;
+  border-radius: 25px;
+  font-weight: normal;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s linear;
+
+  &:hover {
+    box-shadow: 0 5px 10px #4169e1;
+  }
+}
+
+html {
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  margin: auto;
+}
+
+body {
+  background: url("assets/dark/bg-dark.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  overflow-x: hidden;
+
+  scroll-behavior: smooth;
+  font-size: var(--base-font-size);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+p {
+  font-size: var(--p-font-size);
+}
+
+header {
+  width: 100%;
+  padding: 20px 0;
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-btn-price {
+  @include BUTTON;
+  width: 171px;
+  height: 51px;
+  font-size: 14px;
+}
+
+aside {
+  width: auto;
+  position: fixed;
+  top: 30%;
+
+  .nav-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+    width: 1px;
+    height: 450px;
+    background-color: rgba(245, 245, 245, 0.274);
+    z-index: -1;
+
+    .nav-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ffffff42;
+      backdrop-filter: blur(10px);
+      cursor: pointer;
+      position: relative;
+      left: -5px;
+    }
+  }
+}
+
+.section {
+  height: auto;
+  margin-bottom: 126px;
+}
+
+#section1 {
+  @include SECTION;
+
+  p {
+    line-height: 36px;
+  }
+
+  .section-content {
+    position: relative;
+
+    h1 {
+      text-align: end;
+      font-size: 112px;
+      font-weight: normal;
+      margin: 30px 0;
+    }
+
+    .phone-mockup {
+      @include GLASS-BOX;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      border-radius: 6px;
+      width: 764px;
+      height: 519px;
+      background: rgba(255, 255, 255, 0.062);
+    }
+
+    #line {
+      @include LINE;
+      width: 792px;
+      position: absolute;
+      top: 60%;
+      left: -3%;
+      z-index: 1;
+    }
+
+    #line2 {
+      width: 792px;
+      position: absolute;
+      top: 16%;
+      left: -3%;
+      mix-blend-mode: screen;
+      z-index: -1;
+    }
+  }
+}
+
+#section2 {
+  @include SECTION;
+  min-height: var(--min-height-section);
+  position: relative;
+
+  &::before {
+    content: url("assets/section-second/section-second-line.svg");
+    @include LINE;
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    z-index: -1;
+  }
+
+  .section-content {
+    h1 {
+      text-align: end;
+      font-size: 100px;
+      font-weight: normal;
+      margin: 38px 0;
+    }
+
+    .second-section-box {
+      h2 {
+        font-size: 22px;
+        opacity: 0.5;
+      }
+
+      p {
+        font-size: 14px;
+        opacity: 0.5;
+        line-height: 21px;
+      }
+
+      hr {
+        margin: 15px 0;
+        opacity: 0.5;
+        border: 1px solid #fff;
+      }
+    }
+  }
+
+  .video-placeholder {
+    @include GLASS-BOX;
+    width: 1030px;
+    height: 380px;
+    margin: 61px auto;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.164);
+    }
+  }
+
+
+}
+
+
+
+#section3 {
+  @include SECTION;
+  min-height: var(--min-height-section);
+
+  .section-content {
+    h1 {
+      text-align: end;
+      font-size: 80px;
+      font-weight: normal;
+      margin: 60px 0;
+    }
+
+    .services-grid {
+      .service-item {
+        @include GLASS-BOX;
+        width: 220px;
+        height: 283px;
+        cursor: pointer;
+        border-radius: 10px;
+
+        .service-icon {
+          border-radius: 10px;
+          background-color: rgba(255, 255, 255, 0.096);
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .services-bottom {
+
+      h2 {
+        font-size: 36px;
+        border-bottom: 2px solid #4169e1;
+        margin-bottom: 60px;
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 31px;
+      }
+
+      button {
+        @include BUTTON;
+        width: 134px;
+        height: 51px;
+        margin: 20px 0 20px auto;
+      }
+    }
+  }
+}
+
+
+
+#section4 {
+  @include SECTION;
+  min-height: 60dvh;
+  position: relative;
+
+  &::before {
+    content: url("assets/section-four/section-four-line.svg");
+    @include LINE;
+    position: absolute;
+    top: -65%;
+    left: 35%;
+    z-index: -1;
+  }
+
+  .section-content {
+    h1 {
+      text-align: end;
+      font-size: 87px;
+      font-weight: normal;
+      margin: 60px 0;
+    }
+
+    .stats-container {
+      @include GLASS-BOX;
+      width: 1159px;
+      height: 334px;
+      border-radius: 10px;
+
+      .stat-item {
+        opacity: 0.5;
+
+        h2 {
+          font-size: 20px;
+          line-height: 24px;
+        }
+
+        hr {
+          border-color: #fff;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: 178px;
+
+  img {
+    cursor: pointer;
+    transition: opacity 0.2s linear;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  #language {
+    background: transparent;
+    color: #fff;
+    outline: none;
+    border: none;
+  }
+}

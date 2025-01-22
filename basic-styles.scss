@@ -1,0 +1,251 @@
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-3 {
+  gap: 3rem;
+}
+
+.gap-4 {
+  gap: 4rem;
+}
+
+.gap-x-1 {
+  gap: 1rem;
+}
+
+.gap-x-2 {
+  gap: 2rem;
+}
+
+.gap-x-3 {
+  gap: 3rem;
+}
+
+.gap-x-4 {
+  gap: 4rem;
+}
+
+.gap-y-1 {
+  gap: 1rem;
+}
+
+.gap-y-2 {
+  gap: 2rem;
+}
+
+.gap-y-3 {
+  gap: 3rem;
+}
+
+.gap-y-4 {
+  gap: 4rem;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-300 {
+  width: 300px;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.h-80 {
+  height: 80%;
+}
+
+.h-20 {
+  height: 20%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.h-50 {
+  height: 50%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.h-25 {
+  height: 25%;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 2rem;
+}
+
+.m-3 {
+  margin: 3rem;
+}
+
+.m-4 {
+  margin: 4rem;
+}
+
+.m-y-1 {
+  margin: 1rem 0;
+}
+
+.m-y-2 {
+  margin: 2rem 0;
+}
+
+.m-y-3 {
+  margin: 3rem 0;
+}
+
+.m-y-4 {
+  margin: 4rem 0;
+}
+
+.m-x-1 {
+  margin: 0 1rem;
+}
+
+.m-x-2 {
+  margin: 0 2rem;
+}
+
+.m-x-3 {
+  margin: 0 3rem;
+}
+
+.m-x-4 {
+  margin: 0 4rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.p-4 {
+  padding: 4rem;
+}
+
+.p-x-1 {
+  padding: 0 1rem;
+}
+
+.p-x-2 {
+  padding: 0 2rem;
+}
+
+.p-x-3 {
+  padding: 0 3rem;
+}
+
+.p-x-4 {
+  padding: 0 4rem;
+}
+
+.p-y-1 {
+  padding: 1rem 0;
+}
+
+.p-y-2 {
+  padding: 2rem 0;
+}
+
+.p-y-3 {
+  padding: 3rem 0;
+}
+
+.p-y-4 {
+  padding: 4rem 0;
+}
+
+.m-l-auto {
+  margin-left: auto;
+}
+
+.m-r-auto {
+  margin-right: auto;
+}
+
+.m-b-auto {
+  margin-bottom: auto;
+}
+
+.m-t-auto {
+  margin-top: auto;
+}
