@@ -168,8 +168,8 @@ aside .nav-line .nav-dot {
 #section2 .video-placeholder {
   border: 1px solid rgba(245, 245, 245, 0.103);
   background-color: rgba(255, 255, 255, 0.068);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(41px);
+  -webkit-backdrop-filter: blur(41px);
   width: 1030px;
   height: 380px;
   margin: 61px auto;
@@ -206,8 +206,8 @@ aside .nav-line .nav-dot {
 #section3 .section-content .services-grid .service-item {
   border: 1px solid rgba(245, 245, 245, 0.103);
   background-color: rgba(255, 255, 255, 0.068);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(41px);
+  -webkit-backdrop-filter: blur(41px);
   width: 220px;
   height: 283px;
   cursor: pointer;
@@ -302,8 +302,8 @@ aside .nav-line .nav-dot {
 #section4 .section-content .stats-container {
   border: 1px solid rgba(245, 245, 245, 0.103);
   background-color: rgba(255, 255, 255, 0.068);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(41px);
+  -webkit-backdrop-filter: blur(41px);
   width: 1159px;
   height: 334px;
   border-radius: 10px;
@@ -358,6 +358,18 @@ footer #language {
   color: #fff;
   outline: none;
   border: none;
+}
+
+.active-section {
+  animation: fadeIn 0.5s linear;
+  animation-fill-mode: both;
+  transform: translate(0, 0);
+}
+
+.deactive-section {
+  animation: fadeOut 0.5s linear;
+  animation-fill-mode: both;
+  transform: translate(0, 0);
 }
 
 @media screen and (min-width: 320px) and (max-width: 440px) {
@@ -1168,5 +1180,13 @@ footer #language {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }/*# sourceMappingURL=styles.css.map */

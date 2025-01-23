@@ -14,8 +14,8 @@
 @mixin GLASS-BOX {
   border: 1px solid rgba(245, 245, 245, 0.103);
   background-color: rgba(255, 255, 255, 0.068);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(41px);
+  -webkit-backdrop-filter: blur(41px);
 }
 
 @mixin SECTION {
@@ -91,8 +91,6 @@ header {
   }
 }
 
-
-
 aside {
   width: auto;
   position: fixed;
@@ -120,8 +118,6 @@ aside {
     }
   }
 }
-
-
 
 #section1 {
   @include SECTION;
@@ -383,7 +379,18 @@ footer {
   }
 }
 
+// ACTIVE-SECTION
+.active-section {
+  animation: fadeIn 0.5s linear;
+  animation-fill-mode: both;
+  transform: translate(0, 0);
+}
 
+.deactive-section {
+  animation: fadeOut 0.5s linear;
+  animation-fill-mode: both;
+  transform: translate(0, 0);
+}
 
 
 
@@ -1339,5 +1346,15 @@ footer {
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
