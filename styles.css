@@ -391,19 +391,6 @@ footer #language {
   border: none;
 }
 
-.active-stat-item {
-  opacity: 1 !important;
-  transition: all 0.3s ease-in-out !important;
-}
-.active-stat-item h2 {
-  transition: all 0.3s ease-in-out !important;
-  font-size: 32px !important;
-}
-.active-stat-item hr {
-  transition: all 0.3s ease-in-out !important;
-  border-color: #4169e1 !important;
-}
-
 @media screen and (min-width: 320px) and (max-width: 440px) {
   .container {
     padding: 0 20px;
