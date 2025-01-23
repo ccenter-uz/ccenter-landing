@@ -145,39 +145,10 @@ aside {
     }
 
     .phone-mockup {
-      @include GLASS-BOX;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      border-radius: 6px;
-      width: 764px;
-      height: 519px;
-      background: rgba(255, 255, 255, 0.062);
-      overflow: hidden;
-
-      #phone {
-        position: relative;
-        top: 50%;
-      }
+      max-width: 809px;
+      max-height: 593px;
     }
 
-    #line {
-      @include LINE;
-      width: 792px;
-      position: absolute;
-      top: 60%;
-      left: -3%;
-      z-index: 1;
-    }
-
-    #line2 {
-      width: 792px;
-      position: absolute;
-      top: 16%;
-      left: -3%;
-      mix-blend-mode: screen;
-      z-index: -1;
-    }
   }
 }
 
@@ -413,6 +384,9 @@ footer {
 }
 
 
+
+
+
 // MEDIA QUERIES
 @media screen and (min-width:320px) and (max-width:440px) {
   .container {
@@ -474,17 +448,9 @@ footer {
 
       }
 
-      #phone-sm {
-        display: block;
-        width: 100%;
-      }
-
       .phone-mockup {
-        display: none;
-
-        #phone {
-          display: none;
-        }
+        width: 100%;
+        height: 100%;
       }
 
       #line {
@@ -689,5 +655,22 @@ footer {
     flex-direction: column;
     justify-content: center;
     gap: 24px 0;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
