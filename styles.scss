@@ -37,7 +37,7 @@
   background-color: transparent;
   color: white;
   padding: 10px;
-  border: 2px solid #4169e1;
+  border: 2px solid rgba(54, 100, 218, 1);
   border-radius: 25px;
   font-weight: normal;
   cursor: pointer;
@@ -45,7 +45,15 @@
   transition: all 0.2s linear;
 
   &:hover {
-    box-shadow: 0 5px 10px #4169e1;
+    backdrop-filter: blur(66px);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+    border-color: rgba(90, 136, 255, 1);
+  }
+
+  &:active {
+    border: 2px solid rgba(13, 36, 92, 1);
+    backdrop-filter: blur(66px);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
   }
 }
 
@@ -403,6 +411,23 @@ footer {
     border: none;
   }
 }
+
+// ACTIVES
+.active-stat-item {
+  opacity: 1 !important;
+  transition: all 0.3s ease-in-out !important;
+
+  h2 {
+    transition: all 0.3s ease-in-out !important;
+    font-size: 32px !important;
+  }
+
+  hr {
+    transition: all 0.3s ease-in-out !important;
+    border-color: #4169e1 !important;
+  }
+}
+
 
 // MEDIA QUERIES
 @media screen and (min-width:320px) and (max-width:440px) {

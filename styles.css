@@ -38,7 +38,7 @@ header .header-btn-price {
   background-color: transparent;
   color: white;
   padding: 10px;
-  border: 2px solid #4169e1;
+  border: 2px solid rgb(54, 100, 218);
   border-radius: 25px;
   font-weight: normal;
   cursor: pointer;
@@ -49,7 +49,16 @@ header .header-btn-price {
   font-size: 14px;
 }
 header .header-btn-price:hover {
-  box-shadow: 0 5px 10px #4169e1;
+  -webkit-backdrop-filter: blur(66px);
+          backdrop-filter: blur(66px);
+  box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+  border-color: rgb(90, 136, 255);
+}
+header .header-btn-price:active {
+  border: 2px solid rgb(13, 36, 92);
+  -webkit-backdrop-filter: blur(66px);
+          backdrop-filter: blur(66px);
+  box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
 }
 
 aside {
@@ -272,7 +281,7 @@ aside .nav-line .nav-dot {
   background-color: transparent;
   color: white;
   padding: 10px;
-  border: 2px solid #4169e1;
+  border: 2px solid rgb(54, 100, 218);
   border-radius: 25px;
   font-weight: normal;
   cursor: pointer;
@@ -283,7 +292,16 @@ aside .nav-line .nav-dot {
   margin: 20px 0 20px auto;
 }
 #section3 .section-content .services-bottom button:hover {
-  box-shadow: 0 5px 10px #4169e1;
+  -webkit-backdrop-filter: blur(66px);
+          backdrop-filter: blur(66px);
+  box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+  border-color: rgb(90, 136, 255);
+}
+#section3 .section-content .services-bottom button:active {
+  border: 2px solid rgb(13, 36, 92);
+  -webkit-backdrop-filter: blur(66px);
+          backdrop-filter: blur(66px);
+  box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
 }
 
 #section4 {
@@ -373,6 +391,19 @@ footer #language {
   border: none;
 }
 
+.active-stat-item {
+  opacity: 1 !important;
+  transition: all 0.3s ease-in-out !important;
+}
+.active-stat-item h2 {
+  transition: all 0.3s ease-in-out !important;
+  font-size: 32px !important;
+}
+.active-stat-item hr {
+  transition: all 0.3s ease-in-out !important;
+  border-color: #4169e1 !important;
+}
+
 @media screen and (min-width: 320px) and (max-width: 440px) {
   .container {
     padding: 0 20px;
@@ -419,7 +450,7 @@ footer #language {
     background-color: transparent;
     color: white;
     padding: 10px;
-    border: 2px solid #4169e1;
+    border: 2px solid rgb(54, 100, 218);
     border-radius: 25px;
     font-weight: normal;
     cursor: pointer;
@@ -430,7 +461,16 @@ footer #language {
     margin: 16px 0;
   }
   #section1 .section-content .section-default-hiddens .default-hidden-button:hover {
-    box-shadow: 0 5px 10px #4169e1;
+    -webkit-backdrop-filter: blur(66px);
+            backdrop-filter: blur(66px);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+    border-color: rgb(90, 136, 255);
+  }
+  #section1 .section-content .section-default-hiddens .default-hidden-button:active {
+    border: 2px solid rgb(13, 36, 92);
+    -webkit-backdrop-filter: blur(66px);
+            backdrop-filter: blur(66px);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
   }
   #section1 .section-content #phone-sm {
     display: block;
