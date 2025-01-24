@@ -29,8 +29,7 @@
 }
 
 @mixin LINE {
-  mix-blend-mode: screen;
-  filter: drop-shadow(0 0 10px #4169e1);
+  filter: drop-shadow(0 0 5px #4169e1);
 }
 
 @mixin BUTTON {
