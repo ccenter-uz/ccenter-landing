@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Roboto";
   font-weight: 300;
+  scroll-behavior: smooth !important;
 }
 
 .d-none {
@@ -15,7 +16,6 @@ body {
   background: url("assets/dark/bg-dark.png") no-repeat center center fixed;
   background-size: cover;
   color: white;
-  scroll-behavior: smooth;
   overflow: hidden;
 }
 
@@ -27,8 +27,6 @@ body {
   overflow-x: hidden;
   padding: 0 20px;
   overflow-y: scroll;
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(300px);
   scroll-snap-type: y mandatory;
 }
 .container::-webkit-scrollbar {
@@ -117,6 +115,8 @@ aside .nav-line .nav-dot {
 #section1 p {
   font-size: 20px;
   line-height: 36px;
+  -webkit-hyphens: auto;
+          hyphens: auto;
 }
 #section1 .section-content {
   position: relative;
@@ -369,9 +369,6 @@ aside .nav-line .nav-dot {
 }
 #section4 .section-content .stats-container .active-stat-item hr {
   transition: all 0.3s linear;
-  width: 0;
-  animation: fill 2s ease;
-  animation-fill-mode: both;
   border-color: #4169e1;
 }
 

@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Roboto";
   font-weight: 300;
+  scroll-behavior: smooth !important;
 }
 
 .d-none {
@@ -63,7 +64,6 @@ body {
   -o-background-size: cover;
   background-size: cover;
   color: white;
-  scroll-behavior: smooth;
 
   overflow: hidden;
 }
@@ -77,19 +77,13 @@ body {
   margin: auto;
   overflow-x: hidden;
   padding: 0 20px;
-
   overflow-y: scroll;
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(300px);
   scroll-snap-type: y mandatory;
 
   &::-webkit-scrollbar {
     display: none;
   }
 }
-
-
-
 
 
 header {
@@ -151,6 +145,7 @@ aside {
   p {
     font-size: 20px;
     line-height: 36px;
+    hyphens: auto;
   }
 
   .section-content {
@@ -394,9 +389,6 @@ aside {
 
         hr {
           transition: all 0.3s linear;
-          width: 0;
-          animation: fill 2s ease;
-          animation-fill-mode: both;
           border-color: #4169e1;
         }
       }
