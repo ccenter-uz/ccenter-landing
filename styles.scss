@@ -197,6 +197,7 @@ aside {
     }
   }
 
+
   .video-placeholder {
     @include GLASS-BOX;
     width: 1030px;
@@ -205,6 +206,7 @@ aside {
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.2s linear;
+
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.164);
