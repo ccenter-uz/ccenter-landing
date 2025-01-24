@@ -143,7 +143,6 @@ aside {
       max-width: 809px;
       max-height: 593px;
     }
-
   }
 }
 
@@ -177,6 +176,7 @@ aside {
         flex: 1;
         flex-direction: column;
         opacity: 0.5;
+        transition: all 0.4s linear;
 
         h2 {
           font-size: 20px;
@@ -193,9 +193,28 @@ aside {
           border: 1px solid #fff;
         }
       }
+
+      // ACTIVE CLASSES
+      .active-second-section-box {
+        opacity: 1;
+        transition: all 0.3s linear;
+
+        h2 {
+          transition: all 0.3s linear;
+          font-size: 32px;
+        }
+
+        hr {
+          transition: all 0.3s linear;
+          width: 0;
+          animation: fill 2s ease;
+          animation-fill-mode: both;
+          border-color: #4169e1;
+          border-color: #4169e1;
+        }
+      }
     }
   }
-
 
   .video-placeholder {
     @include GLASS-BOX;
@@ -206,13 +225,10 @@ aside {
     cursor: pointer;
     transition: all 0.2s linear;
 
-
     &:hover {
       background-color: rgba(255, 255, 255, 0.164);
     }
   }
-
-
 }
 
 #section3 {
@@ -318,19 +334,21 @@ aside {
       border-radius: 10px;
       display: flex;
       align-items: center;
-      gap: 0 2em;
       padding: 2em;
 
       .stat-item {
         opacity: 0.5;
         flex: 1;
+        transition: all 0.3s linear;
 
         h2 {
+          transition: all 0.3s linear;
           font-size: 20px;
           line-height: 24px;
         }
 
         hr {
+          transition: all 0.3s linear;
           margin: 1em 0;
           border-color: #fff;
         }
@@ -338,6 +356,24 @@ aside {
         p {
           font-size: 14px;
           line-height: 21px;
+        }
+      }
+
+      .active-stat-item {
+        opacity: 1;
+        transition: all 0.3s linear;
+
+        h2 {
+          transition: all 0.3s linear;
+          font-size: 32px;
+        }
+
+        hr {
+          transition: all 0.3s linear;
+          width: 0;
+          animation: fill 2s ease;
+          animation-fill-mode: both;
+          border-color: #4169e1;
         }
       }
     }
@@ -379,21 +415,6 @@ footer {
     border: none;
   }
 }
-
-// ACTIVE-SECTION
-.active-section {
-  animation: fadeIn 0.5s linear;
-  animation-fill-mode: both;
-  transform: translate(0, 0);
-}
-
-.deactive-section {
-  animation: fadeOut 0.5s linear;
-  animation-fill-mode: both;
-  transform: translate(0, 0);
-}
-
-
 
 // MEDIA QUERIES
 @media (320px <=width <=440px) {
@@ -453,16 +474,12 @@ footer {
           height: 40px;
           margin: 16px 0;
         }
-
       }
 
       .phone-mockup {
         width: 100%;
         height: 100%;
       }
-
-
-
     }
   }
 
@@ -493,11 +510,10 @@ footer {
       .outsourcing {
         width: 100%;
         flex-direction: column;
-        gap: 24px 0;
 
         .second-section-box {
           border-left: 1px solid #fff;
-          padding-left: 8px;
+          padding: 1em;
 
           h2 {
             font-size: 20px;
@@ -513,6 +529,18 @@ footer {
 
           hr {
             display: none;
+          }
+        }
+
+        // ACTIVE CLASSES
+        .active-second-section-box {
+          opacity: 1;
+          border-color: #4169e1;
+          transition: all 0.3s linear;
+
+          h2 {
+            transition: all 0.3s linear;
+            font-size: 24px;
           }
         }
       }
@@ -607,7 +635,6 @@ footer {
       z-index: -1;
     }
 
-
     .section-content {
       width: 100%;
 
@@ -624,12 +651,12 @@ footer {
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        gap: 48px 0;
         padding: 16px;
 
         .stat-item {
           border-left: 1px solid #fff;
           padding-left: 10px;
+          padding: 1em;
 
           h2 {
             font-size: 20px;
@@ -643,6 +670,22 @@ footer {
 
           p {
             margin: 0 8px;
+          }
+        }
+
+        .active-stat-item {
+          opacity: 1;
+          border-color: #4169e1;
+          transition: all 0.3s linear;
+
+          h2 {
+            transition: all 0.3s linear;
+            font-size: 32px;
+          }
+
+          hr {
+            transition: all 0.3s linear;
+            border-color: #4169e1;
           }
         }
       }
@@ -717,15 +760,12 @@ footer {
           height: 40px;
           margin: 16px 0;
         }
-
       }
 
       .phone-mockup {
         width: 100%;
         height: 100%;
       }
-
-
     }
   }
 
@@ -751,11 +791,10 @@ footer {
       .outsourcing {
         width: 100%;
         flex-direction: column;
-        gap: 24px 0;
 
         .second-section-box {
           border-left: 1px solid #fff;
-          padding-left: 8px;
+          padding: 1em;
 
           h2 {
             font-size: 20px;
@@ -771,6 +810,18 @@ footer {
 
           hr {
             display: none;
+          }
+        }
+
+        // ACTIVE CLASSES
+        .active-second-section-box {
+          opacity: 1;
+          border-color: #4169e1;
+          transition: all 0.3s linear;
+
+          h2 {
+            transition: all 0.3s linear;
+            font-size: 24px;
           }
         }
       }
@@ -860,7 +911,6 @@ footer {
       display: none;
     }
 
-
     .section-content {
       width: 100%;
 
@@ -877,12 +927,11 @@ footer {
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        gap: 48px 0;
         padding: 16px;
 
         .stat-item {
           border-left: 1px solid #fff;
-          padding-left: 10px;
+          padding: 1em;
 
           h2 {
             font-size: 20px;
@@ -896,6 +945,22 @@ footer {
 
           p {
             margin: 0 8px;
+          }
+        }
+
+        .active-stat-item {
+          opacity: 1;
+          border-color: #4169e1;
+          transition: all 0.3s linear;
+
+          h2 {
+            transition: all 0.3s linear;
+            font-size: 32px;
+          }
+
+          hr {
+            transition: all 0.3s linear;
+            border-color: #4169e1;
           }
         }
       }
@@ -997,7 +1062,6 @@ footer {
             line-height: 21px;
             margin: 0 8px;
           }
-
         }
       }
 
@@ -1207,7 +1271,6 @@ footer {
             line-height: 21px;
             margin: 0 8px;
           }
-
         }
       }
 
@@ -1337,7 +1400,6 @@ footer {
   animation-name: fadeIn;
   animation-duration: 1.5s;
   animation-fill-mode: both;
-
 }
 
 @keyframes fadeIn {
@@ -1357,5 +1419,11 @@ footer {
 
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes fill {
+  to {
+    width: 100%;
   }
 }

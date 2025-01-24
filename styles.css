@@ -151,6 +151,7 @@ aside .nav-line .nav-dot {
   flex: 1;
   flex-direction: column;
   opacity: 0.5;
+  transition: all 0.4s linear;
 }
 #section2 .section-content .outsourcing .second-section-box h2 {
   font-size: 20px;
@@ -163,6 +164,22 @@ aside .nav-line .nav-dot {
 #section2 .section-content .outsourcing .second-section-box hr {
   margin: 15px 0;
   border: 1px solid #fff;
+}
+#section2 .section-content .outsourcing .active-second-section-box {
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+#section2 .section-content .outsourcing .active-second-section-box h2 {
+  transition: all 0.3s linear;
+  font-size: 32px;
+}
+#section2 .section-content .outsourcing .active-second-section-box hr {
+  transition: all 0.3s linear;
+  width: 0;
+  animation: fill 2s ease;
+  animation-fill-mode: both;
+  border-color: #4169e1;
+  border-color: #4169e1;
 }
 #section2 .video-placeholder {
   border: 1px solid rgba(245, 245, 245, 0.103);
@@ -307,24 +324,41 @@ aside .nav-line .nav-dot {
   border-radius: 10px;
   display: flex;
   align-items: center;
-  gap: 0 2em;
   padding: 2em;
 }
 #section4 .section-content .stats-container .stat-item {
   opacity: 0.5;
   flex: 1;
+  transition: all 0.3s linear;
 }
 #section4 .section-content .stats-container .stat-item h2 {
+  transition: all 0.3s linear;
   font-size: 20px;
   line-height: 24px;
 }
 #section4 .section-content .stats-container .stat-item hr {
+  transition: all 0.3s linear;
   margin: 1em 0;
   border-color: #fff;
 }
 #section4 .section-content .stats-container .stat-item p {
   font-size: 14px;
   line-height: 21px;
+}
+#section4 .section-content .stats-container .active-stat-item {
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+#section4 .section-content .stats-container .active-stat-item h2 {
+  transition: all 0.3s linear;
+  font-size: 32px;
+}
+#section4 .section-content .stats-container .active-stat-item hr {
+  transition: all 0.3s linear;
+  width: 0;
+  animation: fill 2s ease;
+  animation-fill-mode: both;
+  border-color: #4169e1;
 }
 
 footer {
@@ -356,18 +390,6 @@ footer #language {
   color: #fff;
   outline: none;
   border: none;
-}
-
-.active-section {
-  animation: fadeIn 0.5s linear;
-  animation-fill-mode: both;
-  transform: translate(0, 0);
-}
-
-.deactive-section {
-  animation: fadeOut 0.5s linear;
-  animation-fill-mode: both;
-  transform: translate(0, 0);
 }
 
 @media (320px <= width <= 440px) {
@@ -467,11 +489,10 @@ footer #language {
   #section2 .section-content .outsourcing {
     width: 100%;
     flex-direction: column;
-    gap: 24px 0;
   }
   #section2 .section-content .outsourcing .second-section-box {
     border-left: 1px solid #fff;
-    padding-left: 8px;
+    padding: 1em;
   }
   #section2 .section-content .outsourcing .second-section-box h2 {
     font-size: 20px;
@@ -485,6 +506,15 @@ footer #language {
   }
   #section2 .section-content .outsourcing .second-section-box hr {
     display: none;
+  }
+  #section2 .section-content .outsourcing .active-second-section-box {
+    opacity: 1;
+    border-color: #4169e1;
+    transition: all 0.3s linear;
+  }
+  #section2 .section-content .outsourcing .active-second-section-box h2 {
+    transition: all 0.3s linear;
+    font-size: 24px;
   }
   #section2 .section-content .video-placeholder {
     width: 100%;
@@ -574,12 +604,12 @@ footer #language {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 48px 0;
     padding: 16px;
   }
   #section4 .section-content .stats-container .stat-item {
     border-left: 1px solid #fff;
     padding-left: 10px;
+    padding: 1em;
   }
   #section4 .section-content .stats-container .stat-item h2 {
     font-size: 20px;
@@ -591,6 +621,19 @@ footer #language {
   }
   #section4 .section-content .stats-container .stat-item p {
     margin: 0 8px;
+  }
+  #section4 .section-content .stats-container .active-stat-item {
+    opacity: 1;
+    border-color: #4169e1;
+    transition: all 0.3s linear;
+  }
+  #section4 .section-content .stats-container .active-stat-item h2 {
+    transition: all 0.3s linear;
+    font-size: 32px;
+  }
+  #section4 .section-content .stats-container .active-stat-item hr {
+    transition: all 0.3s linear;
+    border-color: #4169e1;
   }
   footer {
     width: 100%;
@@ -694,11 +737,10 @@ footer #language {
   #section2 .section-content .outsourcing {
     width: 100%;
     flex-direction: column;
-    gap: 24px 0;
   }
   #section2 .section-content .outsourcing .second-section-box {
     border-left: 1px solid #fff;
-    padding-left: 8px;
+    padding: 1em;
   }
   #section2 .section-content .outsourcing .second-section-box h2 {
     font-size: 20px;
@@ -712,6 +754,15 @@ footer #language {
   }
   #section2 .section-content .outsourcing .second-section-box hr {
     display: none;
+  }
+  #section2 .section-content .outsourcing .active-second-section-box {
+    opacity: 1;
+    border-color: #4169e1;
+    transition: all 0.3s linear;
+  }
+  #section2 .section-content .outsourcing .active-second-section-box h2 {
+    transition: all 0.3s linear;
+    font-size: 24px;
   }
   #section2 .section-content .video-placeholder {
     width: 100%;
@@ -796,12 +847,11 @@ footer #language {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 48px 0;
     padding: 16px;
   }
   #section4 .section-content .stats-container .stat-item {
     border-left: 1px solid #fff;
-    padding-left: 10px;
+    padding: 1em;
   }
   #section4 .section-content .stats-container .stat-item h2 {
     font-size: 20px;
@@ -813,6 +863,19 @@ footer #language {
   }
   #section4 .section-content .stats-container .stat-item p {
     margin: 0 8px;
+  }
+  #section4 .section-content .stats-container .active-stat-item {
+    opacity: 1;
+    border-color: #4169e1;
+    transition: all 0.3s linear;
+  }
+  #section4 .section-content .stats-container .active-stat-item h2 {
+    transition: all 0.3s linear;
+    font-size: 32px;
+  }
+  #section4 .section-content .stats-container .active-stat-item hr {
+    transition: all 0.3s linear;
+    border-color: #4169e1;
   }
   footer {
     width: 100%;
@@ -1180,5 +1243,10 @@ footer #language {
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes fill {
+  to {
+    width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */
