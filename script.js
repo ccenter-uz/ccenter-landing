@@ -32,4 +32,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setInterval(updateSectionItems, 1800);
   setInterval(updateStatItems, 1800);
+
+  // SCROLL-VIEWPORT
+  function scrollToSnapPoint(element, index) {
+  const snapPoints = Array.from(element.children);
+  const snapPoint = snapPoints[index];
+  element.scrollTo({
+    top: snapPoint.offsetTop,
+    behavior: 'smooth'
+  });
+}
+
+// Example usage:
+const container = document.querySelector('.sections-container');
+scrollToSnapPoint(container, 1);
 });
