@@ -397,7 +397,7 @@ footer {
 
 
 // MEDIA QUERIES
-@media screen and (min-width:320px) and (max-width:440px) {
+@media (320px <=width <=440px) {
   .container {
     padding: 0 20px;
   }
@@ -661,7 +661,7 @@ footer {
   }
 }
 
-@media screen and (min-width:440.1px) and (max-width:800px) {
+@media (440.1px <=width <=800px) {
   .container {
     padding: 0 20px;
   }
@@ -914,7 +914,7 @@ footer {
   }
 }
 
-@media screen and (min-width:800.1px) and (max-width:1440px) {
+@media (800.1px <=width <=1024px) {
   .container {
     padding: 0 20px;
   }
@@ -1124,7 +1124,7 @@ footer {
   }
 }
 
-@media screen and (min-width:1024.1px) and (max-width:1440px) {
+@media (1024.1px <=width <=1440px) {
   .container {
     padding: 0 20px;
   }
