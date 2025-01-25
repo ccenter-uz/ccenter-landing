@@ -121,6 +121,7 @@
 
       gtag("config", "UA-XXXXXXXXX-X");
     </script>
+
     <!-- CSS Links -->
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -128,7 +129,9 @@
     <div class="container fadeIn">
       <header>
         <img src="assets/dark/logo.svg" alt="logo" id="logo" />
-        <button class="header-btn-price">ПОЛУЧИТЬ ПРАЙС</button>
+        <a href="contact.html">
+          <button class="header-btn-price" data-i18n="get-price"></button>
+        </a>
       </header>
 
       <aside>
@@ -149,18 +152,17 @@
       </aside>
 
       <section class="section" id="section1" aria-labelledby="section1-heading">
-        <p lang="en">
-          Build as many unique programs as you need—all easily accessible and
-          fully customizable from a single dashboard.
-        </p>
+        <p lang="en" data-i18n="section1-text"></p>
         <div class="section-content">
-          <h1 id="section1-heading">О нас</h1>
+          <h1 id="section1-heading" data-i18n="about-us"></h1>
           <div class="d-none section-default-hiddens">
-            <p class="default-hidden-text">
-              Build as many unique programs as you need—all easily accessible
-              and fully customizable from a single dashboard.
-            </p>
-            <button class="default-hidden-button">Заказать Услугу</button>
+            <p class="default-hidden-text" data-i18n="section1-text"></p>
+            <a href="contact.html">
+              <button
+                class="default-hidden-button"
+                data-i18n="order-service"
+              ></button>
+            </a>
           </div>
           <img
             src="assets/section-first/phone-sm.svg"
@@ -179,35 +181,22 @@
 
       <section class="section" id="section2" aria-labelledby="section2-heading">
         <div class="section-content">
-          <h1 id="section2-heading">Аутсорсинг</h1>
+          <h1 id="section2-heading" data-i18n="outsourcing"></h1>
           <div class="outsourcing">
             <div class="second-section-box">
-              <h2>Аутсорсинг</h2>
+              <h2 data-i18n="outsourcing-box-1-title"></h2>
               <hr />
-              <p>
-                Build as many unique programs as you need—all easily accessible
-                and fully customizable from a single dashboard. Build as many
-                unique programs as you need—all easily accessible and fully
-                customizable from a single dashboard.Build as many unique
-                programs as you need—all easily accessible and fully
-                customizable from a single dashboard.
-              </p>
+              <p data-i18n="outsourcing-box-1-text"></p>
             </div>
             <div class="second-section-box">
-              <h2>Автообзвон</h2>
+              <h2 data-i18n="outsourcing-box-2-title"></h2>
               <hr />
-              <p>
-                Build as many unique programs as you need—all easily accessible
-                and fully customizable from a single dashboard.
-              </p>
+              <p data-i18n="outsourcing-box-2-text"></p>
             </div>
             <div class="second-section-box">
-              <h2>Виртуал офис</h2>
+              <h2 data-i18n="outsourcing-box-3-title"></h2>
               <hr />
-              <p>
-                Build as many unique programs as you need—all easily accessible
-                and fully customizable from a single dashboard.
-              </p>
+              <p data-i18n="outsourcing-box-3-text"></p>
             </div>
           </div>
           <div class="video-placeholder"></div>
@@ -216,13 +205,13 @@
 
       <section class="section" id="section3" aria-labelledby="section3-heading">
         <div class="section-content">
-          <h1 id="section3-heading">Дополнительные услуги</h1>
+          <h1 id="section3-heading" data-i18n="additional-services"></h1>
           <div class="services-grid">
             <div class="service-item">
               <div class="service-icon">
                 <img src="assets/section-third/camera-icon.svg" alt="camera" />
               </div>
-              <p>Кино</p>
+              <p data-i18n="additional-service-1"></p>
             </div>
             <div class="service-item">
               <div class="service-icon">
@@ -231,13 +220,13 @@
                   alt="message"
                 />
               </div>
-              <p>Поздравление</p>
+              <p data-i18n="additional-service-2"></p>
             </div>
             <div class="service-item">
               <div class="service-icon">
                 <img src="assets/section-third/phone-icon.svg" alt="phone" />
               </div>
-              <p>Услуги службы «1064»</p>
+              <p data-i18n="additional-service-3"></p>
             </div>
             <div class="service-item">
               <div class="service-icon">
@@ -246,40 +235,42 @@
                   alt="office-phone"
                 />
               </div>
-              <p>Услуги службы «1086»</p>
+              <p data-i18n="additional-service-4"></p>
             </div>
           </div>
           <div class="services-bottom">
-            <h2>Прайс-лист</h2>
-            <p>За телекоммуникационными услугами обращайтесь к нам!</p>
-            <button>Заказать</button>
+            <h2 data-i18n="price-list"></h2>
+            <p data-i18n="price-list-text"></p>
+            <a href="contact.html">
+              <button data-i18n="order-service"></button>
+            </a>
           </div>
         </div>
       </section>
 
       <section class="section" id="section4" aria-labelledby="section4-heading">
         <div class="section-content">
-          <h1 id="section4-heading">20 лет вместе с вами</h1>
+          <h1 id="section4-heading" data-i18n="section4-title"></h1>
           <div class="stats-container">
             <div class="stat-item">
-              <h2>+15 000 000</h2>
+              <h2 data-i18n="section4-stat1-title"></h2>
               <hr />
-              <p>Поступившие звонки</p>
+              <p data-i18n="section4-stat1-text"></p>
             </div>
             <div class="stat-item">
-              <h2>+15</h2>
+              <h2 data-i18n="section4-stat2-title"></h2>
               <hr />
-              <p>Услуги</p>
+              <p data-i18n="section4-stat2-text"></p>
             </div>
             <div class="stat-item">
-              <h2>+35</h2>
+              <h2 data-i18n="section4-stat3-title"></h2>
               <hr />
-              <p>Клиенты</p>
+              <p data-i18n="section4-stat3-text"></p>
             </div>
             <div class="stat-item">
-              <h2>+100</h2>
+              <h2 data-i18n="section4-stat4-title"></h2>
               <hr />
-              <p>Успешные проекты</p>
+              <p data-i18n="section4-stat4-text"></p>
             </div>
           </div>
         </div>
@@ -307,13 +298,14 @@
         <div class="footer-lng">
           <p>+998 (55) 506 1011</p>
           <select name="language" id="language">
-            <option value="uz">UZ</option>
-            <option value="ru">RU</option>
-            <option value="en">EN</option>
+            <option value="uz" data-i18n="uz"></option>
+            <option value="ru" data-i18n="ru"></option>
+            <option value="en" data-i18n="en"></option>
           </select>
         </div>
       </footer>
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="i18next.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>

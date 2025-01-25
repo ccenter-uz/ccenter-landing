@@ -1,0 +1,156 @@
+@use "styles";
+
+main {
+    max-height: 70dvh;
+    height: 100%;
+
+    .close {
+        max-width: 1070px;
+        width: 100%;
+        display: flex;
+        margin: auto;
+        justify-content: flex-end;
+
+        img {
+            transition: all 0.3s;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .contact-form {
+        @include styles.GLASS-BOX;
+        max-width: 1030px;
+        width: 100%;
+        height: fit-content;
+        margin: auto auto;
+        border-radius: 20px;
+        padding: 2em 5em;
+
+
+        h1 {
+            font-size: 32px;
+            line-height: 36px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1em 0;
+            margin: 42px 0;
+            color: #FFFFFF80;
+
+            label {
+                font-size: 20px;
+                line-height: 24.2px;
+            }
+
+            input {
+                @include styles.GLASS-BOX;
+                height: 52px;
+                padding: 8px 16px;
+                border-radius: 8px;
+                font-size: 20px;
+                color: #FFFFFF80;
+
+                &:user-invalid {
+                    border: 1px solid crimson;
+                }
+            }
+
+            p {
+                margin-top: 3em;
+            }
+
+            button {
+                @include styles.BUTTON;
+                width: 175px;
+                height: 51px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+
+
+@media (width <=545px) {
+    main {
+        .contact-form {
+            padding: 1.5em;
+
+            h1 {
+                font-size: 24px;
+                line-height: 28px;
+            }
+
+            form {
+                margin: 24px 0;
+
+                label {
+                    font-size: 16px;
+                    line-height: 19.2px;
+                }
+
+                input {
+                    height: 40px;
+                    font-size: 16px;
+                }
+
+                p {
+                    font-size: 14px;
+                    margin-top: 1em;
+                }
+
+                button {
+                    width: 140px;
+                    height: 40px;
+                    font-size: 14px;
+                }
+            }
+
+        }
+    }
+}
+
+@media (545.1px <=width <=768px) {
+    main {
+        .contact-form {
+            padding: 2em;
+
+            h1 {
+                font-size: 24px;
+                line-height: 28px;
+            }
+
+            form {
+                margin: 24px 0;
+
+                label {
+                    font-size: 16px;
+                    line-height: 19.2px;
+                }
+
+                input {
+                    height: 40px;
+                    font-size: 16px;
+                }
+
+                p {
+                    font-size: 14px;
+                    margin-top: 1em;
+                }
+
+                button {
+                    width: 140px;
+                    height: 40px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+}

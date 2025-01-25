@@ -427,9 +427,16 @@ footer {
 
   #language {
     background: transparent;
-    color: #fff;
+    color: white;
     outline: none;
     border: none;
+    cursor: pointer;
+  }
+
+  #language option {
+    background: #1a1a1a;
+    color: white;
+    cursor: pointer;
   }
 }
 

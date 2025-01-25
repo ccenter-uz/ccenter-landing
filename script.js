@@ -32,6 +32,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setInterval(updateSectionItems, 1800);
   setInterval(updateStatItems, 1800);
-
- 
 });

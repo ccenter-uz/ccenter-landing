@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>Your Page Title - Up to 60 Characters</title>
+    <meta name="title" content="Your Page Title - Up to 60 Characters" />
+    <meta
+      name="description"
+      content="Your page description goes here. Aim for 50-160 characters to ensure it is fully displayed in search results."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.yourwebsite.com/your-page" />
+    <meta property="og:title" content="Your Page Title - Up to 60 Characters" />
+    <meta
+      property="og:description"
+      content="Your page description goes here. Aim for 50-160 characters to ensure it is fully displayed in search results."
+    />
+    <meta
+      property="og:image"
+      content="https://www.yourwebsite.com/images/your-image.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://www.yourwebsite.com/your-page"
+    />
+    <meta
+      property="twitter:title"
+      content="Your Page Title - Up to 60 Characters"
+    />
+    <meta
+      property="twitter:description"
+      content="Your page description goes here. Aim for 50-160 characters to ensure it is fully displayed in search results."
+    />
+    <meta
+      property="twitter:image"
+      content="https://www.yourwebsite.com/images/your-image.jpg"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.yourwebsite.com/your-page" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Your Page Title",
+        "description": "Your page description goes here.",
+        "url": "https://www.yourwebsite.com/your-page",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Your Organization Name",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yourwebsite.com/images/logo.png"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "name": "Your Page Title"
+        }
+      }
+    </script>
+
+    <!-- Google Fonts (Optional) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SEO Best Practices -->
+    <meta
+      name="keywords"
+      content="your, keywords, here, separated, by, commas"
+    />
+    <meta name="author" content="Your Name or Organization" />
+    <meta name="robots" content="index, follow" />
+    <meta name="google" content="nositelinkssearchbox" />
+    <meta name="google" content="notranslate" />
+    <meta
+      name="google-site-verification"
+      content="Your verification code here"
+    />
+
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <!-- Analytics (Optional) -->
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-XXXXXXXXX-X");
+    </script>
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <div class="fadeIn container">
+      <header>
+        <a href="index.html" title="Home">
+          <img src="assets/dark/logo.svg" alt="logo" id="logo" />
+        </a>
+      </header>
+      <main>
+        <a href="index.html" class="close" title="Close">
+          <img src="assets/close.svg" alt="close" />
+        </a>
+        <div class="contact-form" aria-labelledby="contact-form-title">
+          <h1 id="contact-form-title" data-i18n="request"></h1>
+          <form id="contact-form">
+            <label for="name" data-i18n="your-name"></label>
+            <input type="text" id="name" required />
+            <label for="email" data-i18n="your-email"></label>
+            <input type="email" id="email" />
+            <label for="phone" data-i18n="your-phone"></label>
+            <input type="phone" id="phone" required />
+            <p data-i18n="consent"></p>
+            <button type="submit" data-i18n="send"></button>
+          </form>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer-links">
+          <img
+            src="assets/footer/facebook-icon.svg"
+            alt="facebook-icon"
+            title="facebook"
+          />
+          <img
+            src="assets/footer/instagram-icon.svg"
+            alt="instagram-icon"
+            title="instagram"
+          />
+          <img
+            src="assets/footer/telegram-icon.svg"
+            alt="telegram-icon"
+            title="telegram"
+          />
+        </div>
+        <p>© 2023 UZTELECOM</p>
+        <div class="footer-lng">
+          <p>+998 (55) 506 1011</p>
+          <select name="language" id="language">
+            <option value="uz" data-i18n="uz"></option>
+            <option value="ru" data-i18n="ru"></option>
+            <option value="en" data-i18n="en"></option>
+          </select>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="i18next.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
