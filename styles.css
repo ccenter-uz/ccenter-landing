@@ -560,6 +560,7 @@ footer #language option {
     line-height: 55px;
     margin-bottom: 67px;
     margin-top: 0;
+    word-wrap: break-word;
   }
   #section3 .section-content .services-grid {
     width: 100%;

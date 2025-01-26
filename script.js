@@ -32,4 +32,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setInterval(updateSectionItems, 1800);
   setInterval(updateStatItems, 1800);
+
+
+// SCROLL-BEHAVIOR
+  const body = document.querySelector(".container");
+  let isScrolling = false;
+
+  const handleScroll = (e) => {
+    e.preventDefault();
+    if (!isScrolling) {
+      isScrolling = true;
+
+      if (e.deltaY > 0) {
+        body.scrollTop += window.innerHeight;
+      } else {
+        body.scrollTop -= window.innerHeight;
+      }
+
+      setTimeout(() => {
+        isScrolling = false;
+      }, 500);
+    }
+  };
+
+  window.addEventListener("wheel", handleScroll, { passive: false });
 });
