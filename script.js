@@ -33,12 +33,34 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(updateSectionItems, 1800);
   setInterval(updateStatItems, 1800);
 
-
-// SCROLL-BEHAVIOR
+  // SCROLL-BEHAVIOR
   const body = document.querySelector(".container");
   let isScrolling = false;
+  const sections = document.querySelectorAll(".section");
+  const dots = document.querySelectorAll(".nav-dot");
+
 
   const handleScroll = (e) => {
+      const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const sectionId = entry.target.id;
+        const currentDot = document.querySelector(`.nav-dot[data-section=${sectionId}]`);
+        console.log(currentDot,'currentDot');
+        
+        if (entry.isIntersecting) {
+          dots.forEach((dot) => dot.classList.remove("active-dot"));
+          currentDot.classList.add("active-dot");
+        }
+      });
+    },{threshold: 0.5});
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+
+
+
     e.preventDefault();
     if (!isScrolling) {
       isScrolling = true;

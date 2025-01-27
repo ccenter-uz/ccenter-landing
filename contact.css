@@ -76,24 +76,94 @@ aside {
 }
 aside .nav-line {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: space-between;
-  width: 1px;
   height: 450px;
-  background-color: rgba(245, 245, 245, 0.274);
-  z-index: -1;
 }
 aside .nav-line .nav-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2588235294);
+  background: transparent;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   cursor: pointer;
-  position: relative;
-  left: -5px;
+  position: absolute;
+  top: 50%;
+  left: -4px;
+}
+aside .nav-line .nav-dot::before {
+  visibility: hidden;
+}
+aside .nav-line .nav-dot:nth-child(1)::before {
+  content: "About us";
+  min-width: 100px;
+  padding: 0.5em;
+  border-radius: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: whitesmoke;
+  background-color: #252525;
+  position: absolute;
+  top: 0;
+  left: 1.5em;
+}
+aside .nav-line .nav-dot:nth-child(2)::before {
+  content: "Services";
+  min-width: 100px;
+  padding: 0.5em;
+  border-radius: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: whitesmoke;
+  background-color: #252525;
+  position: absolute;
+  top: 0;
+  left: 1.5em;
+}
+aside .nav-line .nav-dot:nth-child(3)::before {
+  content: "Pricing";
+  min-width: 100px;
+  padding: 0.5em;
+  border-radius: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: whitesmoke;
+  background-color: #252525;
+  position: absolute;
+  top: 0;
+  left: 1.5em;
+}
+aside .nav-line .nav-dot:nth-child(4)::before {
+  content: "Contact";
+  min-width: 100px;
+  padding: 0.5em;
+  border-radius: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: whitesmoke;
+  background-color: #252525;
+  position: absolute;
+  top: 0;
+  left: 1.5em;
+}
+aside .nav-line .active-dot {
+  background: #4169e1;
+  box-shadow: 0 0 10px 0 #4169e1;
+  transition: all 1s linear;
+}
+aside .nav-line .active-dot::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: #4169e1;
+  cursor: pointer;
+  position: absolute;
+  top: -9em;
+  left: 5px;
+  animation: spill 0.5s linear;
+  animation-fill-mode: both;
+}
+aside .nav-line .active-dot::before {
+  visibility: visible;
 }
 
 .section {
@@ -560,6 +630,7 @@ footer #language option {
     line-height: 55px;
     margin-bottom: 67px;
     margin-top: 0;
+    word-wrap: break-word;
   }
   #section3 .section-content .services-grid {
     width: 100%;
@@ -1266,6 +1337,11 @@ footer #language option {
 @keyframes fill {
   to {
     width: 100%;
+  }
+}
+@keyframes spill {
+  to {
+    height: 150px;
   }
 }
 main {

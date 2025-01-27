@@ -110,25 +110,40 @@ aside {
   top: 30%;
 
   .nav-line {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: space-between;
-    width: 1px;
     height: 450px;
-    background-color: rgba(245, 245, 245, 0.274);
-    z-index: -1;
 
     .nav-dot {
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background: #ffffff42;
-      backdrop-filter: blur(10px);
+      background: transparent;
       cursor: pointer;
-      position: relative;
-      left: -5px;
+      position: absolute;
+      top: 50%;
+      left: -4px;
     }
+
+    // ACTIVE CLASSES
+    .active-dot {
+      background: #4169e1;
+      box-shadow: 0 0 10px 0 #4169e1;
+      transition: all 0.5s linear 0.5s;
+
+      &::after {
+        content: "";
+        width: 1px;
+        height: 100%;
+        background: #4169e1;
+        cursor: pointer;
+        position: absolute;
+        top: -9em;
+        left: 4.3px;
+        animation: spill 0.5s linear;
+        animation-fill-mode: both;
+      }
+    }
+
+
   }
 }
 
@@ -1451,5 +1466,16 @@ footer {
 @keyframes fill {
   to {
     width: 100%;
+  }
+}
+
+@keyframes spill {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    height: calc(450px/3);
+    opacity: 1;
   }
 }
