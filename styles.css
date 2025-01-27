@@ -85,7 +85,7 @@ aside .nav-line .nav-dot {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  left: -4px;
+  left: -3px;
 }
 aside .nav-line .active-dot {
   background: #4169e1;
@@ -99,8 +99,8 @@ aside .nav-line .active-dot::after {
   background: #4169e1;
   cursor: pointer;
   position: absolute;
-  top: -9em;
-  left: 4.3px;
+  top: -9.5em;
+  left: 4.5px;
   animation: spill 0.5s linear;
   animation-fill-mode: both;
 }
