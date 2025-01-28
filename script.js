@@ -38,28 +38,40 @@ document.addEventListener("DOMContentLoaded", function () {
   let isScrolling = false;
   const sections = document.querySelectorAll(".section");
   const dots = document.querySelectorAll(".nav-dot");
-
-
+  let scrollDirection;
   const handleScroll = (e) => {
-      const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const sectionId = entry.target.id;
-        const currentDot = document.querySelector(`.nav-dot[data-section=${sectionId}]`);
-        console.log(currentDot,'currentDot');
-        
-        if (entry.isIntersecting) {
-          dots.forEach((dot) => dot.classList.remove("active-dot"));
-          currentDot.classList.add("active-dot");
-        }
-      });
-    },{threshold: 0.5});
+    scrollDirection = e.wheelDeltaY;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const sectionId = entry.target.id;
+          const currentDot = document.querySelector(
+            `.nav-dot[data-section=${sectionId}]`
+          );
+
+          if (entry.isIntersecting) {
+            if (scrollDirection > 0) {
+              dots.forEach((dot) => dot.classList.remove("second-active-dot"));
+              dots.forEach((dot) => dot.classList.remove("active-dot"));
+              setTimeout(() => {
+                currentDot.classList.add("second-active-dot");
+              }, 400);
+            } else {
+              dots.forEach((dot) => dot.classList.remove("active-dot"));
+              dots.forEach((dot) => dot.classList.remove("second-active-dot"));
+              setTimeout(() => {
+                currentDot.classList.add("active-dot");
+              }, 400);
+            }
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
 
     sections.forEach((section) => {
       observer.observe(section);
     });
-
-
-
 
     e.preventDefault();
     if (!isScrolling) {

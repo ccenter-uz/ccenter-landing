@@ -109,6 +109,18 @@ aside {
   position: fixed;
   top: 30%;
 
+  // .line {
+  //   width: 1px;
+  //   height: 0;
+  //   background: #4169e1;
+  //   cursor: pointer;
+  //   position: absolute;
+  //   top: -9.5em;
+  //   left: 4.5px;
+  //   animation: spill 0.5s linear;
+  //   animation-fill-mode: both;
+  // }
+
   .nav-line {
     height: 450px;
 
@@ -119,30 +131,80 @@ aside {
       background: transparent;
       cursor: pointer;
       position: absolute;
-      top: 50%;
+      top: 30%;
       left: -3px;
-    }
-
-    // ACTIVE CLASSES
-    .active-dot {
-      background: #4169e1;
-      box-shadow: 0 0 10px 0 #4169e1;
-      transition: all 0.5s linear 0.5s;
 
       &::after {
+        visibility: hidden;
         content: "";
         width: 1px;
         height: 100%;
         background: #4169e1;
         cursor: pointer;
         position: absolute;
-        top: -9.5em;
+        top: -9.0em;
         left: 4.5px;
-        animation: spill 0.5s linear;
+
+      }
+
+      &::before {
+        visibility: hidden;
+        content: "";
+        width: 1px;
+        height: 100%;
+        background: #4169e1;
+        cursor: pointer;
+        position: absolute;
+        left: 4.5px;
+      }
+    }
+
+    // ACTIVE CLASSES
+    .active-dot {
+      background: #4169e1;
+      box-shadow: 0 0 10px 0 #4169e1;
+      transition: all 0.3s linear 0.3s;
+
+      &::after {
+        visibility: visible;
+        animation: growFromTop 0.3s linear forwards;
         animation-fill-mode: both;
       }
     }
 
+    .second-active-dot {
+      background: #4169e1;
+      box-shadow: 0 0 10px 0 #4169e1;
+      transition: all 0.3s linear 0.3s;
+
+      &::before {
+        visibility: visible;
+        animation: growFromBottom 0.3s linear forwards;
+        animation-fill-mode: both;
+      }
+    }
+
+    @keyframes growFromBottom {
+      from {
+        height: 0;
+        top: 150px;
+      }
+
+      to {
+        height: 150px;
+        top: 0;
+      }
+    }
+
+    @keyframes growFromTop {
+      from {
+        height: 0;
+      }
+
+      to {
+        height: 150px;
+      }
+    }
 
   }
 }
