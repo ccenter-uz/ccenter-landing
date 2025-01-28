@@ -113,6 +113,21 @@ aside .nav-line .active-dot {
   box-shadow: 0 0 10px 0 #4169e1;
   transition: all 0.3s linear 0.3s;
 }
+aside .nav-line .active-dot span {
+  display: block;
+  width: 100%;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  position: absolute;
+  padding: 8px 16px;
+  background: #252525;
+  color: #fff;
+  border-radius: 20px;
+  left: 1em;
+}
 aside .nav-line .active-dot::after {
   visibility: visible;
   animation: growFromTop 0.3s linear forwards;
@@ -122,6 +137,21 @@ aside .nav-line .second-active-dot {
   background: #4169e1;
   box-shadow: 0 0 10px 0 #4169e1;
   transition: all 0.3s linear 0.3s;
+}
+aside .nav-line .second-active-dot span {
+  display: block;
+  width: 100%;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  position: absolute;
+  padding: 8px 16px;
+  background: #252525;
+  color: #fff;
+  border-radius: 20px;
+  left: 1em;
 }
 aside .nav-line .second-active-dot::before {
   visibility: visible;
