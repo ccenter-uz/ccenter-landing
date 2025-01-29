@@ -75,7 +75,6 @@ aside {
   top: 30%;
 }
 aside .nav-line {
-  display: flex;
   height: 450px;
 }
 aside .nav-line .nav-dot {
@@ -83,74 +82,13 @@ aside .nav-line .nav-dot {
   height: 10px;
   border-radius: 50%;
   background: transparent;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
   cursor: pointer;
   position: absolute;
-  top: 50%;
-  left: -4px;
+  top: 30%;
+  left: -3px;
 }
-aside .nav-line .nav-dot::before {
+aside .nav-line .nav-dot::after {
   visibility: hidden;
-}
-aside .nav-line .nav-dot:nth-child(1)::before {
-  content: "About us";
-  min-width: 100px;
-  padding: 0.5em;
-  border-radius: 20px;
-  font-size: 14px;
-  text-align: center;
-  color: whitesmoke;
-  background-color: #252525;
-  position: absolute;
-  top: 0;
-  left: 1.5em;
-}
-aside .nav-line .nav-dot:nth-child(2)::before {
-  content: "Services";
-  min-width: 100px;
-  padding: 0.5em;
-  border-radius: 20px;
-  font-size: 14px;
-  text-align: center;
-  color: whitesmoke;
-  background-color: #252525;
-  position: absolute;
-  top: 0;
-  left: 1.5em;
-}
-aside .nav-line .nav-dot:nth-child(3)::before {
-  content: "Pricing";
-  min-width: 100px;
-  padding: 0.5em;
-  border-radius: 20px;
-  font-size: 14px;
-  text-align: center;
-  color: whitesmoke;
-  background-color: #252525;
-  position: absolute;
-  top: 0;
-  left: 1.5em;
-}
-aside .nav-line .nav-dot:nth-child(4)::before {
-  content: "Contact";
-  min-width: 100px;
-  padding: 0.5em;
-  border-radius: 20px;
-  font-size: 14px;
-  text-align: center;
-  color: whitesmoke;
-  background-color: #252525;
-  position: absolute;
-  top: 0;
-  left: 1.5em;
-}
-aside .nav-line .active-dot {
-  background: #4169e1;
-  box-shadow: 0 0 10px 0 #4169e1;
-  transition: all 1s linear;
-}
-aside .nav-line .active-dot::after {
   content: "";
   width: 1px;
   height: 100%;
@@ -158,12 +96,85 @@ aside .nav-line .active-dot::after {
   cursor: pointer;
   position: absolute;
   top: -9em;
-  left: 5px;
-  animation: spill 0.5s linear;
+  left: 4.5px;
+}
+aside .nav-line .nav-dot::before {
+  visibility: hidden;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: #4169e1;
+  cursor: pointer;
+  position: absolute;
+  left: 4.5px;
+}
+aside .nav-line .active-dot {
+  background: #4169e1;
+  box-shadow: 0 0 10px 0 #4169e1;
+  transition: all 0.3s linear 0.3s;
+}
+aside .nav-line .active-dot span {
+  display: block;
+  width: 100%;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  position: absolute;
+  padding: 8px 16px;
+  background: #252525;
+  color: #fff;
+  border-radius: 20px;
+  left: 1em;
+}
+aside .nav-line .active-dot::after {
+  visibility: visible;
+  animation: growFromTop 0.3s linear forwards;
   animation-fill-mode: both;
 }
-aside .nav-line .active-dot::before {
+aside .nav-line .second-active-dot {
+  background: #4169e1;
+  box-shadow: 0 0 10px 0 #4169e1;
+  transition: all 0.3s linear 0.3s;
+}
+aside .nav-line .second-active-dot span {
+  display: block;
+  width: 100%;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  position: absolute;
+  padding: 8px 16px;
+  background: #252525;
+  color: #fff;
+  border-radius: 20px;
+  left: 1em;
+}
+aside .nav-line .second-active-dot::before {
   visibility: visible;
+  animation: growFromBottom 0.3s linear forwards;
+  animation-fill-mode: both;
+}
+@keyframes growFromBottom {
+  from {
+    height: 0;
+    top: 150px;
+  }
+  to {
+    height: 150px;
+    top: 0;
+  }
+}
+@keyframes growFromTop {
+  from {
+    height: 0;
+  }
+  to {
+    height: 150px;
+  }
 }
 
 .section {
@@ -1340,8 +1351,12 @@ footer #language option {
   }
 }
 @keyframes spill {
+  from {
+    opacity: 0.5;
+  }
   to {
     height: 150px;
+    opacity: 1;
   }
 }
 main {

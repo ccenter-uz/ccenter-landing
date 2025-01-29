@@ -13,10 +13,22 @@
 
 /* Glass box */
 body {
-  background: url("assets/dark/bg-dark.png") no-repeat center center fixed;
   background-size: cover;
   color: white;
   overflow: hidden;
+}
+
+#gradient-canvas {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150vh;
+  --gradient-color-1: #043278;
+  --gradient-color-2: #043278;
+  --gradient-color-3: #01122b;
+  --gradient-color-4: #021533;
 }
 
 .container {
