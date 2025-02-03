@@ -205,7 +205,6 @@ aside .nav-line .second-active-dot::before {
   align-items: center;
   justify-content: flex-end;
   gap: 0 2em;
-  min-height: 100dvh;
   margin-top: 60px;
 }
 #section1 p {
@@ -498,11 +497,12 @@ footer #language option {
 @media (320px <= width <= 440px) {
   .container {
     padding: 0 20px;
-    scroll-snap-type: none;
   }
   header {
     margin: 0;
-    padding: 0 20px;
+    padding: 5px 20px;
+    height: 70px;
+    align-items: flex-end;
     width: 100%;
     top: 0;
   }
@@ -642,7 +642,7 @@ footer #language option {
     margin-bottom: 68px;
   }
   #section3 .section-content .services-grid .service-item {
-    width: 185px;
+    width: calc(50% - 10px);
     height: 237px;
   }
   #section3 .section-content .services-grid .service-item .service-icon {
@@ -718,11 +718,14 @@ footer #language option {
     transition: all 0.3s linear;
     border-color: #4169e1;
   }
-  footer {
+  .last-block {
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+  .last-block footer {
     width: 100%;
-    margin: 0 auto;
+    margin: 28px auto;
     height: 173px;
-    margin-top: 28px;
     flex-direction: column;
     justify-content: center;
     gap: 24px 0;
@@ -733,7 +736,11 @@ footer #language option {
     padding: 0 20px;
   }
   header {
-    margin: 50px 0;
+    padding: 5px 20px;
+    height: 70px;
+    align-items: flex-end;
+    width: 100%;
+    top: 0;
   }
   header img {
     width: 185px;
@@ -948,9 +955,8 @@ footer #language option {
   }
   footer {
     width: 100%;
-    margin: 0 auto;
+    margin: 28px auto;
     height: 173px;
-    margin-top: 28px;
     flex-direction: column;
     justify-content: center;
     gap: 24px 0;
@@ -1108,9 +1114,8 @@ footer #language option {
   }
   footer {
     width: 90%;
-    margin: 0 auto;
+    margin: 28px auto;
     height: 173px;
-    margin-top: 28px;
     gap: 24px 0;
   }
 }
@@ -1265,9 +1270,8 @@ footer #language option {
   }
   footer {
     width: 90%;
-    margin: 0 auto;
+    margin: 28px auto;
     height: 173px;
-    margin-top: 28px;
     gap: 24px 0;
   }
 }
