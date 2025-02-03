@@ -71,14 +71,14 @@ header .header-btn-price {
 header .header-btn-price:hover {
   -webkit-backdrop-filter: blur(66px);
           backdrop-filter: blur(66px);
-  box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+  box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
   border-color: rgb(90, 136, 255);
 }
 header .header-btn-price:active {
   border: 2px solid rgb(13, 36, 92);
   -webkit-backdrop-filter: blur(66px);
           backdrop-filter: blur(66px);
-  box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+  box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
 }
 
 aside {
@@ -386,14 +386,14 @@ aside .nav-line .second-active-dot::before {
 #section3 .section-content .services-bottom button:hover {
   -webkit-backdrop-filter: blur(66px);
           backdrop-filter: blur(66px);
-  box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+  box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
   border-color: rgb(90, 136, 255);
 }
 #section3 .section-content .services-bottom button:active {
   border: 2px solid rgb(13, 36, 92);
   -webkit-backdrop-filter: blur(66px);
           backdrop-filter: blur(66px);
-  box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+  box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
 }
 
 #section4 {
@@ -562,14 +562,14 @@ footer #language option {
   #section1 .section-content .section-default-hiddens .default-hidden-button:hover {
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
-    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
     border-color: rgb(90, 136, 255);
   }
   #section1 .section-content .section-default-hiddens .default-hidden-button:active {
     border: 2px solid rgb(13, 36, 92);
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
-    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
   }
   #section1 .section-content .phone-mockup {
     width: 100%;
@@ -816,14 +816,14 @@ footer #language option {
   #section1 .section-content .section-default-hiddens .default-hidden-button:hover {
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
-    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
     border-color: rgb(90, 136, 255);
   }
   #section1 .section-content .section-default-hiddens .default-hidden-button:active {
     border: 2px solid rgb(13, 36, 92);
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
-    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
   }
   #section1 .section-content .phone-mockup {
     width: 100%;

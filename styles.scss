@@ -46,14 +46,15 @@
 
   &:hover {
     backdrop-filter: blur(66px);
-    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
     border-color: rgba(90, 136, 255, 1);
+
   }
 
   &:active {
     border: 2px solid rgba(13, 36, 92, 1);
     backdrop-filter: blur(66px);
-    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
   }
 }
 
