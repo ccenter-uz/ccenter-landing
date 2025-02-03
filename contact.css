@@ -1300,22 +1300,10 @@ footer #language option {
   }
 }
 main {
-  max-height: 70dvh;
   height: 100%;
-}
-main .close {
-  max-width: 1070px;
-  width: 100%;
   display: flex;
-  margin: auto;
-  justify-content: flex-end;
-}
-main .close img {
-  transition: all 0.3s;
-}
-main .close img:hover {
-  cursor: pointer;
-  opacity: 0.7;
+  flex-direction: column;
+  align-items: center;
 }
 main .contact-form {
   border: 1px solid rgba(245, 245, 245, 0.103);
@@ -1329,6 +1317,18 @@ main .contact-form {
   margin: auto auto;
   border-radius: 20px;
   padding: 2em 5em;
+}
+main .contact-form .close {
+  position: absolute;
+  top: -1em;
+  right: -1em;
+}
+main .contact-form .close img {
+  transition: all 0.3s;
+}
+main .contact-form .close img:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
 main .contact-form h1 {
   font-size: 32px;
