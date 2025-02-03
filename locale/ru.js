@@ -1,8 +1,8 @@
 export const translationRu ={
     "about-us": "О нас",
-    "get-price": "ПОЛУЧИТЬ ПРАЙС",
+    "get-price": "Получить прайс",
     "section1-text": "Мы предлагаем вам лучшие услуги по ремонту и обслуживанию вашего автомобиля",
-    "order-service": "Заказать услугу",
+    "order-service": "ЗАКАЗАТЬ УСЛУГУ",
     "outsourcing": "Аутсорсинг",
     "outsourcing-box-1-title": "Аутсорсинг",
     "outsourcing-box-1-text": "Мы предлагаем вам лучшие услуги по ремонту и обслуживанию вашего автомобиля",
@@ -17,7 +17,6 @@ export const translationRu ={
     "additional-service-4": "Дополнительная услуга 4",
     "price-list": "Прайс-лист",
     "price-list-text": "За телекоммуникационными услугами обращайтесь к нам!",
-    "order-service": "Заказать услугу",
     "section4-title": "20 лет вместе с вами",
     "section4-stat1-title": "+15 000 000",
     "section4-stat1-text": "Поступившие звонки",

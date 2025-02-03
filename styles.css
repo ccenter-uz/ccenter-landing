@@ -47,12 +47,15 @@ body {
 
 header {
   width: 100%;
-  margin: 60px 0;
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  background: transparent;
   align-items: center;
-  scroll-snap-align: start;
-  scroll-margin-top: 60px;
+  position: sticky;
+  top: 60px;
+  z-index: 99;
 }
 header .header-btn-price {
   background-color: transparent;
@@ -190,6 +193,7 @@ aside .nav-line .second-active-dot::before {
 }
 
 .section {
+  scroll-margin-top: 150px;
   scroll-snap-align: center;
 }
 
@@ -197,13 +201,12 @@ aside .nav-line .second-active-dot::before {
   width: 80%;
   margin-left: auto;
   height: auto;
-  min-height: 1080px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 0 2em;
-  min-height: auto;
-  margin-bottom: 308px;
+  min-height: 100dvh;
+  margin-top: 60px;
 }
 #section1 p {
   font-size: 20px;
@@ -229,19 +232,9 @@ aside .nav-line .second-active-dot::before {
   width: 80%;
   margin-left: auto;
   height: auto;
-  min-height: 1080px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  position: relative;
-}
-#section2::before {
-  content: url("assets/section-second/section-second-line.svg");
-  filter: drop-shadow(0 0 5px #4169e1);
-  position: absolute;
-  top: 35%;
-  left: 55%;
-  z-index: -1;
 }
 #section2 .section-content h1 {
   text-align: end;
@@ -308,10 +301,12 @@ aside .nav-line .second-active-dot::before {
   width: 80%;
   margin-left: auto;
   height: auto;
-  min-height: 1080px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  scroll-margin-top: 60px;
 }
 #section3 .section-content h1 {
   text-align: end;
@@ -400,19 +395,9 @@ aside .nav-line .second-active-dot::before {
   width: 80%;
   margin-left: auto;
   height: auto;
-  min-height: 1080px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  position: relative;
-}
-#section4::after {
-  content: url("assets/section-four/section-four-line.svg");
-  filter: drop-shadow(0 0 5px #4169e1);
-  position: absolute;
-  top: -5%;
-  left: 33%;
-  z-index: -1;
 }
 #section4 .section-content h1 {
   text-align: end;
@@ -465,13 +450,20 @@ aside .nav-line .second-active-dot::before {
   border-color: #4169e1;
 }
 
+.last-block {
+  min-height: 100dvh;
+  scroll-snap-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 footer {
   width: 100%;
   height: 178px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  scroll-snap-align: end;
 }
 footer .footer-links,
 footer .footer-lng {
@@ -506,9 +498,13 @@ footer #language option {
 @media (320px <= width <= 440px) {
   .container {
     padding: 0 20px;
+    scroll-snap-type: none;
   }
   header {
-    margin: 50px 0;
+    margin: 0;
+    padding: 0 20px;
+    width: 100%;
+    top: 0;
   }
   header img {
     width: 185px;
@@ -522,17 +518,16 @@ footer #language option {
   }
   #section1 {
     width: 100%;
-    gap: 1em;
+    min-height: 100dvh;
     margin: 0 auto;
-    margin-bottom: 108px;
-    display: block;
+    align-items: flex-start;
   }
   #section1 p {
     display: none;
   }
   #section1 .section-content h1 {
-    font-size: 60px;
-    line-height: 72px;
+    font-size: 48px;
+    line-height: 62px;
     margin: 13px 0;
   }
   #section1 .section-content .section-default-hiddens {
@@ -542,7 +537,7 @@ footer #language option {
   }
   #section1 .section-content .section-default-hiddens .default-hidden-text {
     display: block;
-    font-size: 20px;
+    font-size: 17px;
     line-height: 29px;
   }
   #section1 .section-content .section-default-hiddens .default-hidden-button {
@@ -577,24 +572,16 @@ footer #language option {
   }
   #section2 {
     width: 100%;
-    min-height: auto;
+    min-height: 100dvh;
     margin-bottom: 107px;
-  }
-  #section2::before {
-    content: url("assets/section-second/section-second-mini-line.svg");
-    filter: drop-shadow(0 0 5px #4169e1);
-    position: absolute;
-    top: -60%;
-    right: 0;
-    z-index: -1;
   }
   #section2 .section-content {
     width: 100%;
   }
   #section2 .section-content h1 {
-    font-size: 60px;
-    line-height: 72px;
-    margin-bottom: 135px;
+    font-size: 48px;
+    line-height: 62px;
+    margin-bottom: 1.5em;
     margin-top: 0;
   }
   #section2 .section-content .outsourcing {
@@ -606,8 +593,8 @@ footer #language option {
     padding: 1em;
   }
   #section2 .section-content .outsourcing .second-section-box h2 {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 20px;
     margin-bottom: 8px;
   }
   #section2 .section-content .outsourcing .second-section-box p {
@@ -636,14 +623,6 @@ footer #language option {
     margin: 0 auto;
     min-height: auto;
     position: relative;
-  }
-  #section3::before {
-    content: url("assets/section-third/section-third-mini-line.svg");
-    filter: drop-shadow(0 0 5px #4169e1);
-    position: absolute;
-    top: -30%;
-    right: -5%;
-    z-index: 1;
   }
   #section3 .section-content {
     width: 100%;
@@ -693,14 +672,6 @@ footer #language option {
     margin: 0 auto;
     min-height: auto;
   }
-  #section4::after {
-    content: url("assets/section-four/section-four-mini-line.svg");
-    filter: drop-shadow(0 0 5px #4169e1);
-    position: absolute;
-    top: -10%;
-    left: 2%;
-    z-index: -1;
-  }
   #section4 .section-content {
     width: 100%;
   }
@@ -749,7 +720,7 @@ footer #language option {
   }
   footer {
     width: 100%;
-    margin: auto;
+    margin: 0 auto;
     height: 173px;
     margin-top: 28px;
     flex-direction: column;
@@ -834,9 +805,6 @@ footer #language option {
     min-height: auto;
     margin-bottom: 107px;
   }
-  #section2::before {
-    display: none;
-  }
   #section2 .section-content {
     width: 100%;
   }
@@ -886,14 +854,6 @@ footer #language option {
     min-height: auto;
     position: relative;
   }
-  #section3::before {
-    content: url("assets/section-third/section-third-mini-line.svg");
-    filter: drop-shadow(0 0 5px #4169e1);
-    position: absolute;
-    top: -30%;
-    right: -5%;
-    z-index: 1;
-  }
   #section3 .section-content {
     width: 100%;
   }
@@ -940,9 +900,6 @@ footer #language option {
     width: 100%;
     margin: 0 auto;
     min-height: auto;
-  }
-  #section4::after {
-    display: none;
   }
   #section4 .section-content {
     width: 100%;
@@ -991,7 +948,7 @@ footer #language option {
   }
   footer {
     width: 100%;
-    margin: auto;
+    margin: 0 auto;
     height: 173px;
     margin-top: 28px;
     flex-direction: column;
@@ -1002,6 +959,7 @@ footer #language option {
 @media (800.1px <= width <= 1024px) {
   .container {
     padding: 0 20px;
+    scroll-snap-type: none;
   }
   header {
     width: 90%;
@@ -1022,6 +980,7 @@ footer #language option {
     margin: 0 auto;
     margin-bottom: 108px;
     display: flex;
+    min-height: 100dvh;
   }
   #section1 p {
     width: 300px;
@@ -1041,11 +1000,8 @@ footer #language option {
   #section2 {
     width: 90%;
     margin: 0 auto;
-    min-height: auto;
+    min-height: 100dvh;
     margin-bottom: 107px;
-  }
-  #section2::before {
-    display: none;
   }
   #section2 .section-content {
     width: 100%;
@@ -1077,16 +1033,8 @@ footer #language option {
   #section3 {
     width: 90%;
     margin: 0 auto;
-    min-height: auto;
+    min-height: 100dvh;
     position: relative;
-  }
-  #section3::before {
-    content: url("assets/section-third/section-third-mini-line.svg");
-    filter: drop-shadow(0 0 5px #4169e1);
-    position: absolute;
-    top: -30%;
-    right: -8%;
-    z-index: 1;
   }
   #section3 .section-content {
     width: 100%;
@@ -1133,7 +1081,6 @@ footer #language option {
   #section4 {
     width: 90%;
     margin: 0 auto;
-    min-height: auto;
   }
   #section4 .section-content {
     width: 100%;
@@ -1161,7 +1108,7 @@ footer #language option {
   }
   footer {
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
     height: 173px;
     margin-top: 28px;
     gap: 24px 0;
@@ -1212,9 +1159,6 @@ footer #language option {
     min-height: auto;
     margin-bottom: 107px;
   }
-  #section2::before {
-    display: none;
-  }
   #section2 .section-content {
     width: 100%;
   }
@@ -1248,14 +1192,6 @@ footer #language option {
     min-height: auto;
     position: relative;
   }
-  #section3::before {
-    content: url("assets/section-third/section-third-mini-line.svg");
-    filter: drop-shadow(0 0 5px #4169e1);
-    position: absolute;
-    top: -30%;
-    right: -8%;
-    z-index: 1;
-  }
   #section3 .section-content {
     width: 100%;
   }
@@ -1269,7 +1205,7 @@ footer #language option {
     width: 100%;
     flex-wrap: wrap;
     gap: 40px;
-    justify-content: center;
+    justify-content: flex-end;
     margin-bottom: 68px;
   }
   #section3 .section-content .services-grid .service-item {
@@ -1329,34 +1265,22 @@ footer #language option {
   }
   footer {
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
     height: 173px;
     margin-top: 28px;
     gap: 24px 0;
   }
 }
 .fadeIn {
-  animation-name: fadeIn;
-  animation-duration: 1.5s;
-  animation-fill-mode: both;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.fadeOut {
+  opacity: 0;
+  transition: all 0.1s ease-in-out;
 }
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+
 @keyframes fill {
   to {
     width: 100%;

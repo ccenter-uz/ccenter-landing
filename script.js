@@ -40,38 +40,50 @@ document.addEventListener("DOMContentLoaded", function () {
   const dots = document.querySelectorAll(".nav-dot");
   let scrollDirection;
   const handleScroll = (e) => {
-    scrollDirection = e.wheelDeltaY;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const sectionId = entry.target.id;
-          const currentDot = document.querySelector(
-            `.nav-dot[data-section=${sectionId}]`
-          );
+    if (window.innerWidth > 1024) {
+      scrollDirection = e.wheelDeltaY;
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const sectionId = entry.target.id;
+            const currentDot = document.querySelector(
+              `.nav-dot[data-section=${sectionId}]`
+            );
 
-          if (entry.isIntersecting) {
-            if (scrollDirection > 0) {
-              dots.forEach((dot) => dot.classList.remove("second-active-dot"));
-              dots.forEach((dot) => dot.classList.remove("active-dot"));
-              setTimeout(() => {
-                currentDot.classList.add("second-active-dot");
-              }, 400);
+            if (entry.isIntersecting) {
+              entry.target.classList.add("fadeIn");
+              entry.target.classList.remove("fadeOut");
+              if (scrollDirection > 0) {
+                dots.forEach((dot) =>
+                  dot.classList.remove("second-active-dot")
+                );
+                dots.forEach((dot) => dot.classList.remove("active-dot"));
+
+                setTimeout(() => {
+                  currentDot.classList.add("second-active-dot");
+                }, 400);
+              } else {
+                dots.forEach((dot) => dot.classList.remove("active-dot"));
+                dots.forEach((dot) =>
+                  dot.classList.remove("second-active-dot")
+                );
+                setTimeout(() => {
+                  currentDot.classList.add("active-dot");
+                }, 400);
+              }
             } else {
-              dots.forEach((dot) => dot.classList.remove("active-dot"));
-              dots.forEach((dot) => dot.classList.remove("second-active-dot"));
-              setTimeout(() => {
-                currentDot.classList.add("active-dot");
-              }, 400);
+              entry.target.classList.add("fadeOut");
+              entry.target.classList.remove("fadeIn");
             }
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
+          });
+        },
+        { threshold: 0.8 }
+      );
 
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
+      sections.forEach((section) => {
+        observer.observe(section);
+      });
+    }
 
     e.preventDefault();
     if (!isScrolling) {

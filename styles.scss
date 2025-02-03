@@ -23,7 +23,6 @@
   width: 80%;
   margin-left: auto;
   height: auto;
-  min-height: 1080px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -59,7 +58,6 @@
 }
 
 body {
-  // background: url("assets/dark/bg-dark.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -100,15 +98,18 @@ body {
 }
 
 
+
 header {
   width: 100%;
-  margin: 60px 0;
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  background: transparent;
   align-items: center;
-
-  scroll-snap-align: start;
-  scroll-margin-top: 60px;
+  position: sticky;
+  top: 60px;
+  z-index: 99;
 
   .header-btn-price {
     @include BUTTON;
@@ -245,14 +246,15 @@ aside {
 }
 
 .section {
+  scroll-margin-top: 150px;
   scroll-snap-align: center;
 }
 
 #section1 {
   @include SECTION;
   gap: 0 2em;
-  min-height: auto;
-  margin-bottom: 308px;
+  min-height: 100dvh;
+  margin-top: 60px;
 
   p {
     font-size: 20px;
@@ -279,16 +281,6 @@ aside {
 
 #section2 {
   @include SECTION;
-  position: relative;
-
-  &::before {
-    content: url("assets/section-second/section-second-line.svg");
-    @include LINE;
-    position: absolute;
-    top: 35%;
-    left: 55%;
-    z-index: -1;
-  }
 
   .section-content {
     h1 {
@@ -364,6 +356,9 @@ aside {
 
 #section3 {
   @include SECTION;
+  flex-direction: column;
+  align-items: flex-end;
+  scroll-margin-top: 60px;
 
   .section-content {
     h1 {
@@ -438,16 +433,6 @@ aside {
 
 #section4 {
   @include SECTION;
-  position: relative;
-
-  &::after {
-    content: url("assets/section-four/section-four-line.svg");
-    @include LINE;
-    position: absolute;
-    top: -5%;
-    left: 33%;
-    z-index: -1;
-  }
 
   .section-content {
     h1 {
@@ -508,13 +493,20 @@ aside {
   }
 }
 
+.last-block {
+  min-height: 100dvh;
+  scroll-snap-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 footer {
   width: 100%;
   height: 178px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  scroll-snap-align: end;
 
   .footer-links,
   .footer-lng {
@@ -556,10 +548,15 @@ footer {
 @media (320px <=width <=440px) {
   .container {
     padding: 0 20px;
+    scroll-snap-type: none;
   }
 
   header {
-    margin: 50px 0;
+    margin: 0;
+    padding: 0 20px;
+    width: 100%;
+    top: 0;
+
 
     img {
       width: 185px;
@@ -577,10 +574,9 @@ footer {
 
   #section1 {
     width: 100%;
-    gap: 1em;
+    min-height: 100dvh;
     margin: 0 auto;
-    margin-bottom: 108px;
-    display: block;
+    align-items: flex-start;
 
     p {
       display: none;
@@ -588,8 +584,8 @@ footer {
 
     .section-content {
       h1 {
-        font-size: 60px;
-        line-height: 72px;
+        font-size: 48px;
+        line-height: 62px;
         margin: 13px 0;
       }
 
@@ -600,7 +596,7 @@ footer {
 
         .default-hidden-text {
           display: block;
-          font-size: 20px;
+          font-size: 17px;
           line-height: 29px;
         }
 
@@ -621,25 +617,18 @@ footer {
 
   #section2 {
     width: 100%;
-    min-height: auto;
+    min-height: 100dvh;
     margin-bottom: 107px;
 
-    &::before {
-      content: url("assets/section-second/section-second-mini-line.svg");
-      @include LINE;
-      position: absolute;
-      top: -60%;
-      right: 0;
-      z-index: -1;
-    }
+
 
     .section-content {
       width: 100%;
 
       h1 {
-        font-size: 60px;
-        line-height: 72px;
-        margin-bottom: 135px;
+        font-size: 48px;
+        line-height: 62px;
+        margin-bottom: 1.5em;
         margin-top: 0;
       }
 
@@ -652,8 +641,8 @@ footer {
           padding: 1em;
 
           h2 {
-            font-size: 20px;
-            line-height: 24px;
+            font-size: 18px;
+            line-height: 20px;
             margin-bottom: 8px;
           }
 
@@ -694,14 +683,7 @@ footer {
     min-height: auto;
     position: relative;
 
-    &::before {
-      content: url("assets/section-third/section-third-mini-line.svg");
-      @include LINE;
-      position: absolute;
-      top: -30%;
-      right: -5%;
-      z-index: 1;
-    }
+
 
     .section-content {
       width: 100%;
@@ -764,14 +746,7 @@ footer {
     margin: 0 auto;
     min-height: auto;
 
-    &::after {
-      content: url("assets/section-four/section-four-mini-line.svg");
-      @include LINE;
-      position: absolute;
-      top: -10%;
-      left: 2%;
-      z-index: -1;
-    }
+
 
     .section-content {
       width: 100%;
@@ -832,7 +807,7 @@ footer {
 
   footer {
     width: 100%;
-    margin: auto;
+    margin: 0 auto;
     height: 173px;
     margin-top: 28px;
     flex-direction: column;
@@ -912,9 +887,6 @@ footer {
     min-height: auto;
     margin-bottom: 107px;
 
-    &::before {
-      display: none;
-    }
 
     .section-content {
       width: 100%;
@@ -977,14 +949,7 @@ footer {
     min-height: auto;
     position: relative;
 
-    &::before {
-      content: url("assets/section-third/section-third-mini-line.svg");
-      @include LINE;
-      position: absolute;
-      top: -30%;
-      right: -5%;
-      z-index: 1;
-    }
+
 
     .section-content {
       width: 100%;
@@ -1045,9 +1010,7 @@ footer {
     margin: 0 auto;
     min-height: auto;
 
-    &::after {
-      display: none;
-    }
+
 
     .section-content {
       width: 100%;
@@ -1107,7 +1070,7 @@ footer {
 
   footer {
     width: 100%;
-    margin: auto;
+    margin: 0 auto;
     height: 173px;
     margin-top: 28px;
     flex-direction: column;
@@ -1119,6 +1082,7 @@ footer {
 @media (800.1px <=width <=1024px) {
   .container {
     padding: 0 20px;
+    scroll-snap-type: none;
   }
 
   header {
@@ -1141,6 +1105,7 @@ footer {
     margin: 0 auto;
     margin-bottom: 108px;
     display: flex;
+    min-height: 100dvh;
 
     p {
       width: 300px;
@@ -1167,12 +1132,9 @@ footer {
   #section2 {
     width: 90%;
     margin: 0 auto;
-    min-height: auto;
+    min-height: 100dvh;
     margin-bottom: 107px;
 
-    &::before {
-      display: none;
-    }
 
     .section-content {
       width: 100%;
@@ -1213,17 +1175,10 @@ footer {
   #section3 {
     width: 90%;
     margin: 0 auto;
-    min-height: auto;
+    min-height: 100dvh;
     position: relative;
 
-    &::before {
-      content: url("assets/section-third/section-third-mini-line.svg");
-      @include LINE;
-      position: absolute;
-      top: -30%;
-      right: -8%;
-      z-index: 1;
-    }
+
 
     .section-content {
       width: 100%;
@@ -1282,7 +1237,6 @@ footer {
   #section4 {
     width: 90%;
     margin: 0 auto;
-    min-height: auto;
 
     .section-content {
       width: 100%;
@@ -1318,7 +1272,7 @@ footer {
 
   footer {
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
     height: 173px;
     margin-top: 28px;
     gap: 24px 0;
@@ -1379,9 +1333,6 @@ footer {
     min-height: auto;
     margin-bottom: 107px;
 
-    &::before {
-      display: none;
-    }
 
     .section-content {
       width: 100%;
@@ -1425,14 +1376,6 @@ footer {
     min-height: auto;
     position: relative;
 
-    &::before {
-      content: url("assets/section-third/section-third-mini-line.svg");
-      @include LINE;
-      position: absolute;
-      top: -30%;
-      right: -8%;
-      z-index: 1;
-    }
 
     .section-content {
       width: 100%;
@@ -1448,7 +1391,7 @@ footer {
         width: 100%;
         flex-wrap: wrap;
         gap: 40px;
-        justify-content: center;
+        justify-content: flex-end;
         margin-bottom: 68px;
 
         .service-item {
@@ -1527,7 +1470,7 @@ footer {
 
   footer {
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
     height: 173px;
     margin-top: 28px;
     gap: 24px 0;
@@ -1535,29 +1478,13 @@ footer {
 }
 
 .fadeIn {
-  animation-name: fadeIn;
-  animation-duration: 1.5s;
-  animation-fill-mode: both;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
+.fadeOut {
+  opacity: 0;
+  transition: all 0.1s ease-in-out;
 }
 
 @keyframes fill {

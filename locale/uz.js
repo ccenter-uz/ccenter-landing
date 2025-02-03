@@ -1,8 +1,8 @@
 export const translationUz ={
     "about-us": "Biz haqimizda",
-    "get-price": "NARXNI OLISH",
+    "get-price": "Narxni olish",
     "section1-text": "Biz sizga avtomobilingizni ta'mirlash va xizmat ko'rsatishda eng yaxshi xizmatlarni taklif qilamiz",
-    "order-service": "Xizmat buyurtirish",
+    "order-service": "XIZMAT BUYURTMA",
     "outsourcing": "Autmasulot",
     "outsourcing-box-1-title": "Autmasulot",
     "outsourcing-box-1-text": "Biz sizga avtomobilingizni ta'mirlash va xizmat ko'rsatishda eng yaxshi xizmatlarni taklif qilamiz",
@@ -17,7 +17,6 @@ export const translationUz ={
     "additional-service-4": "Qo'shimcha xizmat 4",
     "price-list": "Narx ro'yxati",
     "price-list-text": "Telekommunikatsiya xizmatlariga murojaat qiling!",
-    "order-service": "Xizmat buyurtirish",
     "section4-title": "20 yil siz bilan birga",
     "section4-stat1-title": "+15 000 000",
     "section4-stat1-text": "Qabul qilingan qo'ng'iroqlar",
