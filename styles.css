@@ -695,6 +695,7 @@ aside .nav-line .second-active-dot::before {
     flex-direction: column;
     justify-content: space-between;
     margin-top: 4.25rem;
+    gap: 1.5rem 0;
   }
   .last-section #section4 {
     width: 100%;
