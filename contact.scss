@@ -1,157 +1,308 @@
-// @use "styles";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-weight: 300;
+  scroll-behavior: smooth !important;
+}
+
+@mixin GLASS-BOX {
+  border: 1px solid rgba(245, 245, 245, 0.103);
+  background-color: rgba(255, 255, 255, 0.068);
+  backdrop-filter: blur(41px);
+  -webkit-backdrop-filter: blur(41px);
+}
+
+@mixin BUTTON {
+  background-color: transparent;
+  color: white;
+  padding: 0.62rem;
+  border: 2px solid rgba(54, 100, 218, 1);
+  border-radius: 2rem;
+  font-weight: normal;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s linear;
+
+  &:hover {
+    backdrop-filter: blur(66px);
+    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+    border-color: rgba(90, 136, 255, 1);
+  }
+
+  &:active {
+    border: 2px solid rgba(13, 36, 92, 1);
+    backdrop-filter: blur(66px);
+    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+  }
+}
+
+body {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  background: url("assets/bg.svg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+header {
+  width: 100%;
+  margin: 3.75rem auto;
+  padding: 0 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-btn-price {
+    @include BUTTON;
+    width: 10.68rem;
+    height: 3.18rem;
+    font-size: 0.87rem;
+  }
+}
 
 main {
-    height: 100%;
+  padding: 0 1.25rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .contact-form {
+    @include GLASS-BOX;
+    max-width: 64.37rem;
+    width: 100%;
+    height: fit-content;
+    margin: auto auto;
+    border-radius: 1.25rem;
+    padding: 2em 5em;
+
+    .close {
+      position: absolute;
+      top: -1em;
+      right: -1em;
+
+      img {
+        transition: all 0.3s;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.7;
+        }
+      }
+    }
+
+    h1 {
+      font-size: 32px;
+      line-height: 36px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em 0;
+      margin: 42px 0;
+      color: #ffffff80;
+
+      label {
+        font-size: 20px;
+        line-height: 24.2px;
+      }
+
+      input {
+        @include GLASS-BOX;
+        height: 52px;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-size: 20px;
+        color: #ffffff80;
+
+        &:user-invalid {
+          border: 1px solid crimson;
+        }
+      }
+
+      p {
+        margin-top: 3em;
+      }
+
+      button {
+        @include BUTTON;
+        width: 175px;
+        height: 51px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  margin: 3.75rem auto 0 auto;
+  padding: 3rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .footer-links,
+  .footer-lng {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 0 1em;
+  }
 
+  img {
+    cursor: pointer;
+    transition: opacity 0.2s linear;
 
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  p {
+    font-size: 0.87rem;
+    line-height: 1.37rem;
+  }
+
+  #language {
+    background: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  #language option {
+    background: #1a1a1a;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+@media (width <=640px) {
+  header {
+    padding: 0 1.25rem;
+    margin: 2rem 0;
+
+    img {
+      width: 14rem;
+      height: auto;
+    }
+
+    .header-btn-price {
+      display: none;
+    }
+  }
+
+  main {
+    margin: 0 1.25rem;
 
     .contact-form {
-        @include styles.GLASS-BOX;
-        max-width: 1030px;
-        width: 100%;
-        height: fit-content;
-        margin: auto auto;
-        border-radius: 20px;
-        padding: 2em 5em;
+      padding: 1rem;
 
-        .close {
-            position: absolute;
-            top: -1em;
-            right: -1em;
+      .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
 
-            img {
-                transition: all 0.3s;
+        img {
+          transition: all 0.3s;
 
-                &:hover {
-                    cursor: pointer;
-                    opacity: 0.7;
-                }
-            }
+          &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+          }
+        }
+      }
+
+      h1 {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+      }
+
+      form {
+        margin: 1.5rem 0;
+        gap: 0.5rem;
+
+        label {
+          font-size: 0.87rem;
+          line-height: 1.2rem;
         }
 
-        h1 {
-            font-size: 32px;
-            line-height: 36px;
+        input {
+          height: 2.25rem;
+          font-size: 0.87rem;
         }
 
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 1em 0;
-            margin: 42px 0;
-            color: #FFFFFF80;
-
-            label {
-                font-size: 20px;
-                line-height: 24.2px;
-            }
-
-            input {
-                @include styles.GLASS-BOX;
-                height: 52px;
-                padding: 8px 16px;
-                border-radius: 8px;
-                font-size: 20px;
-                color: #FFFFFF80;
-
-                &:user-invalid {
-                    border: 1px solid crimson;
-                }
-            }
-
-            p {
-                margin-top: 3em;
-            }
-
-            button {
-                @include styles.BUTTON;
-                width: 175px;
-                height: 51px;
-                font-size: 20px;
-            }
+        p {
+          font-size: 0.87rem;
+          margin-top: 1em;
         }
+
+        button {
+          width: 100%;
+          height: 2.5rem;
+          font-size: 0.87rem;
+        }
+      }
     }
-}
+  }
 
+  footer {
+    width: 100%;
+    height: 5rem;
+    margin: 3.75rem auto 0 auto;
+    padding: 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
 
-
-@media (width <=545px) {
-    main {
-        .contact-form {
-            padding: 1.5em;
-
-            h1 {
-                font-size: 24px;
-                line-height: 28px;
-            }
-
-            form {
-                margin: 24px 0;
-
-                label {
-                    font-size: 16px;
-                    line-height: 19.2px;
-                }
-
-                input {
-                    height: 40px;
-                    font-size: 16px;
-                }
-
-                p {
-                    font-size: 14px;
-                    margin-top: 1em;
-                }
-
-                button {
-                    width: 140px;
-                    height: 40px;
-                    font-size: 14px;
-                }
-            }
-
-        }
-    }
-}
-
-@media (545.1px <=width <=768px) {
-    main {
-        .contact-form {
-            padding: 2em;
-
-            h1 {
-                font-size: 24px;
-                line-height: 28px;
-            }
-
-            form {
-                margin: 24px 0;
-
-                label {
-                    font-size: 16px;
-                    line-height: 19.2px;
-                }
-
-                input {
-                    height: 40px;
-                    font-size: 16px;
-                }
-
-                p {
-                    font-size: 14px;
-                    margin-top: 1em;
-                }
-
-                button {
-                    width: 140px;
-                    height: 40px;
-                    font-size: 14px;
-                }
-            }
-        }
+    .footer-links,
+    .footer-lng {
+      display: flex;
+      align-items: center;
+      gap: 0 1em;
     }
 
+    img {
+      cursor: pointer;
+      transition: opacity 0.2s linear;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    p {
+      font-size: 0.87rem;
+      line-height: 1.37rem;
+    }
+
+    #language {
+      background: transparent;
+      color: white;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    #language option {
+      background: #1a1a1a;
+      color: white;
+      cursor: pointer;
+    }
+  }
 }
