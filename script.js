@@ -9,29 +9,29 @@ function updateActiveClass(items, currentIndex, activeClass) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  // const sectionitems = document.querySelectorAll(".second-section-box");
-  // const statItems = document.querySelectorAll(".stat-item");
-  // let currentIndexSectionItems = 0;
-  // let currentIndexStatItems = 0;
+  const sectionitems = document.querySelectorAll(".second-section-box");
+  const statItems = document.querySelectorAll(".stat-item");
+  let currentIndexSectionItems = 0;
+  let currentIndexStatItems = 0;
 
-  // function updateSectionItems() {
-  //   currentIndexSectionItems = updateActiveClass(
-  //     sectionitems,
-  //     currentIndexSectionItems,
-  //     "active-second-section-box"
-  //   );
-  // }
+  function updateSectionItems() {
+    currentIndexSectionItems = updateActiveClass(
+      sectionitems,
+      currentIndexSectionItems,
+      "active-second-section-box"
+    );
+  }
 
-  // function updateStatItems() {
-  //   currentIndexStatItems = updateActiveClass(
-  //     statItems,
-  //     currentIndexStatItems,
-  //     "active-stat-item"
-  //   );
-  // }
+  function updateStatItems() {
+    currentIndexStatItems = updateActiveClass(
+      statItems,
+      currentIndexStatItems,
+      "active-stat-item"
+    );
+  }
 
-  // setInterval(updateSectionItems, 1800);
-  // setInterval(updateStatItems, 1800);
+  setInterval(updateSectionItems, 1800);
+  setInterval(updateStatItems, 1800);
 
   // SCROLL-BEHAVIOR
   const body = document.querySelector(".container");
