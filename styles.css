@@ -25,7 +25,7 @@ body {
   height: 100dvh;
   margin: auto;
   overflow-x: hidden;
-  padding: 0 20px;
+  padding: 0 1.25rem;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
@@ -42,22 +42,22 @@ header {
   background: transparent;
   align-items: center;
   position: sticky;
-  top: 60px;
+  top: 3.75rem;
   z-index: 99;
 }
 header .header-btn-price {
   background-color: transparent;
   color: white;
-  padding: 10px;
+  padding: 0.62rem;
   border: 2px solid rgb(54, 100, 218);
-  border-radius: 25px;
+  border-radius: 2rem;
   font-weight: normal;
   cursor: pointer;
   outline: none;
   transition: all 0.2s linear;
-  width: 171px;
-  height: 51px;
-  font-size: 14px;
+  width: 10.68rem;
+  height: 3.18rem;
+  font-size: 0.87rem;
 }
 header .header-btn-price:hover {
   -webkit-backdrop-filter: blur(66px);
@@ -201,8 +201,8 @@ aside .nav-line .second-active-dot::before {
   gap: 0 2em;
 }
 #section1 .section1-block p {
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 1.25rem;
+  line-height: 2.25rem;
   -webkit-hyphens: auto;
           hyphens: auto;
 }
@@ -211,12 +211,12 @@ aside .nav-line .second-active-dot::before {
 }
 #section1 .section1-block .section-content h1 {
   text-align: end;
-  font-size: 112px;
+  font-size: 7rem;
   font-weight: normal;
 }
 #section1 .section1-block .section-content .phone-mockup {
-  max-width: 809px;
-  max-height: 593px;
+  max-width: 50.56rem;
+  max-height: 37.06rem;
 }
 
 #section2 {
@@ -232,9 +232,9 @@ aside .nav-line .second-active-dot::before {
 }
 #section2 .section-content h1 {
   text-align: end;
-  font-size: 112px;
+  font-size: 7rem;
   font-weight: normal;
-  margin: 38px 0;
+  margin: 2.37rem 0;
 }
 #section2 .section-content .outsourcing {
   display: flex;
@@ -248,15 +248,15 @@ aside .nav-line .second-active-dot::before {
   transition: all 0.4s linear;
 }
 #section2 .section-content .outsourcing .second-section-box h2 {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 1.25rem;
+  line-height: 2rem;
 }
 #section2 .section-content .outsourcing .second-section-box p {
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 0.87rem;
+  line-height: 1.31rem;
 }
 #section2 .section-content .outsourcing .second-section-box hr {
-  margin: 15px 0;
+  margin: 1rem 0;
   border: 1px solid #fff;
 }
 #section2 .section-content .outsourcing .active-second-section-box {
@@ -280,10 +280,10 @@ aside .nav-line .second-active-dot::before {
   background-color: rgba(255, 255, 255, 0.068);
   backdrop-filter: blur(41px);
   -webkit-backdrop-filter: blur(41px);
-  width: 1030px;
-  height: 380px;
-  margin: 61px auto;
-  border-radius: 20px;
+  width: 64.37rem;
+  height: 23.75rem;
+  margin: 3.81rem auto;
+  border-radius: 1.25rem;
   cursor: pointer;
   transition: all 0.2s linear;
 }
@@ -306,8 +306,8 @@ aside .nav-line .second-active-dot::before {
 }
 #section3 .section-content h1 {
   text-align: end;
-  font-size: 87px;
-  line-height: 105px;
+  font-size: 5.43rem;
+  line-height: 6.56rem;
   font-weight: normal;
   margin-bottom: 3.75rem;
 }
@@ -322,10 +322,10 @@ aside .nav-line .second-active-dot::before {
   background-color: rgba(255, 255, 255, 0.068);
   backdrop-filter: blur(41px);
   -webkit-backdrop-filter: blur(41px);
-  width: 220px;
-  height: 283px;
+  width: 13.75rem;
+  height: 17.68rem;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 0.62rem;
   justify-content: center;
 }
 #section3 .section-content .services-grid .service-item .service-icon {
@@ -333,7 +333,7 @@ aside .nav-line .second-active-dot::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 0.62rem;
   background-color: rgba(255, 255, 255, 0.096);
 }
 #section3 .section-content .services-grid .service-item p {
@@ -342,37 +342,37 @@ aside .nav-line .second-active-dot::before {
   align-items: center;
   justify-content: flex-start;
   padding: 0 1em;
-  font-size: 14px;
+  font-size: 0.9rem;
 }
 #section3 .section-content .services-bottom {
-  width: 300px;
+  width: 18.75rem;
   display: flex;
   flex-direction: column;
   margin-left: auto;
 }
 #section3 .section-content .services-bottom h2 {
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 2.25rem;
+  line-height: 2.25rem;
   border-bottom: 2px solid #4169e1;
-  margin-bottom: 60px;
+  margin-bottom: 3.75rem;
 }
 #section3 .section-content .services-bottom p {
-  font-size: 20px;
-  line-height: 31px;
+  font-size: 1.25rem;
+  line-height: 1.93rem;
 }
 #section3 .section-content .services-bottom button {
   background-color: transparent;
   color: white;
-  padding: 10px;
+  padding: 0.62rem;
   border: 2px solid rgb(54, 100, 218);
-  border-radius: 25px;
+  border-radius: 2rem;
   font-weight: normal;
   cursor: pointer;
   outline: none;
   transition: all 0.2s linear;
-  width: 134px;
-  height: 51px;
-  margin: 20px 0 20px auto;
+  width: 8.37rem;
+  height: 3.18rem;
+  margin: 1.25rem 0 1.25rem auto;
 }
 #section3 .section-content .services-bottom button:hover {
   -webkit-backdrop-filter: blur(66px);
@@ -401,19 +401,19 @@ aside .nav-line .second-active-dot::before {
 }
 .last-section #section4 .section-content h1 {
   text-align: end;
-  font-size: 87px;
-  line-height: 105px;
+  font-size: 5.43rem;
+  line-height: 6.56rem;
   font-weight: normal;
-  margin: 60px 0;
+  margin: 3.75rem 0;
 }
 .last-section #section4 .section-content .stats-container {
   border: 1px solid rgba(245, 245, 245, 0.103);
   background-color: rgba(255, 255, 255, 0.068);
   backdrop-filter: blur(41px);
   -webkit-backdrop-filter: blur(41px);
-  width: 1159px;
-  height: 334px;
-  border-radius: 10px;
+  width: 72.43rem;
+  height: 20.87rem;
+  border-radius: 0.62rem;
   display: flex;
   align-items: center;
   padding: 2em;
@@ -426,8 +426,8 @@ aside .nav-line .second-active-dot::before {
 }
 .last-section #section4 .section-content .stats-container .stat-item h2 {
   transition: all 0.3s linear;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 .last-section #section4 .section-content .stats-container .stat-item hr {
   transition: all 0.3s linear;
@@ -435,8 +435,8 @@ aside .nav-line .second-active-dot::before {
   border-color: #fff;
 }
 .last-section #section4 .section-content .stats-container .stat-item p {
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 0.87rem;
+  line-height: 1.31rem;
 }
 .last-section #section4 .section-content .stats-container .active-stat-item {
   opacity: 1;
@@ -444,7 +444,7 @@ aside .nav-line .second-active-dot::before {
 }
 .last-section #section4 .section-content .stats-container .active-stat-item h2 {
   transition: all 0.3s linear;
-  font-size: 32px;
+  font-size: 2rem;
 }
 .last-section #section4 .section-content .stats-container .active-stat-item hr {
   transition: all 0.3s linear;
@@ -452,7 +452,7 @@ aside .nav-line .second-active-dot::before {
 }
 .last-section footer {
   width: 100%;
-  height: 178px;
+  height: 11.12rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -471,8 +471,8 @@ aside .nav-line .second-active-dot::before {
   opacity: 0.7;
 }
 .last-section footer p {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.87rem;
+  line-height: 1.37rem;
 }
 .last-section footer #language {
   background: transparent;
@@ -561,9 +561,9 @@ aside .nav-line .second-active-dot::before {
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button {
     background-color: transparent;
     color: white;
-    padding: 10px;
+    padding: 0.62rem;
     border: 2px solid rgb(54, 100, 218);
-    border-radius: 25px;
+    border-radius: 2rem;
     font-weight: normal;
     cursor: pointer;
     outline: none;
@@ -815,9 +815,9 @@ aside .nav-line .second-active-dot::before {
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button {
     background-color: transparent;
     color: white;
-    padding: 10px;
+    padding: 0.62rem;
     border: 2px solid rgb(54, 100, 218);
-    border-radius: 25px;
+    border-radius: 2rem;
     font-weight: normal;
     cursor: pointer;
     outline: none;
@@ -1070,9 +1070,9 @@ aside .nav-line .second-active-dot::before {
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button {
     background-color: transparent;
     color: white;
-    padding: 10px;
+    padding: 0.62rem;
     border: 2px solid rgb(54, 100, 218);
-    border-radius: 25px;
+    border-radius: 2rem;
     font-weight: normal;
     cursor: pointer;
     outline: none;
