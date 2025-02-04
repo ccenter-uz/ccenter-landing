@@ -125,13 +125,14 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="fadeIn">
-      <img src="assets/dark/logo.svg" alt="logo" id="logo" />
-      <a href="contact.html">
-        <button class="header-btn-price" data-i18n="order-service"></button>
-      </a>
-    </header>
     <div class="container fadeIn">
+      <header class="fadeIn">
+        <img src="assets/dark/logo.svg" alt="logo" id="logo" />
+        <a href="contact.html">
+          <button class="header-btn-price" data-i18n="order-service"></button>
+        </a>
+      </header>
+
       <aside>
         <nav class="nav-line">
           <div class="nav-dot active-dot" data-section="section1">
@@ -150,24 +151,26 @@
       </aside>
 
       <section class="section" id="section1" aria-labelledby="section1-heading">
-        <p lang="en" data-i18n="section1-text"></p>
-        <div class="section-content">
-          <h1 id="section1-heading" data-i18n="about-us"></h1>
-          <div class="d-none section-default-hiddens">
-            <p class="default-hidden-text" data-i18n="section1-text"></p>
-            <a href="contact.html">
-              <button
-                class="default-hidden-button"
-                data-i18n="order-service"
-              ></button>
-            </a>
-          </div>
+        <div class="section1-block">
+          <p lang="en" data-i18n="section1-text"></p>
+          <div class="section-content">
+            <h1 id="section1-heading" data-i18n="about-us"></h1>
+            <div class="d-none section-default-hiddens">
+              <p class="default-hidden-text" data-i18n="section1-text"></p>
+              <a href="contact.html">
+                <button
+                  class="default-hidden-button"
+                  data-i18n="order-service"
+                ></button>
+              </a>
+            </div>
 
-          <img
-            src="assets/section-first/phone.svg"
-            alt="phone"
-            class="phone-mockup"
-          />
+            <img
+              src="assets/section-first/phone.svg"
+              alt="phone"
+              class="phone-mockup"
+            />
+          </div>
         </div>
       </section>
 
@@ -240,62 +243,68 @@
         </div>
       </section>
 
-      <section class="section" id="section4" aria-labelledby="section4-heading">
-        <div class="section-content">
-          <h1 id="section4-heading" data-i18n="section4-title"></h1>
-          <div class="stats-container">
-            <div class="stat-item">
-              <h2 data-i18n="section4-stat1-title"></h2>
-              <hr />
-              <p data-i18n="section4-stat1-text"></p>
-            </div>
-            <div class="stat-item">
-              <h2 data-i18n="section4-stat2-title"></h2>
-              <hr />
-              <p data-i18n="section4-stat2-text"></p>
-            </div>
-            <div class="stat-item">
-              <h2 data-i18n="section4-stat3-title"></h2>
-              <hr />
-              <p data-i18n="section4-stat3-text"></p>
-            </div>
-            <div class="stat-item">
-              <h2 data-i18n="section4-stat4-title"></h2>
-              <hr />
-              <p data-i18n="section4-stat4-text"></p>
+      <div class="last-section">
+        <section
+          class="section"
+          id="section4"
+          aria-labelledby="section4-heading"
+        >
+          <div class="section-content">
+            <h1 id="section4-heading" data-i18n="section4-title"></h1>
+            <div class="stats-container">
+              <div class="stat-item">
+                <h2 data-i18n="section4-stat1-title"></h2>
+                <hr />
+                <p data-i18n="section4-stat1-text"></p>
+              </div>
+              <div class="stat-item">
+                <h2 data-i18n="section4-stat2-title"></h2>
+                <hr />
+                <p data-i18n="section4-stat2-text"></p>
+              </div>
+              <div class="stat-item">
+                <h2 data-i18n="section4-stat3-title"></h2>
+                <hr />
+                <p data-i18n="section4-stat3-text"></p>
+              </div>
+              <div class="stat-item">
+                <h2 data-i18n="section4-stat4-title"></h2>
+                <hr />
+                <p data-i18n="section4-stat4-text"></p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <footer class="footer">
-        <div class="footer-links">
-          <img
-            src="assets/footer/facebook-icon.svg"
-            alt="facebook-icon"
-            title="facebook"
-          />
-          <img
-            src="assets/footer/instagram-icon.svg"
-            alt="instagram-icon"
-            title="instagram"
-          />
-          <img
-            src="assets/footer/telegram-icon.svg"
-            alt="telegram-icon"
-            title="telegram"
-          />
-        </div>
-        <p>© 2023 UZTELECOM</p>
-        <div class="footer-lng">
-          <p>+998 (55) 506 1011</p>
-          <select name="language" id="language">
-            <option value="uz" data-i18n="uz"></option>
-            <option value="ru" data-i18n="ru"></option>
-            <option value="en" data-i18n="en"></option>
-          </select>
-        </div>
-      </footer>
+        <footer class="footer">
+          <div class="footer-links">
+            <img
+              src="assets/footer/facebook-icon.svg"
+              alt="facebook-icon"
+              title="facebook"
+            />
+            <img
+              src="assets/footer/instagram-icon.svg"
+              alt="instagram-icon"
+              title="instagram"
+            />
+            <img
+              src="assets/footer/telegram-icon.svg"
+              alt="telegram-icon"
+              title="telegram"
+            />
+          </div>
+          <p>© 2023 UZTELECOM</p>
+          <div class="footer-lng">
+            <p>+998 (55) 506 1011</p>
+            <select name="language" id="language">
+              <option value="uz" data-i18n="uz"></option>
+              <option value="ru" data-i18n="ru"></option>
+              <option value="en" data-i18n="en"></option>
+            </select>
+          </div>
+        </footer>
+      </div>
     </div>
 
     <script type="module" src="i18next.js"></script>
