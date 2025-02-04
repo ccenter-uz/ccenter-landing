@@ -110,39 +110,35 @@ aside {
   top: 30%;
 
   .nav-line {
-    height: 450px;
-
+    height: 24rem;
+    width: 1px;
+    border: 1px dashed #ffffff49;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     .nav-dot {
-      width: 10px;
-      height: 10px;
+      width: 0.32rem;
+      height: 0.32rem;
       border-radius: 50%;
-      background: transparent;
+      background: #ffffff98;
       cursor: pointer;
-      position: absolute;
-      top: 30%;
-      left: -3px;
 
-      &::after {
-        visibility: hidden;
-        content: "";
-        width: 1px;
-        height: 100%;
-        background: #4169e1;
-        cursor: pointer;
-        position: absolute;
-        top: -9em;
-        left: 4.5px;
-      }
-
-      &::before {
-        visibility: hidden;
-        content: "";
-        width: 1px;
-        height: 100%;
-        background: #4169e1;
-        cursor: pointer;
-        position: absolute;
-        left: 4.5px;
+      span {
+        opacity: 0;
+        @include GLASS-BOX;
+        display: block;
+        min-width: fit-content;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        padding: 8px 16px;
+        border-radius: 20px;
+        position: relative;
+        left: 1em;
+        top: -0.8rem;
       }
     }
 
@@ -150,78 +146,20 @@ aside {
     .active-dot {
       background: #4169e1;
       box-shadow: 0 0 10px 0 #4169e1;
-      transition: all 0.3s linear 0.3s;
+      transition: all 0.3s linear;
 
       span {
-        display: block;
-        width: 100%;
-        min-width: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 14px;
-        position: absolute;
-        padding: 8px 16px;
-        background: #252525;
-        color: #fff;
-        border-radius: 20px;
-        left: 1em;
-      }
-
-      &::after {
-        visibility: visible;
-        animation: growFromTop 0.3s linear forwards;
-        animation-fill-mode: both;
+        opacity: 1;
+        animation: scaleLittle 0.5s linear both;
       }
     }
 
-    .second-active-dot {
-      background: #4169e1;
-      box-shadow: 0 0 10px 0 #4169e1;
-      transition: all 0.3s linear 0.3s;
-
-      span {
-        display: block;
-        width: 100%;
-        min-width: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 14px;
-        position: absolute;
-        padding: 8px 16px;
-        background: #252525;
-        color: #fff;
-        border-radius: 20px;
-        left: 1em;
+    @keyframes scaleLittle {
+      50% {
+        scale: 1.2;
       }
-
-      &::before {
-        visibility: visible;
-        animation: growFromBottom 0.3s linear forwards;
-        animation-fill-mode: both;
-      }
-    }
-
-    @keyframes growFromBottom {
-      from {
-        height: 0;
-        top: 150px;
-      }
-
-      to {
-        height: 150px;
-        top: 0;
-      }
-    }
-
-    @keyframes growFromTop {
-      from {
-        height: 0;
-      }
-
-      to {
-        height: 150px;
+      100% {
+        scale: 1;
       }
     }
   }

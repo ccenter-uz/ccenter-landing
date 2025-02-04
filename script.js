@@ -53,24 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
             if (entry.isIntersecting) {
               entry.target.classList.add("fadeIn");
               entry.target.classList.remove("fadeOut");
-              if (scrollDirection > 0) {
-                dots.forEach((dot) =>
-                  dot.classList.remove("second-active-dot")
-                );
-                dots.forEach((dot) => dot.classList.remove("active-dot"));
-
-                setTimeout(() => {
-                  currentDot.classList.add("second-active-dot");
-                }, 400);
-              } else {
-                dots.forEach((dot) => dot.classList.remove("active-dot"));
-                dots.forEach((dot) =>
-                  dot.classList.remove("second-active-dot")
-                );
-                setTimeout(() => {
-                  currentDot.classList.add("active-dot");
-                }, 400);
-              }
+              dots.forEach((dot) => dot.classList.remove("active-dot"));
+                currentDot.classList.add("active-dot");
             } else {
               entry.target.classList.add("fadeOut");
               entry.target.classList.remove("fadeIn");
