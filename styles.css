@@ -1,28 +1,35 @@
+/* Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth;
 }
 
 .d-none {
   display: none;
 }
 
-/* Glass box */
+/* Glass Box Mixin */
+/* Section Mixin */
+/* Line Mixin */
+/* Button Mixin */
+/* Body Styles */
 body {
   background: url("assets/bg.svg") no-repeat center center fixed;
   background-size: cover;
   color: white;
   overflow: hidden;
+  position: relative;
 }
 
+/* Container Styles */
 .container {
   width: 100%;
   max-width: 1440px;
-  height: 100dvh;
+  height: 100vh;
   margin: auto;
   overflow-x: hidden;
   padding: 0 1.25rem;
@@ -33,31 +40,32 @@ body {
   display: none;
 }
 
+/* Header Styles */
 header {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  background: transparent;
   align-items: center;
   position: sticky;
-  top: 3.75rem;
+  top: 0;
   z-index: 99;
+  background: rgba(0, 0, 0, 0.5);
 }
 header .header-btn-price {
   background-color: transparent;
   color: white;
-  padding: 0.62rem;
+  padding: 0.5rem 1rem;
   border: 2px solid rgb(54, 100, 218);
   border-radius: 2rem;
   font-weight: normal;
   cursor: pointer;
   outline: none;
   transition: all 0.2s linear;
-  width: 10.68rem;
-  height: 3.18rem;
-  font-size: 0.87rem;
+  width: 150px;
+  height: 50px;
+  font-size: 1rem;
 }
 header .header-btn-price:hover {
   -webkit-backdrop-filter: blur(66px);
@@ -72,13 +80,15 @@ header .header-btn-price:active {
   box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
 }
 
+/* Aside Styles */
 aside {
   width: auto;
   position: fixed;
   top: 30%;
+  left: 20px;
 }
 aside .nav-line {
-  height: 450px;
+  height: 300px;
 }
 aside .nav-line .nav-dot {
   width: 10px;
@@ -87,8 +97,8 @@ aside .nav-line .nav-dot {
   background: transparent;
   cursor: pointer;
   position: absolute;
-  top: 30%;
-  left: -3px;
+  top: 0;
+  left: 0;
 }
 aside .nav-line .nav-dot::after {
   visibility: hidden;
@@ -98,7 +108,7 @@ aside .nav-line .nav-dot::after {
   background: #4169e1;
   cursor: pointer;
   position: absolute;
-  top: -9em;
+  top: -150px;
   left: 4.5px;
 }
 aside .nav-line .nav-dot::before {
@@ -109,6 +119,7 @@ aside .nav-line .nav-dot::before {
   background: #4169e1;
   cursor: pointer;
   position: absolute;
+  top: 0;
   left: 4.5px;
 }
 aside .nav-line .active-dot {
@@ -129,7 +140,8 @@ aside .nav-line .active-dot span {
   background: #252525;
   color: #fff;
   border-radius: 20px;
-  left: 1em;
+  left: 20px;
+  top: -30px;
 }
 aside .nav-line .active-dot::after {
   visibility: visible;
@@ -154,7 +166,8 @@ aside .nav-line .second-active-dot span {
   background: #252525;
   color: #fff;
   border-radius: 20px;
-  left: 1em;
+  left: 20px;
+  top: -30px;
 }
 aside .nav-line .second-active-dot::before {
   visibility: visible;
@@ -180,65 +193,66 @@ aside .nav-line .second-active-dot::before {
   }
 }
 
+/* Main Section Styles */
 .section {
   scroll-snap-align: center;
+  padding: 2rem 0;
 }
 
+/* Section 1 Styles */
 #section1 {
   width: 80%;
   height: 100%;
   min-height: -moz-fit-content;
   min-height: fit-content;
-  max-height: 100dvh;
+  max-height: 100vh;
   margin-left: auto;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 #section1 .section1-block {
   display: flex;
   align-items: center;
-  gap: 0 2em;
-}
-#section1 .section1-block p {
-  font-size: 1.25rem;
-  line-height: 2.25rem;
-  -webkit-hyphens: auto;
-          hyphens: auto;
+  gap: 2rem;
 }
 #section1 .section1-block .section-content {
   position: relative;
 }
 #section1 .section1-block .section-content h1 {
   text-align: end;
-  font-size: 7rem;
+  font-size: 3rem;
   font-weight: normal;
 }
 #section1 .section1-block .section-content .phone-mockup {
-  max-width: 50.56rem;
-  max-height: 37.06rem;
+  max-width: 100%;
+  height: auto;
 }
 
+/* Section 2 Styles */
 #section2 {
   width: 80%;
   height: 100%;
   min-height: -moz-fit-content;
   min-height: fit-content;
-  max-height: 100dvh;
+  max-height: 100vh;
   margin-left: auto;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 #section2 .section-content h1 {
   text-align: end;
-  font-size: 7rem;
+  font-size: 3rem;
   font-weight: normal;
-  margin: 2.37rem 0;
+  margin: 2rem 0;
 }
 #section2 .section-content .outsourcing {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
 }
 #section2 .section-content .outsourcing .second-section-box {
   display: flex;
@@ -248,11 +262,11 @@ aside .nav-line .second-active-dot::before {
   transition: all 0.4s linear;
 }
 #section2 .section-content .outsourcing .second-section-box h2 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 2rem;
 }
 #section2 .section-content .outsourcing .second-section-box p {
-  font-size: 0.87rem;
+  font-size: 1rem;
   line-height: 1.31rem;
 }
 #section2 .section-content .outsourcing .second-section-box hr {
@@ -265,7 +279,7 @@ aside .nav-line .second-active-dot::before {
 }
 #section2 .section-content .outsourcing .active-second-section-box h2 {
   transition: all 0.3s linear;
-  font-size: 32px;
+  font-size: 2rem;
 }
 #section2 .section-content .outsourcing .active-second-section-box hr {
   transition: all 0.3s linear;
@@ -273,17 +287,16 @@ aside .nav-line .second-active-dot::before {
   animation: fill 2s ease;
   animation-fill-mode: both;
   border-color: #4169e1;
-  border-color: #4169e1;
 }
 #section2 .video-placeholder {
-  border: 1px solid rgba(245, 245, 245, 0.103);
-  background-color: rgba(255, 255, 255, 0.068);
+  border: 1px solid rgba(245, 245, 245, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(41px);
   -webkit-backdrop-filter: blur(41px);
-  width: 64.37rem;
-  height: 23.75rem;
-  margin: 3.81rem auto;
-  border-radius: 1.25rem;
+  width: 100%;
+  height: 300px;
+  margin: 2rem auto;
+  border-radius: 1rem;
   cursor: pointer;
   transition: all 0.2s linear;
 }
@@ -291,88 +304,90 @@ aside .nav-line .second-active-dot::before {
   background-color: rgba(255, 255, 255, 0.164);
 }
 
+/* Section 3 Styles */
 #section3 {
   width: 80%;
   height: 100%;
   min-height: -moz-fit-content;
   min-height: fit-content;
-  max-height: 100dvh;
+  max-height: 100vh;
   margin-left: auto;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 }
 #section3 .section-content h1 {
-  text-align: end;
-  font-size: 5.43rem;
-  line-height: 6.56rem;
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 3rem;
   font-weight: normal;
-  margin-bottom: 3.75rem;
+  margin-bottom: 2rem;
 }
 #section3 .section-content .services-grid {
   display: flex;
-  gap: 0 2em;
-  margin: 2em 0;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
 }
 #section3 .section-content .services-grid .service-item {
-  border: 1px solid rgba(245, 245, 245, 0.103);
-  background-color: rgba(255, 255, 255, 0.068);
+  border: 1px solid rgba(245, 245, 245, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(41px);
   -webkit-backdrop-filter: blur(41px);
-  width: 13.75rem;
-  height: 17.68rem;
+  width: 150px;
+  height: 150px;
   cursor: pointer;
-  border-radius: 0.62rem;
-  justify-content: center;
+  border-radius: 0.5rem;
 }
 #section3 .section-content .services-grid .service-item .service-icon {
   height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0.62rem;
-  background-color: rgba(255, 255, 255, 0.096);
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 #section3 .section-content .services-grid .service-item p {
   height: 20%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 0 1em;
+  justify-content: center;
+  padding: 0 0.5rem;
   font-size: 0.9rem;
 }
 #section3 .section-content .services-bottom {
-  width: 18.75rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin-left: auto;
+  align-items: center;
 }
 #section3 .section-content .services-bottom h2 {
-  font-size: 2.25rem;
-  line-height: 2.25rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   border-bottom: 2px solid #4169e1;
-  margin-bottom: 3.75rem;
+  margin-bottom: 1rem;
 }
 #section3 .section-content .services-bottom p {
-  font-size: 1.25rem;
-  line-height: 1.93rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 #section3 .section-content .services-bottom button {
   background-color: transparent;
   color: white;
-  padding: 0.62rem;
+  padding: 0.5rem 1rem;
   border: 2px solid rgb(54, 100, 218);
   border-radius: 2rem;
   font-weight: normal;
   cursor: pointer;
   outline: none;
   transition: all 0.2s linear;
-  width: 8.37rem;
-  height: 3.18rem;
-  margin: 1.25rem 0 1.25rem auto;
+  width: 150px;
+  height: 40px;
+  margin: 1rem 0;
 }
 #section3 .section-content .services-bottom button:hover {
   -webkit-backdrop-filter: blur(66px);
@@ -387,131 +402,114 @@ aside .nav-line .second-active-dot::before {
   box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
 }
 
-.last-section #section4 {
+/* Section 4 Styles */
+#section4 {
   width: 80%;
   height: 100%;
   min-height: -moz-fit-content;
   min-height: fit-content;
-  max-height: 100dvh;
+  max-height: 100vh;
   margin-left: auto;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   margin-bottom: 2rem;
 }
-.last-section #section4 .section-content h1 {
-  text-align: end;
-  font-size: 5.43rem;
-  line-height: 6.56rem;
+#section4 .section-content h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 3rem;
   font-weight: normal;
-  margin: 3.75rem 0;
+  margin: 2rem 0;
 }
-.last-section #section4 .section-content .stats-container {
-  border: 1px solid rgba(245, 245, 245, 0.103);
-  background-color: rgba(255, 255, 255, 0.068);
+#section4 .section-content .stats-container {
+  border: 1px solid rgba(245, 245, 245, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(41px);
   -webkit-backdrop-filter: blur(41px);
-  width: 72.43rem;
-  height: 20.87rem;
-  border-radius: 0.62rem;
+  width: 100%;
+  height: 200px;
+  border-radius: 0.5rem;
   display: flex;
   align-items: center;
-  padding: 2em;
+  padding: 1rem;
   flex-wrap: wrap;
 }
-.last-section #section4 .section-content .stats-container .stat-item {
+#section4 .section-content .stats-container .stat-item {
   opacity: 0.5;
   flex: 1;
   transition: all 0.3s linear;
 }
-.last-section #section4 .section-content .stats-container .stat-item h2 {
+#section4 .section-content .stats-container .stat-item h2 {
   transition: all 0.3s linear;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
 }
-.last-section #section4 .section-content .stats-container .stat-item hr {
+#section4 .section-content .stats-container .stat-item hr {
   transition: all 0.3s linear;
-  margin: 1em 0;
+  margin: 0.5rem 0;
   border-color: #fff;
 }
-.last-section #section4 .section-content .stats-container .stat-item p {
-  font-size: 0.87rem;
+#section4 .section-content .stats-container .stat-item p {
+  font-size: 0.9rem;
   line-height: 1.31rem;
 }
-.last-section #section4 .section-content .stats-container .active-stat-item {
+#section4 .section-content .stats-container .active-stat-item {
   opacity: 1;
   transition: all 0.3s linear;
 }
-.last-section #section4 .section-content .stats-container .active-stat-item h2 {
+#section4 .section-content .stats-container .active-stat-item h2 {
   transition: all 0.3s linear;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
-.last-section #section4 .section-content .stats-container .active-stat-item hr {
+#section4 .section-content .stats-container .active-stat-item hr {
   transition: all 0.3s linear;
   border-color: #4169e1;
 }
-.last-section footer {
+
+/* Footer Styles */
+.footer {
   width: 100%;
-  height: 11.12rem;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: rgba(0, 0, 0, 0.5);
 }
-.last-section footer .footer-links,
-.last-section footer .footer-lng {
+.footer .footer-links,
+.footer .footer-lng {
   display: flex;
   align-items: center;
-  gap: 0 1em;
+  gap: 0.5rem;
 }
-.last-section footer img {
+.footer img {
   cursor: pointer;
   transition: opacity 0.2s linear;
 }
-.last-section footer img:hover {
+.footer img:hover {
   opacity: 0.7;
 }
-.last-section footer p {
-  font-size: 0.87rem;
-  line-height: 1.37rem;
+.footer p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
 }
-.last-section footer #language {
+.footer #language {
   background: transparent;
   color: white;
   outline: none;
   border: none;
   cursor: pointer;
 }
-.last-section footer #language option {
+.footer #language option {
   background: #1a1a1a;
   color: white;
   cursor: pointer;
 }
 
-.fadeIn {
-  opacity: 1;
-  transition: all 0.5s ease-in-out;
-}
-
-.fadeOut {
-  opacity: 0;
-  transition: all 0.1s ease-in-out;
-}
-
-@keyframes fill {
-  to {
-    width: 100%;
-  }
-}
-@keyframes spill {
-  from {
-    opacity: 0.5;
-  }
-  to {
-    height: 9.375rem;
-    opacity: 1;
-  }
-}
-@media (320px <= width <= 440px) {
+/* Responsive Styles */
+/* For Mobile Devices */
+@media (max-width: 440px) {
   body {
     overflow-y: auto;
   }
@@ -544,33 +542,33 @@ aside .nav-line .second-active-dot::before {
     display: none;
   }
   #section1 .section1-block .section-content h1 {
-    font-size: 4rem;
-    line-height: 3.875rem;
-    margin: 1.81rem 0;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin: 1rem 0;
   }
   #section1 .section1-block .section-content .section-default-hiddens {
-    width: 85%;
+    width: 100%;
     margin-left: auto;
     display: block;
   }
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-text {
     display: block;
-    font-size: 1.3rem;
-    line-height: 1.81rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button {
     background-color: transparent;
     color: white;
-    padding: 0.62rem;
+    padding: 0.5rem 1rem;
     border: 2px solid rgb(54, 100, 218);
     border-radius: 2rem;
     font-weight: normal;
     cursor: pointer;
     outline: none;
     transition: all 0.2s linear;
-    width: 12.5rem;
-    height: 3.125rem;
-    margin: 1rem 0;
+    width: 10rem;
+    height: 2.5rem;
+    margin: 0.5rem 0;
   }
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:hover {
     -webkit-backdrop-filter: blur(66px);
@@ -586,21 +584,21 @@ aside .nav-line .second-active-dot::before {
   }
   #section1 .section1-block .section-content .phone-mockup {
     width: 100%;
-    height: 100%;
+    height: auto;
   }
   #section2 {
     width: 100%;
     height: 100%;
     align-items: flex-start;
-    margin-bottom: 6.68rem;
+    margin-bottom: 3rem;
   }
   #section2 .section-content {
     width: 100%;
   }
   #section2 .section-content h1 {
-    font-size: 3.5rem;
-    line-height: 3.87rem;
-    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 1.5rem;
     margin-top: 0;
   }
   #section2 .section-content .outsourcing {
@@ -609,16 +607,16 @@ aside .nav-line .second-active-dot::before {
   }
   #section2 .section-content .outsourcing .second-section-box {
     border-left: 1px solid #fff;
-    padding: 1em;
+    padding: 0.5rem;
   }
   #section2 .section-content .outsourcing .second-section-box h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
     margin-bottom: 0.5rem;
   }
   #section2 .section-content .outsourcing .second-section-box p {
-    font-size: 1rem;
-    line-height: 1.2rem;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
     margin: 0 0.5rem;
   }
   #section2 .section-content .outsourcing .second-section-box hr {
@@ -631,13 +629,13 @@ aside .nav-line .second-active-dot::before {
   }
   #section2 .section-content .outsourcing .active-second-section-box h2 {
     transition: all 0.3s linear;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   #section2 .section-content .video-placeholder {
     width: 100%;
-    max-height: 11rem;
+    max-height: 10rem;
     margin: 0;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
   #section3 {
     width: 100%;
@@ -649,120 +647,117 @@ aside .nav-line .second-active-dot::before {
     width: 100%;
   }
   #section3 .section-content h1 {
-    font-size: 3rem;
-    line-height: 3.43rem;
-    margin-bottom: 4rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
     margin-top: 0;
     word-wrap: break-word;
   }
   #section3 .section-content .services-grid {
     width: 100%;
     flex-wrap: wrap;
-    gap: 1.2rem;
+    gap: 1rem;
     justify-content: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
   #section3 .section-content .services-grid .service-item {
-    width: calc(50% - 0.62rem);
-    width: -webkit-calc(100% / 2 - 0.62rem);
-    height: 14.81rem;
+    width: calc(50% - 0.5rem);
+    width: -webkit-calc(100% / 2 - 0.5rem);
+    height: 10rem;
   }
   #section3 .section-content .services-grid .service-item .service-icon {
-    height: 80%;
+    height: 70%;
   }
   #section3 .section-content .services-grid .service-item .service-icon img {
-    width: 6.25rem;
-    height: 6.25rem;
+    width: 4rem;
+    height: 4rem;
+  }
+  #section3 .section-content .services-grid .service-item p {
+    height: 30%;
+    font-size: 0.8rem;
   }
   #section3 .section-content .services-bottom h2 {
-    font-size: 36px;
-    line-height: 36px;
-    margin-bottom: 37px;
-  }
-  #section3 .section-content .services-bottom p {
-    font-size: 20px;
-    line-height: 31px;
-  }
-  #section3 .section-content .services-bottom button {
-    width: 175px;
-    height: 51px;
-    font-size: 20px;
-    line-height: 24px;
-  }
-  .last-section {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 4.25rem;
-    gap: 1.5rem 0;
-  }
-  .last-section #section4 {
-    width: 100%;
-    height: 50%;
-    align-items: flex-start;
-  }
-  .last-section #section4 .section-content {
-    width: 100%;
-  }
-  .last-section #section4 .section-content h1 {
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
     margin-bottom: 1.5rem;
   }
-  .last-section #section4 .section-content .stats-container {
+  #section3 .section-content .services-bottom p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  #section3 .section-content .services-bottom button {
+    width: 10rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+  #section4 {
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+  }
+  #section4 .section-content {
+    width: 100%;
+  }
+  #section4 .section-content h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+  }
+  #section4 .section-content .stats-container {
     width: 100%;
     height: 100%;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 1rem;
+    padding: 0.5rem;
   }
-  .last-section #section4 .section-content .stats-container .stat-item {
+  #section4 .section-content .stats-container .stat-item {
     border-left: 1px solid #fff;
-    padding-left: 0.62rem;
-    padding: 1em;
+    padding-left: 0.5rem;
+    padding: 0.5rem;
   }
-  .last-section #section4 .section-content .stats-container .stat-item h2 {
-    font-size: 1.5rem;
+  #section4 .section-content .stats-container .stat-item h2 {
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
-  .last-section #section4 .section-content .stats-container .stat-item hr {
+  #section4 .section-content .stats-container .stat-item hr {
     display: none;
   }
-  .last-section #section4 .section-content .stats-container .stat-item p {
-    font-size: 1rem;
+  #section4 .section-content .stats-container .stat-item p {
+    font-size: 0.9rem;
     margin: 0 0.5rem;
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item {
+  #section4 .section-content .stats-container .active-stat-item {
     opacity: 1;
     border-color: #4169e1;
     transition: all 0.3s linear;
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item h2 {
+  #section4 .section-content .stats-container .active-stat-item h2 {
     transition: all 0.3s linear;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item hr {
+  #section4 .section-content .stats-container .active-stat-item hr {
     transition: all 0.3s linear;
     border-color: #4169e1;
   }
-  .last-section footer {
+  footer {
     width: 100%;
     margin: 0 auto;
-    height: 10.81rem;
+    height: 8rem;
     flex-direction: column;
     justify-content: center;
-    gap: 1.5rem 0;
+    gap: 1rem;
   }
-  .last-section footer p {
+  footer p {
     font-size: 1rem;
   }
-  .last-section footer select {
+  footer select {
     font-size: 1rem;
   }
 }
-@media (440.1px <= width <= 768px) {
+/* For Tablet Devices */
+@media (min-width: 441px) and (max-width: 768px) {
   body {
     overflow-y: auto;
   }
@@ -789,42 +784,42 @@ aside .nav-line .second-active-dot::before {
     width: 100%;
     min-height: -moz-fit-content;
     min-height: fit-content;
-    max-height: 100dvh;
+    max-height: 100vh;
     height: 100%;
     margin: 0 auto;
     align-items: flex-start;
-    margin-bottom: 6.25rem;
+    margin-bottom: 4rem;
   }
   #section1 .section1-block p {
     display: none;
   }
   #section1 .section1-block .section-content h1 {
-    font-size: 4rem;
-    line-height: 3.875rem;
-    margin: 1.81rem 0;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin: 1.5rem 0;
   }
   #section1 .section1-block .section-content .section-default-hiddens {
-    width: 85%;
+    width: 100%;
     margin-left: auto;
     display: block;
   }
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-text {
     display: block;
-    font-size: 1.3rem;
-    line-height: 1.81rem;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
   }
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button {
     background-color: transparent;
     color: white;
-    padding: 0.62rem;
+    padding: 0.5rem 1rem;
     border: 2px solid rgb(54, 100, 218);
     border-radius: 2rem;
     font-weight: normal;
     cursor: pointer;
     outline: none;
     transition: all 0.2s linear;
-    width: 12.5rem;
-    height: 3.125rem;
+    width: 12rem;
+    height: 3rem;
     margin: 1rem 0;
   }
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:hover {
@@ -841,22 +836,22 @@ aside .nav-line .second-active-dot::before {
   }
   #section1 .section1-block .section-content .phone-mockup {
     width: 100%;
-    height: 100%;
+    height: auto;
   }
   #section2 {
     width: 100%;
     height: -moz-fit-content;
     height: fit-content;
     align-items: flex-start;
-    margin-bottom: 4.25rem;
+    margin-bottom: 3rem;
   }
   #section2 .section-content {
     width: 100%;
   }
   #section2 .section-content h1 {
-    font-size: 3.5rem;
-    line-height: 3.87rem;
-    margin-bottom: 2.5rem;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
     margin-top: 0;
   }
   #section2 .section-content .outsourcing {
@@ -865,7 +860,7 @@ aside .nav-line .second-active-dot::before {
   }
   #section2 .section-content .outsourcing .second-section-box {
     border-left: 1px solid #fff;
-    padding: 1em;
+    padding: 1rem;
   }
   #section2 .section-content .outsourcing .second-section-box h2 {
     font-size: 1.5rem;
@@ -893,7 +888,7 @@ aside .nav-line .second-active-dot::before {
     width: 100%;
     max-height: 15rem;
     margin: 0;
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
   #section3 {
     width: 100%;
@@ -906,118 +901,109 @@ aside .nav-line .second-active-dot::before {
   }
   #section3 .section-content h1 {
     font-size: 3rem;
-    line-height: 3.43rem;
-    margin-bottom: 4rem;
+    line-height: 3.5rem;
+    margin-bottom: 3rem;
     margin-top: 0;
     word-wrap: break-word;
   }
   #section3 .section-content .services-grid {
     width: 100%;
+    gap: 1rem;
     flex-wrap: wrap;
-    gap: 1.2rem;
-    justify-content: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
   #section3 .section-content .services-grid .service-item {
-    width: calc(50% - 0.62rem);
-    width: -webkit-calc(100% / 2 - 0.62rem);
-    height: 14.81rem;
+    height: 12rem;
   }
   #section3 .section-content .services-grid .service-item .service-icon {
-    height: 80%;
+    height: 70%;
   }
   #section3 .section-content .services-grid .service-item .service-icon img {
-    width: 6.25rem;
-    height: 6.25rem;
+    width: 5rem;
+    height: 5rem;
   }
   #section3 .section-content .services-bottom h2 {
-    font-size: 36px;
-    line-height: 36px;
-    margin-bottom: 37px;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
   }
   #section3 .section-content .services-bottom p {
-    font-size: 20px;
-    line-height: 31px;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
   }
   #section3 .section-content .services-bottom button {
-    width: 175px;
-    height: 51px;
-    font-size: 20px;
-    line-height: 24px;
+    width: 12rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
   }
-  .last-section {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 4.25rem;
-  }
-  .last-section #section4 {
+  #section4 {
     width: 100%;
-    height: 50%;
+    height: 100%;
     align-items: flex-start;
   }
-  .last-section #section4 .section-content {
+  #section4 .section-content {
     width: 100%;
   }
-  .last-section #section4 .section-content h1 {
+  #section4 .section-content h1 {
     font-size: 3rem;
     line-height: 3rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
-  .last-section #section4 .section-content .stats-container {
+  #section4 .section-content .stats-container {
     width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-items: flex-start;
+    height: 20rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
     justify-content: flex-start;
     padding: 1rem;
   }
-  .last-section #section4 .section-content .stats-container .stat-item {
-    border-left: 1px solid #fff;
-    padding-left: 0.62rem;
-    padding: 1em;
+  #section4 .section-content .stats-container .stat-item {
+    border-left: none;
+    padding-left: 0.5rem;
+    padding: 1rem;
   }
-  .last-section #section4 .section-content .stats-container .stat-item h2 {
+  #section4 .section-content .stats-container .stat-item h2 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
-  .last-section #section4 .section-content .stats-container .stat-item hr {
-    display: none;
+  #section4 .section-content .stats-container .stat-item hr {
+    display: block;
   }
-  .last-section #section4 .section-content .stats-container .stat-item p {
+  #section4 .section-content .stats-container .stat-item p {
     font-size: 1rem;
     margin: 0 0.5rem;
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item {
+  #section4 .section-content .stats-container .active-stat-item {
     opacity: 1;
-    border-color: #4169e1;
     transition: all 0.3s linear;
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item h2 {
+  #section4 .section-content .stats-container .active-stat-item h2 {
     transition: all 0.3s linear;
     font-size: 1.7rem;
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item hr {
+  #section4 .section-content .stats-container .active-stat-item hr {
     transition: all 0.3s linear;
     border-color: #4169e1;
   }
-  .last-section footer {
+  footer {
     width: 100%;
     margin: 0 auto;
-    height: 10.81rem;
+    height: 10rem;
     flex-direction: column;
     justify-content: center;
-    gap: 1.5rem 0;
+    gap: 1rem;
   }
-  .last-section footer p {
-    font-size: 1rem;
+  footer p {
+    font-size: 1.2rem;
   }
-  .last-section footer select {
-    font-size: 1rem;
+  footer select {
+    font-size: 1.2rem;
   }
 }
-@media (768.1px <= width <= 1024px) {
+/* For Desktop Devices */
+@media (min-width: 769px) {
   body {
     overflow-y: auto;
   }
@@ -1044,42 +1030,42 @@ aside .nav-line .second-active-dot::before {
     width: 100%;
     min-height: -moz-fit-content;
     min-height: fit-content;
-    max-height: 100dvh;
+    max-height: 100vh;
     height: 100%;
     margin: 0 auto;
     align-items: flex-start;
-    margin-bottom: 6.25rem;
+    margin-bottom: 4rem;
   }
   #section1 .section1-block p {
     display: none;
   }
   #section1 .section1-block .section-content h1 {
-    font-size: 5rem;
-    line-height: 3.875rem;
-    margin: 2.81rem 0;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    margin: 2rem 0;
   }
   #section1 .section1-block .section-content .section-default-hiddens {
-    width: 85%;
+    width: 100%;
     margin-left: auto;
     display: block;
   }
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-text {
     display: block;
-    font-size: 1.3rem;
-    line-height: 1.81rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button {
     background-color: transparent;
     color: white;
-    padding: 0.62rem;
+    padding: 0.5rem 1rem;
     border: 2px solid rgb(54, 100, 218);
     border-radius: 2rem;
     font-weight: normal;
     cursor: pointer;
     outline: none;
     transition: all 0.2s linear;
-    width: 12.5rem;
-    height: 3.125rem;
+    width: 12rem;
+    height: 3rem;
     margin: 1rem 0;
   }
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:hover {
@@ -1096,39 +1082,40 @@ aside .nav-line .second-active-dot::before {
   }
   #section1 .section1-block .section-content .phone-mockup {
     width: 100%;
-    height: 100%;
+    height: auto;
   }
   #section2 {
     width: 100%;
     height: -moz-fit-content;
     height: fit-content;
     align-items: flex-start;
-    margin-bottom: 4.25rem;
+    margin-bottom: 3rem;
   }
   #section2 .section-content {
     width: 100%;
   }
   #section2 .section-content h1 {
-    font-size: 3.5rem;
-    line-height: 3.87rem;
+    font-size: 4rem;
+    line-height: 4.5rem;
     margin-bottom: 2.5rem;
     margin-top: 0;
   }
   #section2 .section-content .outsourcing {
     width: 100%;
+    flex-direction: column;
   }
   #section2 .section-content .outsourcing .second-section-box {
     border-left: 1px solid #fff;
-    padding: 1em;
+    padding: 1rem;
   }
   #section2 .section-content .outsourcing .second-section-box h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
   }
   #section2 .section-content .outsourcing .second-section-box p {
-    font-size: 1rem;
-    line-height: 1.2rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
     margin: 0 0.5rem;
   }
   #section2 .section-content .outsourcing .second-section-box hr {
@@ -1141,13 +1128,13 @@ aside .nav-line .second-active-dot::before {
   }
   #section2 .section-content .outsourcing .active-second-section-box h2 {
     transition: all 0.3s linear;
-    font-size: 1.7rem;
+    font-size: 2.5rem;
   }
   #section2 .section-content .video-placeholder {
     width: 100%;
-    max-height: 17rem;
+    max-height: 20rem;
     margin: 0;
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
   #section3 {
     width: 100%;
@@ -1159,112 +1146,105 @@ aside .nav-line .second-active-dot::before {
     width: 100%;
   }
   #section3 .section-content h1 {
-    font-size: 3rem;
-    line-height: 3.43rem;
-    margin-bottom: 4rem;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    margin-bottom: 3rem;
     margin-top: 0;
     word-wrap: break-word;
   }
   #section3 .section-content .services-grid {
     width: 100%;
-    gap: 1.2rem;
+    gap: 1rem;
     flex-wrap: wrap;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
   #section3 .section-content .services-grid .service-item {
-    height: 14.81rem;
+    height: 15rem;
   }
   #section3 .section-content .services-grid .service-item .service-icon {
-    height: 80%;
+    height: 70%;
   }
   #section3 .section-content .services-grid .service-item .service-icon img {
-    width: 6.25rem;
-    height: 6.25rem;
+    width: 6rem;
+    height: 6rem;
   }
   #section3 .section-content .services-bottom h2 {
-    font-size: 36px;
-    line-height: 36px;
-    margin-bottom: 37px;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 2.5rem;
   }
   #section3 .section-content .services-bottom p {
-    font-size: 20px;
-    line-height: 31px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   #section3 .section-content .services-bottom button {
-    width: 175px;
-    height: 51px;
-    font-size: 20px;
-    line-height: 24px;
+    width: 15rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
   }
-  .last-section {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 4.25rem;
-  }
-  .last-section #section4 {
+  #section4 {
     width: 100%;
-    height: 50%;
+    height: 100%;
     align-items: flex-start;
   }
-  .last-section #section4 .section-content {
+  #section4 .section-content {
     width: 100%;
   }
-  .last-section #section4 .section-content h1 {
-    font-size: 3rem;
-    line-height: 3rem;
-    margin-bottom: 3.5rem;
+  #section4 .section-content h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
   }
-  .last-section #section4 .section-content .stats-container {
+  #section4 .section-content .stats-container {
     width: 100%;
-    height: 20rem;
+    height: 25rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: flex-start;
     padding: 1rem;
   }
-  .last-section #section4 .section-content .stats-container .stat-item {
+  #section4 .section-content .stats-container .stat-item {
     border-left: none;
-    padding-left: 0.62rem;
-    padding: 1em;
+    padding-left: 0.5rem;
+    padding: 1rem;
   }
-  .last-section #section4 .section-content .stats-container .stat-item h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+  #section4 .section-content .stats-container .stat-item h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
-  .last-section #section4 .section-content .stats-container .stat-item hr {
+  #section4 .section-content .stats-container .stat-item hr {
     display: block;
   }
-  .last-section #section4 .section-content .stats-container .stat-item p {
-    font-size: 1rem;
+  #section4 .section-content .stats-container .stat-item p {
+    font-size: 1.2rem;
     margin: 0 0.5rem;
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item {
+  #section4 .section-content .stats-container .active-stat-item {
     opacity: 1;
     transition: all 0.3s linear;
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item h2 {
+  #section4 .section-content .stats-container .active-stat-item h2 {
     transition: all 0.3s linear;
-    font-size: 1.7rem;
+    font-size: 2.5rem;
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item hr {
+  #section4 .section-content .stats-container .active-stat-item hr {
     transition: all 0.3s linear;
     border-color: #4169e1;
   }
-  .last-section footer {
+  footer {
     width: 100%;
     margin: 0 auto;
-    height: 10.81rem;
+    height: 12rem;
     flex-direction: column;
     justify-content: center;
-    gap: 1.5rem 0;
+    gap: 1rem;
   }
-  .last-section footer p {
-    font-size: 1rem;
+  footer p {
+    font-size: 1.5rem;
   }
-  .last-section footer select {
-    font-size: 1rem;
+  footer select {
+    font-size: 1.5rem;
   }
 }/*# sourceMappingURL=styles.css.map */
