@@ -12,12 +12,9 @@
 }
 
 /* Glass box */
-html {
+body {
   background: url("assets/bg.svg") no-repeat center center fixed;
   background-size: cover;
-}
-
-body {
   color: white;
   overflow: hidden;
 }
@@ -521,6 +518,7 @@ aside .nav-line .second-active-dot::before {
   .container {
     padding: 0 20px;
     scroll-snap-type: none;
+    overflow-y: auto;
   }
   header {
     position: static;
