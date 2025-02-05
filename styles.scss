@@ -5,6 +5,8 @@
   font-family: "Roboto";
   font-weight: 300;
   scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
 }
 
 .d-none {
@@ -815,6 +817,11 @@ aside {
 }
 
 @media (440.1px <=width <=768px) {
+  body {
+    background-size: cover;
+    background-position: fixed;
+    z-index: -1;
+  }
   header {
     position: static;
     margin: 2rem 0;
@@ -1095,6 +1102,11 @@ aside {
 }
 
 @media (768.1px <=width <=1024px) {
+  body {
+    background-size: cover;
+    background-position: fixed;
+    z-index: -1;
+  }
   header {
     position: static;
     margin: 2rem 0;
@@ -1368,6 +1380,11 @@ aside {
 }
 
 @media (1024.1px <=width <=1440px) {
+  body {
+    background-size: cover;
+    background-position: fixed;
+    z-index: -1;
+  }
   header {
     position: static;
     margin: 2rem 0;
