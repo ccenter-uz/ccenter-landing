@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const dots = document.querySelectorAll(".nav-dot");
   let scrollDirection;
   const handleScroll = (e) => {
-    e.preventDefault();
     if (window.innerWidth > 1024) {
       scrollDirection = e.wheelDeltaY;
       const observer = new IntersectionObserver(
