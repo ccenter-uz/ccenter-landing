@@ -59,11 +59,15 @@
 
 html,
 body {
-  background: url("assets/bg.svg") no-repeat center center fixed;
+  background-image: url("./assets/bg.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-color: #000;
   scroll-behavior: smooth;
   color: white;
 
