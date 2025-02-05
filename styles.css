@@ -49,7 +49,7 @@ header .header-btn-price {
   font-weight: normal;
   cursor: pointer;
   outline: none;
-  transition: all 0.2s linear;
+  transition: all 0.3s linear;
   width: 10.68rem;
   height: 3.18rem;
   font-size: 0.87rem;
@@ -57,14 +57,14 @@ header .header-btn-price {
 header .header-btn-price:hover {
   -webkit-backdrop-filter: blur(66px);
           backdrop-filter: blur(66px);
-  box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
-  border-color: rgb(90, 136, 255);
+  box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+  border: 2px solid rgb(90, 136, 255);
 }
 header .header-btn-price:active {
   border: 2px solid rgb(13, 36, 92);
   -webkit-backdrop-filter: blur(66px);
           backdrop-filter: blur(66px);
-  box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+  box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
 }
 
 aside {
@@ -94,10 +94,9 @@ aside .nav-line .nav-dot span {
   background-color: rgba(255, 255, 255, 0.068);
   backdrop-filter: blur(41px);
   -webkit-backdrop-filter: blur(41px);
-  display: block;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
   width: 100%;
+  min-width: -moz-max-content;
+  min-width: max-content;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -316,7 +315,7 @@ aside .nav-line .active-dot span {
   font-weight: normal;
   cursor: pointer;
   outline: none;
-  transition: all 0.2s linear;
+  transition: all 0.3s linear;
   width: 8.37rem;
   height: 3.18rem;
   margin: 1.25rem 0 1.25rem auto;
@@ -324,14 +323,14 @@ aside .nav-line .active-dot span {
 #section3 .section-content .services-bottom button:hover {
   -webkit-backdrop-filter: blur(66px);
           backdrop-filter: blur(66px);
-  box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
-  border-color: rgb(90, 136, 255);
+  box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+  border: 2px solid rgb(90, 136, 255);
 }
 #section3 .section-content .services-bottom button:active {
   border: 2px solid rgb(13, 36, 92);
   -webkit-backdrop-filter: blur(66px);
           backdrop-filter: blur(66px);
-  box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+  box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
 }
 
 .last-section {
@@ -512,7 +511,7 @@ aside .nav-line .active-dot span {
     font-weight: normal;
     cursor: pointer;
     outline: none;
-    transition: all 0.2s linear;
+    transition: all 0.3s linear;
     width: 12.5rem;
     height: 3.125rem;
     margin: 1rem 0;
@@ -520,14 +519,14 @@ aside .nav-line .active-dot span {
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:hover {
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
-    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
-    border-color: rgb(90, 136, 255);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+    border: 2px solid rgb(90, 136, 255);
   }
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:active {
     border: 2px solid rgb(13, 36, 92);
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
-    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
   }
   #section1 .section1-block .section-content .phone-mockup {
     width: 100%;
@@ -760,7 +759,7 @@ aside .nav-line .active-dot span {
     font-weight: normal;
     cursor: pointer;
     outline: none;
-    transition: all 0.2s linear;
+    transition: all 0.3s linear;
     width: 12.5rem;
     height: 3.125rem;
     margin: 1rem 0;
@@ -768,14 +767,14 @@ aside .nav-line .active-dot span {
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:hover {
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
-    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
-    border-color: rgb(90, 136, 255);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+    border: 2px solid rgb(90, 136, 255);
   }
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:active {
     border: 2px solid rgb(13, 36, 92);
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
-    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
   }
   #section1 .section1-block .section-content .phone-mockup {
     width: 100%;
@@ -1007,7 +1006,7 @@ aside .nav-line .active-dot span {
     font-weight: normal;
     cursor: pointer;
     outline: none;
-    transition: all 0.2s linear;
+    transition: all 0.3s linear;
     width: 12.5rem;
     height: 3.125rem;
     margin: 1rem 0;
@@ -1015,14 +1014,14 @@ aside .nav-line .active-dot span {
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:hover {
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
-    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
-    border-color: rgb(90, 136, 255);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+    border: 2px solid rgb(90, 136, 255);
   }
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:active {
     border: 2px solid rgb(13, 36, 92);
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
-    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
   }
   #section1 .section1-block .section-content .phone-mockup {
     width: 100%;
@@ -1248,7 +1247,7 @@ aside .nav-line .active-dot span {
     font-weight: normal;
     cursor: pointer;
     outline: none;
-    transition: all 0.2s linear;
+    transition: all 0.3s linear;
     width: 12.5rem;
     height: 3.125rem;
     margin: 1rem 0;
@@ -1256,14 +1255,14 @@ aside .nav-line .active-dot span {
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:hover {
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
-    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
-    border-color: rgb(90, 136, 255);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+    border: 2px solid rgb(90, 136, 255);
   }
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:active {
     border: 2px solid rgb(13, 36, 92);
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
-    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
   }
   #section1 .section1-block .section-content .phone-mockup {
     width: 100%;

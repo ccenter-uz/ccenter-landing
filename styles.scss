@@ -41,18 +41,18 @@
   font-weight: normal;
   cursor: pointer;
   outline: none;
-  transition: all 0.2s linear;
+  transition: all 0.3s linear;
 
   &:hover {
     backdrop-filter: blur(66px);
-    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
-    border-color: rgba(90, 136, 255, 1);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+    border: 2px solid rgba(90, 136, 255, 1);
   }
 
   &:active {
     border: 2px solid rgba(13, 36, 92, 1);
     backdrop-filter: blur(66px);
-    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
   }
 }
 html {
@@ -119,9 +119,8 @@ aside {
       span {
         opacity: 0;
         @include GLASS-BOX;
-        display: block;
-        min-width: fit-content;
         width: 100%;
+        min-width: max-content;
         display: flex;
         align-items: center;
         justify-content: center;
