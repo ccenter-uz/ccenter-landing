@@ -28,6 +28,7 @@ body {
   padding: 0 1.25rem;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 .container::-webkit-scrollbar {
   display: none;
@@ -197,6 +198,8 @@ aside .nav-line .active-dot span {
   flex-direction: column;
   opacity: 0.5;
   transition: all 0.4s linear;
+  will-change: transform, opacity;
+  transform: translateZ(0);
 }
 #section2 .section-content .outsourcing .second-section-box h2 {
   font-size: 1.25rem;
@@ -220,7 +223,7 @@ aside .nav-line .active-dot span {
 }
 #section2 .section-content .outsourcing .active-second-section-box hr {
   transition: all 0.3s linear;
-  width: 0;
+  max-width: 0;
   animation: fill 2s ease;
   animation-fill-mode: both;
   border-color: #4169e1;
@@ -374,6 +377,8 @@ aside .nav-line .active-dot span {
   opacity: 0.5;
   flex: 1;
   transition: all 0.3s linear;
+  will-change: transform, opacity;
+  transform: translateZ(0);
 }
 .last-section #section4 .section-content .stats-container .stat-item h2 {
   transition: all 0.3s linear;
@@ -450,7 +455,7 @@ aside .nav-line .active-dot span {
 
 @keyframes fill {
   to {
-    width: 100%;
+    max-width: 100%;
   }
 }
 @keyframes spill {

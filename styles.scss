@@ -78,6 +78,7 @@ body {
   padding: 0 1.25rem;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
 
   &::-webkit-scrollbar {
     display: none;
@@ -221,7 +222,8 @@ aside {
         flex-direction: column;
         opacity: 0.5;
         transition: all 0.4s linear;
-
+        will-change: transform, opacity;
+        transform: translateZ(0);
         h2 {
           font-size: 1.25rem;
           line-height: 2rem;
@@ -250,7 +252,7 @@ aside {
 
         hr {
           transition: all 0.3s linear;
-          width: 0;
+          max-width: 0;
           animation: fill 2s ease;
           animation-fill-mode: both;
           border-color: #4169e1;
@@ -379,6 +381,8 @@ aside {
           opacity: 0.5;
           flex: 1;
           transition: all 0.3s linear;
+          will-change: transform, opacity;
+          transform: translateZ(0);
 
           h2 {
             transition: all 0.3s linear;
@@ -472,7 +476,7 @@ aside {
 
 @keyframes fill {
   to {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
