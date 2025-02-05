@@ -32,7 +32,6 @@ body::-webkit-scrollbar {
 
 .container {
   width: 100%;
-  height: 100%;
   max-width: 1440px;
   margin: auto;
   padding: 0 1.25rem;
@@ -616,7 +615,7 @@ aside .nav-line .active-dot span {
   }
   #section2 .section-content .outsourcing .active-second-section-box h2 {
     scale: 1.1;
-    transform: translateX(1.5rem);
+    transform: translateX(1rem);
   }
   #section2 .section-content .video-placeholder {
     width: 100%;
@@ -687,6 +686,7 @@ aside .nav-line .active-dot span {
   }
   .last-section #section4 {
     width: 100%;
+    height: 50%;
     align-items: flex-start;
   }
   .last-section #section4 .section-content {
@@ -726,7 +726,8 @@ aside .nav-line .active-dot span {
     border-color: #4169e1;
   }
   .last-section #section4 .section-content .stats-container .active-stat-item h2 {
-    font-size: 1.7rem;
+    scale: 1.1;
+    transform: translateX(0.5rem);
   }
   .last-section #section4 .section-content .stats-container .active-stat-item hr {
     border-color: #4169e1;
@@ -861,7 +862,8 @@ aside .nav-line .active-dot span {
     border-color: #4169e1;
   }
   #section2 .section-content .outsourcing .active-second-section-box h2 {
-    font-size: 1.7rem;
+    scale: 1.1;
+    transform: translateX(2rem);
   }
   #section2 .section-content .video-placeholder {
     width: 100%;
@@ -972,7 +974,8 @@ aside .nav-line .active-dot span {
     border-color: #4169e1;
   }
   .last-section #section4 .section-content .stats-container .active-stat-item h2 {
-    font-size: 1.7rem;
+    scale: 1.1;
+    transform: translateX(0.5rem);
   }
   .last-section #section4 .section-content .stats-container .active-stat-item hr {
     transition: all 0.3s linear;
@@ -1107,7 +1110,8 @@ aside .nav-line .active-dot span {
     border-color: #4169e1;
   }
   #section2 .section-content .outsourcing .active-second-section-box h2 {
-    font-size: 1.7rem;
+    scale: 1.1;
+    transform: translateX(1rem);
   }
   #section2 .section-content .video-placeholder {
     width: 100%;
@@ -1214,7 +1218,8 @@ aside .nav-line .active-dot span {
     opacity: 1;
   }
   .last-section #section4 .section-content .stats-container .active-stat-item h2 {
-    font-size: 1.7rem;
+    scale: 1.1;
+    transform: translateX(1.5rem);
   }
   .last-section #section4 .section-content .stats-container .active-stat-item hr {
     border-color: #4169e1;
@@ -1349,7 +1354,8 @@ aside .nav-line .active-dot span {
     border-color: #4169e1;
   }
   #section2 .section-content .outsourcing .active-second-section-box h2 {
-    font-size: 1.7rem;
+    scale: 1.1;
+    transform: translateX(1rem);
   }
   #section2 .section-content .video-placeholder {
     width: 100%;
@@ -1459,7 +1465,8 @@ aside .nav-line .active-dot span {
     opacity: 1;
   }
   .last-section #section4 .section-content .stats-container .active-stat-item h2 {
-    font-size: 1.7rem;
+    scale: 1.1;
+    transform: translateX(2rem);
   }
   .last-section #section4 .section-content .stats-container .active-stat-item hr {
     border-color: #4169e1;
