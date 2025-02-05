@@ -8,6 +8,11 @@ function updateActiveClass(items, currentIndex, activeClass) {
   return (currentIndex + 1) % items.length;
 }
 
+window.onload = function () {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("container").style.display = "block";
+};
+
 document.addEventListener("DOMContentLoaded", function () {
   window.scrollTo(0, 0);
 
