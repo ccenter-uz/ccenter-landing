@@ -28,6 +28,7 @@ body {
   padding: 0 1.25rem;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
 }
 .container::-webkit-scrollbar {
@@ -566,6 +567,8 @@ aside .nav-line .active-dot span {
   #section2 .section-content .outsourcing .second-section-box {
     border-left: 1px solid #fff;
     padding: 1em;
+    transform: translateZ(0);
+    will-change: transform;
   }
   #section2 .section-content .outsourcing .second-section-box h2 {
     font-size: 1.5rem;

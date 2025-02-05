@@ -78,6 +78,7 @@ body {
   padding: 0 1.25rem;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
 
   &::-webkit-scrollbar {
@@ -589,6 +590,8 @@ aside {
         .second-section-box {
           border-left: 1px solid #fff;
           padding: 1em;
+          transform: translateZ(0);
+          will-change: transform;
 
           h2 {
             font-size: 1.5rem;
