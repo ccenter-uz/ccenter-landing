@@ -1,8 +1,8 @@
 export const translationEn ={
     "about-us": "About us",
     "get-price": "Get a price",
-    "section1-text": "We offer you the best services in repairing and servicing your car",
-    "order-service": "ORDER SERVICE",
+    "section1-text": "The team at the Contact Center has been operating for over 10 years. During this time, the number of clients using our services has been increasing, as well as the size of our team each year.",
+    "order-service": "Contact us",
     "outsourcing": "Outsourcing",
     "outsourcing-box-1-title": "Outsourcing",
     "outsourcing-box-1-text": "We offer you the best services in repairing and servicing your car",
@@ -16,8 +16,8 @@ export const translationEn ={
     "additional-service-3": "Additional service 3",
     "additional-service-4": "Additional service 4",
     "price-list": "Price list",
-    "price-list-text": "Contact us for telecommunication services",
-    "section4-title": "20 years with you",
+    "price-list-text": "Tariffs for services provided under a contractual agreement",
+    "section4-title": "Together with you for over 10 years!",
     "section4-stat1-title": "+15 000 000",
     "section4-stat1-text": "Calls received",
     "section4-stat2-title": "+15",
@@ -37,4 +37,5 @@ export const translationEn ={
     "send": "Send",
     "services": "Services",
     "contact": "Contacts",
+    "destribution": "© 2025 OOO Contact Center LLC"
 }

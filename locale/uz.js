@@ -1,8 +1,8 @@
 export const translationUz ={
     "about-us": "Biz haqimizda",
     "get-price": "Narxni olish",
-    "section1-text": "Biz sizga avtomobilingizni ta'mirlash va xizmat ko'rsatishda eng yaxshi xizmatlarni taklif qilamiz",
-    "order-service": "XIZMAT BUYURTMA",
+    "section1-text": "Kontakt Markazi jamoasi 10 yildan ortiq vaqt mobaynida o‘z faoliyatini yuritib kelmoqda. Bu vaqt davomida xizmatlarimizdan foydalanayotgan mijozlar soni ortishi bilan birga bizning jamoa soni ham yildan-yilga oshib kelmoqda.",
+    "order-service": "Biz bilan bog‘lanish",
     "outsourcing": "Autmasulot",
     "outsourcing-box-1-title": "Autmasulot",
     "outsourcing-box-1-text": "Biz sizga avtomobilingizni ta'mirlash va xizmat ko'rsatishda eng yaxshi xizmatlarni taklif qilamiz",
@@ -16,8 +16,8 @@ export const translationUz ={
     "additional-service-3": "Qo'shimcha xizmat 3",
     "additional-service-4": "Qo'shimcha xizmat 4",
     "price-list": "Narx ro'yxati",
-    "price-list-text": "Telekommunikatsiya xizmatlariga murojaat qiling!",
-    "section4-title": "20 yil siz bilan birga",
+    "price-list-text": "Shartnoma asosida belgilanadigan xizmatlar uchun narxnoma",
+    "section4-title": "10 yildan ortiq siz bilan birgamiz!",
     "section4-stat1-title": "+15 000 000",
     "section4-stat1-text": "Qabul qilingan qo'ng'iroqlar",
     "section4-stat2-title": "+15",
@@ -37,4 +37,5 @@ export const translationUz ={
     "send": "Yuborish",
     "services": "Xizmatlar",
     "contact": "Aloqa",
+    "destribution": "© 2025 OOO Kontakt markazi MChJ"
 }
