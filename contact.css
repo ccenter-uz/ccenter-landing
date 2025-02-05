@@ -186,6 +186,11 @@ footer #language option {
 }
 
 @media (width <= 640px) {
+  body {
+    background-size: cover;
+    background-position: fixed;
+    z-index: -1;
+  }
   header {
     padding: 0 1.25rem;
     margin: 2rem 0;

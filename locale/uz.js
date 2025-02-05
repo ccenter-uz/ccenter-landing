@@ -35,4 +35,6 @@ export const translationUz ={
     "your-phone": "Telefon raqamingiz",
     "consent": "Butonni bosish orqali siz ro'yxatdan o'chirilgan ma'lumotlarga ega bo'lasiz.",
     "send": "Yuborish",
+    "services": "Xizmatlar",
+    "contact": "Aloqa",
 }

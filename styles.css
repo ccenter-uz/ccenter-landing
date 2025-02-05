@@ -4,7 +4,13 @@
   box-sizing: border-box;
   font-family: "Roboto";
   font-weight: 300;
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  color: white;
 }
 
 .d-none {
@@ -12,31 +18,34 @@
 }
 
 /* Glass box */
+html,
 body {
-  background: url("assets/bg.svg") no-repeat center center fixed;
-  background-size: cover;
+  width: 100%;
+  height: 100%;
   color: white;
-  overflow: hidden;
+  scroll-behavior: smooth;
+  background-image: url("./assets/bg.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-color: #000;
+  overflow-y: auto;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .container {
   width: 100%;
   max-width: 1440px;
-  height: 100dvh;
   margin: auto;
-  overflow-x: hidden;
   padding: 0 1.25rem;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-}
-.container::-webkit-scrollbar {
-  display: none;
 }
 
 header {
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   background: transparent;
@@ -54,7 +63,7 @@ header .header-btn-price {
   font-weight: normal;
   cursor: pointer;
   outline: none;
-  transition: all 0.2s linear;
+  transition: all 0.3s linear;
   width: 10.68rem;
   height: 3.18rem;
   font-size: 0.87rem;
@@ -62,14 +71,14 @@ header .header-btn-price {
 header .header-btn-price:hover {
   -webkit-backdrop-filter: blur(66px);
           backdrop-filter: blur(66px);
-  box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
-  border-color: rgb(90, 136, 255);
+  box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+  border: 2px solid rgb(90, 136, 255);
 }
 header .header-btn-price:active {
   border: 2px solid rgb(13, 36, 92);
   -webkit-backdrop-filter: blur(66px);
           backdrop-filter: blur(66px);
-  box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+  box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
 }
 
 aside {
@@ -78,110 +87,56 @@ aside {
   top: 30%;
 }
 aside .nav-line {
-  height: 450px;
+  height: 24rem;
+  width: 1px;
+  border: 1px dashed rgba(255, 255, 255, 0.2862745098);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 aside .nav-line .nav-dot {
-  width: 10px;
-  height: 10px;
+  width: 0.32rem;
+  height: 0.32rem;
   border-radius: 50%;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.5960784314);
   cursor: pointer;
-  position: absolute;
-  top: 30%;
-  left: -3px;
 }
-aside .nav-line .nav-dot::after {
-  visibility: hidden;
-  content: "";
-  width: 1px;
-  height: 100%;
-  background: #4169e1;
-  cursor: pointer;
-  position: absolute;
-  top: -9em;
-  left: 4.5px;
-}
-aside .nav-line .nav-dot::before {
-  visibility: hidden;
-  content: "";
-  width: 1px;
-  height: 100%;
-  background: #4169e1;
-  cursor: pointer;
-  position: absolute;
-  left: 4.5px;
+aside .nav-line .nav-dot span {
+  opacity: 0;
+  border: 1px solid rgba(245, 245, 245, 0.103);
+  background-color: rgba(255, 255, 255, 0.068);
+  backdrop-filter: blur(41px);
+  -webkit-backdrop-filter: blur(41px);
+  width: 100%;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  position: relative;
+  left: 1em;
+  top: -0.8rem;
 }
 aside .nav-line .active-dot {
   background: #4169e1;
   box-shadow: 0 0 10px 0 #4169e1;
-  transition: all 0.3s linear 0.3s;
+  transition: all 0.3s linear;
 }
 aside .nav-line .active-dot span {
-  display: block;
-  width: 100%;
-  min-width: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  position: absolute;
-  padding: 8px 16px;
-  background: #252525;
-  color: #fff;
-  border-radius: 20px;
-  left: 1em;
+  opacity: 1;
+  animation: scaleLittle 0.5s linear both;
 }
-aside .nav-line .active-dot::after {
-  visibility: visible;
-  animation: growFromTop 0.3s linear forwards;
-  animation-fill-mode: both;
-}
-aside .nav-line .second-active-dot {
-  background: #4169e1;
-  box-shadow: 0 0 10px 0 #4169e1;
-  transition: all 0.3s linear 0.3s;
-}
-aside .nav-line .second-active-dot span {
-  display: block;
-  width: 100%;
-  min-width: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  position: absolute;
-  padding: 8px 16px;
-  background: #252525;
-  color: #fff;
-  border-radius: 20px;
-  left: 1em;
-}
-aside .nav-line .second-active-dot::before {
-  visibility: visible;
-  animation: growFromBottom 0.3s linear forwards;
-  animation-fill-mode: both;
-}
-@keyframes growFromBottom {
-  from {
-    height: 0;
-    top: 150px;
+@keyframes scaleLittle {
+  50% {
+    scale: 1.2;
   }
-  to {
-    height: 150px;
-    top: 0;
+  100% {
+    scale: 1;
   }
-}
-@keyframes growFromTop {
-  from {
-    height: 0;
-  }
-  to {
-    height: 150px;
-  }
-}
-
-.section {
-  scroll-snap-align: center;
 }
 
 #section1 {
@@ -189,11 +144,13 @@ aside .nav-line .second-active-dot::before {
   height: 100%;
   min-height: -moz-fit-content;
   min-height: fit-content;
-  max-height: 100dvh;
   margin-left: auto;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  min-height: 67.5rem;
+  display: flex;
+  align-items: center;
 }
 #section1 .section1-block {
   display: flex;
@@ -224,11 +181,12 @@ aside .nav-line .second-active-dot::before {
   height: 100%;
   min-height: -moz-fit-content;
   min-height: fit-content;
-  max-height: 100dvh;
   margin-left: auto;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  min-height: fit-content;
+  align-items: flex-start;
 }
 #section2 .section-content h1 {
   text-align: end;
@@ -245,31 +203,31 @@ aside .nav-line .second-active-dot::before {
   flex: 1;
   flex-direction: column;
   opacity: 0.5;
-  transition: all 0.4s linear;
+  transition: all 0.3s linear;
 }
 #section2 .section-content .outsourcing .second-section-box h2 {
+  transition: all 0.3s linear;
   font-size: 1.25rem;
   line-height: 2rem;
 }
 #section2 .section-content .outsourcing .second-section-box p {
+  transition: all 0.3s linear;
   font-size: 0.87rem;
   line-height: 1.31rem;
 }
 #section2 .section-content .outsourcing .second-section-box hr {
+  transition: all 0.3s linear;
   margin: 1rem 0;
   border: 1px solid #fff;
 }
 #section2 .section-content .outsourcing .active-second-section-box {
   opacity: 1;
-  transition: all 0.3s linear;
 }
 #section2 .section-content .outsourcing .active-second-section-box h2 {
-  transition: all 0.3s linear;
-  font-size: 32px;
+  font-size: 1.5rem;
 }
 #section2 .section-content .outsourcing .active-second-section-box hr {
-  transition: all 0.3s linear;
-  width: 0;
+  max-width: 0;
   animation: fill 2s ease;
   animation-fill-mode: both;
   border-color: #4169e1;
@@ -296,13 +254,15 @@ aside .nav-line .second-active-dot::before {
   height: 100%;
   min-height: -moz-fit-content;
   min-height: fit-content;
-  max-height: 100dvh;
   margin-left: auto;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  height: 100%;
+  min-height: 57.5rem;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: center;
 }
 #section3 .section-content h1 {
   text-align: end;
@@ -369,7 +329,7 @@ aside .nav-line .second-active-dot::before {
   font-weight: normal;
   cursor: pointer;
   outline: none;
-  transition: all 0.2s linear;
+  transition: all 0.3s linear;
   width: 8.37rem;
   height: 3.18rem;
   margin: 1.25rem 0 1.25rem auto;
@@ -377,22 +337,28 @@ aside .nav-line .second-active-dot::before {
 #section3 .section-content .services-bottom button:hover {
   -webkit-backdrop-filter: blur(66px);
           backdrop-filter: blur(66px);
-  box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
-  border-color: rgb(90, 136, 255);
+  box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+  border: 2px solid rgb(90, 136, 255);
 }
 #section3 .section-content .services-bottom button:active {
   border: 2px solid rgb(13, 36, 92);
   -webkit-backdrop-filter: blur(66px);
           backdrop-filter: blur(66px);
-  box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+  box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
 }
 
+.last-section {
+  height: 100%;
+  min-height: 57.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .last-section #section4 {
   width: 80%;
   height: 100%;
   min-height: -moz-fit-content;
   min-height: fit-content;
-  max-height: 100dvh;
   margin-left: auto;
   display: flex;
   align-items: flex-end;
@@ -435,19 +401,17 @@ aside .nav-line .second-active-dot::before {
   border-color: #fff;
 }
 .last-section #section4 .section-content .stats-container .stat-item p {
+  transition: all 0.3s linear;
   font-size: 0.87rem;
   line-height: 1.31rem;
 }
 .last-section #section4 .section-content .stats-container .active-stat-item {
   opacity: 1;
-  transition: all 0.3s linear;
 }
 .last-section #section4 .section-content .stats-container .active-stat-item h2 {
-  transition: all 0.3s linear;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .last-section #section4 .section-content .stats-container .active-stat-item hr {
-  transition: all 0.3s linear;
   border-color: #4169e1;
 }
 .last-section footer {
@@ -499,7 +463,7 @@ aside .nav-line .second-active-dot::before {
 
 @keyframes fill {
   to {
-    width: 100%;
+    max-width: 100%;
   }
 }
 @keyframes spill {
@@ -511,14 +475,42 @@ aside .nav-line .second-active-dot::before {
     opacity: 1;
   }
 }
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #011a68, #4169e1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Spinner animation */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top: 5px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @media (320px <= width <= 440px) {
   body {
-    overflow-y: auto;
-  }
-  .container {
-    padding: 0 20px;
-    scroll-snap-type: none;
-    overflow-y: auto;
+    background-size: cover;
+    background-position: fixed;
+    z-index: -1;
   }
   header {
     position: static;
@@ -537,8 +529,10 @@ aside .nav-line .second-active-dot::before {
   #section1 {
     width: 100%;
     height: 100%;
-    margin: 0 auto;
-    align-items: flex-start;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    align-items: center;
+    margin-bottom: 6.68rem;
   }
   #section1 .section1-block p {
     display: none;
@@ -567,7 +561,7 @@ aside .nav-line .second-active-dot::before {
     font-weight: normal;
     cursor: pointer;
     outline: none;
-    transition: all 0.2s linear;
+    transition: all 0.3s linear;
     width: 12.5rem;
     height: 3.125rem;
     margin: 1rem 0;
@@ -575,14 +569,14 @@ aside .nav-line .second-active-dot::before {
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:hover {
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
-    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
-    border-color: rgb(90, 136, 255);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+    border: 2px solid rgb(90, 136, 255);
   }
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:active {
     border: 2px solid rgb(13, 36, 92);
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
-    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
   }
   #section1 .section1-block .section-content .phone-mockup {
     width: 100%;
@@ -591,7 +585,9 @@ aside .nav-line .second-active-dot::before {
   #section2 {
     width: 100%;
     height: 100%;
-    align-items: flex-start;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    align-items: center;
     margin-bottom: 6.68rem;
   }
   #section2 .section-content {
@@ -630,8 +626,8 @@ aside .nav-line .second-active-dot::before {
     transition: all 0.3s linear;
   }
   #section2 .section-content .outsourcing .active-second-section-box h2 {
-    transition: all 0.3s linear;
-    font-size: 1.7rem;
+    scale: 1.1;
+    transform: translateX(1rem);
   }
   #section2 .section-content .video-placeholder {
     width: 100%;
@@ -642,8 +638,9 @@ aside .nav-line .second-active-dot::before {
   #section3 {
     width: 100%;
     height: 100%;
-    margin: 0 auto;
-    align-items: flex-start;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    align-items: center;
   }
   #section3 .section-content {
     width: 100%;
@@ -691,9 +688,11 @@ aside .nav-line .second-active-dot::before {
   }
   .last-section {
     height: 100%;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 4.25rem;
     gap: 1.5rem 0;
   }
@@ -737,14 +736,12 @@ aside .nav-line .second-active-dot::before {
   .last-section #section4 .section-content .stats-container .active-stat-item {
     opacity: 1;
     border-color: #4169e1;
-    transition: all 0.3s linear;
   }
   .last-section #section4 .section-content .stats-container .active-stat-item h2 {
-    transition: all 0.3s linear;
-    font-size: 1.7rem;
+    scale: 1.1;
+    transform: translateX(0.5rem);
   }
   .last-section #section4 .section-content .stats-container .active-stat-item hr {
-    transition: all 0.3s linear;
     border-color: #4169e1;
   }
   .last-section footer {
@@ -764,12 +761,9 @@ aside .nav-line .second-active-dot::before {
 }
 @media (440.1px <= width <= 768px) {
   body {
-    overflow-y: auto;
-  }
-  .container {
-    padding: 0 20px;
-    scroll-snap-type: none;
-    overflow-y: auto;
+    background-size: cover;
+    background-position: fixed;
+    z-index: -1;
   }
   header {
     position: static;
@@ -787,13 +781,12 @@ aside .nav-line .second-active-dot::before {
   }
   #section1 {
     width: 100%;
+    height: 100%;
     min-height: -moz-fit-content;
     min-height: fit-content;
-    max-height: 100dvh;
-    height: 100%;
+    align-items: center;
     margin: 0 auto;
-    align-items: flex-start;
-    margin-bottom: 6.25rem;
+    margin-bottom: 7.68rem;
   }
   #section1 .section1-block p {
     display: none;
@@ -822,7 +815,7 @@ aside .nav-line .second-active-dot::before {
     font-weight: normal;
     cursor: pointer;
     outline: none;
-    transition: all 0.2s linear;
+    transition: all 0.3s linear;
     width: 12.5rem;
     height: 3.125rem;
     margin: 1rem 0;
@@ -830,14 +823,14 @@ aside .nav-line .second-active-dot::before {
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:hover {
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
-    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
-    border-color: rgb(90, 136, 255);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+    border: 2px solid rgb(90, 136, 255);
   }
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:active {
     border: 2px solid rgb(13, 36, 92);
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
-    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
   }
   #section1 .section1-block .section-content .phone-mockup {
     width: 100%;
@@ -845,10 +838,11 @@ aside .nav-line .second-active-dot::before {
   }
   #section2 {
     width: 100%;
-    height: -moz-fit-content;
-    height: fit-content;
-    align-items: flex-start;
-    margin-bottom: 4.25rem;
+    height: 100%;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    align-items: center;
+    margin-bottom: 7.68rem;
   }
   #section2 .section-content {
     width: 100%;
@@ -883,11 +877,10 @@ aside .nav-line .second-active-dot::before {
   #section2 .section-content .outsourcing .active-second-section-box {
     opacity: 1;
     border-color: #4169e1;
-    transition: all 0.3s linear;
   }
   #section2 .section-content .outsourcing .active-second-section-box h2 {
-    transition: all 0.3s linear;
-    font-size: 1.7rem;
+    scale: 1.1;
+    transform: translateX(2rem);
   }
   #section2 .section-content .video-placeholder {
     width: 100%;
@@ -898,8 +891,10 @@ aside .nav-line .second-active-dot::before {
   #section3 {
     width: 100%;
     height: 100%;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    align-items: center;
     margin: 0 auto;
-    align-items: flex-start;
   }
   #section3 .section-content {
     width: 100%;
@@ -947,6 +942,8 @@ aside .nav-line .second-active-dot::before {
   }
   .last-section {
     height: 100%;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -992,11 +989,10 @@ aside .nav-line .second-active-dot::before {
   .last-section #section4 .section-content .stats-container .active-stat-item {
     opacity: 1;
     border-color: #4169e1;
-    transition: all 0.3s linear;
   }
   .last-section #section4 .section-content .stats-container .active-stat-item h2 {
-    transition: all 0.3s linear;
-    font-size: 1.7rem;
+    scale: 1.1;
+    transform: translateX(0.5rem);
   }
   .last-section #section4 .section-content .stats-container .active-stat-item hr {
     transition: all 0.3s linear;
@@ -1019,12 +1015,9 @@ aside .nav-line .second-active-dot::before {
 }
 @media (768.1px <= width <= 1024px) {
   body {
-    overflow-y: auto;
-  }
-  .container {
-    padding: 0 20px;
-    scroll-snap-type: none;
-    overflow-y: auto;
+    background-size: cover;
+    background-position: fixed;
+    z-index: -1;
   }
   header {
     position: static;
@@ -1042,13 +1035,12 @@ aside .nav-line .second-active-dot::before {
   }
   #section1 {
     width: 100%;
+    height: 100%;
     min-height: -moz-fit-content;
     min-height: fit-content;
-    max-height: 100dvh;
-    height: 100%;
+    align-items: center;
     margin: 0 auto;
-    align-items: flex-start;
-    margin-bottom: 6.25rem;
+    margin-bottom: 10.25rem;
   }
   #section1 .section1-block p {
     display: none;
@@ -1077,7 +1069,7 @@ aside .nav-line .second-active-dot::before {
     font-weight: normal;
     cursor: pointer;
     outline: none;
-    transition: all 0.2s linear;
+    transition: all 0.3s linear;
     width: 12.5rem;
     height: 3.125rem;
     margin: 1rem 0;
@@ -1085,14 +1077,14 @@ aside .nav-line .second-active-dot::before {
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:hover {
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
-    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
-    border-color: rgb(90, 136, 255);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+    border: 2px solid rgb(90, 136, 255);
   }
   #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:active {
     border: 2px solid rgb(13, 36, 92);
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
-    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
   }
   #section1 .section1-block .section-content .phone-mockup {
     width: 100%;
@@ -1100,10 +1092,11 @@ aside .nav-line .second-active-dot::before {
   }
   #section2 {
     width: 100%;
-    height: -moz-fit-content;
-    height: fit-content;
-    align-items: flex-start;
-    margin-bottom: 4.25rem;
+    height: 100%;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    align-items: center;
+    margin-bottom: 10.25rem;
   }
   #section2 .section-content {
     width: 100%;
@@ -1137,11 +1130,10 @@ aside .nav-line .second-active-dot::before {
   #section2 .section-content .outsourcing .active-second-section-box {
     opacity: 1;
     border-color: #4169e1;
-    transition: all 0.3s linear;
   }
   #section2 .section-content .outsourcing .active-second-section-box h2 {
-    transition: all 0.3s linear;
-    font-size: 1.7rem;
+    scale: 1.1;
+    transform: translateX(1rem);
   }
   #section2 .section-content .video-placeholder {
     width: 100%;
@@ -1152,8 +1144,9 @@ aside .nav-line .second-active-dot::before {
   #section3 {
     width: 100%;
     height: 100%;
-    margin: 0 auto;
-    align-items: flex-start;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    align-items: center;
   }
   #section3 .section-content {
     width: 100%;
@@ -1198,6 +1191,8 @@ aside .nav-line .second-active-dot::before {
   }
   .last-section {
     height: 100%;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1243,14 +1238,264 @@ aside .nav-line .second-active-dot::before {
   }
   .last-section #section4 .section-content .stats-container .active-stat-item {
     opacity: 1;
-    transition: all 0.3s linear;
   }
   .last-section #section4 .section-content .stats-container .active-stat-item h2 {
-    transition: all 0.3s linear;
-    font-size: 1.7rem;
+    scale: 1.1;
+    transform: translateX(1.5rem);
   }
   .last-section #section4 .section-content .stats-container .active-stat-item hr {
+    border-color: #4169e1;
+  }
+  .last-section footer {
+    width: 100%;
+    margin: 0 auto;
+    height: 10.81rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem 0;
+  }
+  .last-section footer p {
+    font-size: 1rem;
+  }
+  .last-section footer select {
+    font-size: 1rem;
+  }
+}
+@media (1024.1px <= width <= 1440px) {
+  body {
+    background-size: cover;
+    background-position: fixed;
+    z-index: -1;
+  }
+  header {
+    position: static;
+    margin: 2rem 0;
+  }
+  header img {
+    width: 14rem;
+    height: auto;
+  }
+  header .header-btn-price {
+    display: none;
+  }
+  aside {
+    display: none;
+  }
+  #section1 {
+    width: 90%;
+    height: 100%;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 10.25rem;
+  }
+  #section1 .section1-block p {
+    display: none;
+  }
+  #section1 .section1-block .section-content h1 {
+    font-size: 5rem;
+    line-height: 3.875rem;
+    margin: 2.81rem 0;
+  }
+  #section1 .section1-block .section-content .section-default-hiddens {
+    width: 85%;
+    margin-left: auto;
+    display: block;
+  }
+  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-text {
+    display: block;
+    font-size: 1.3rem;
+    line-height: 1.81rem;
+  }
+  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button {
+    background-color: transparent;
+    color: white;
+    padding: 0.62rem;
+    border: 2px solid rgb(54, 100, 218);
+    border-radius: 2rem;
+    font-weight: normal;
+    cursor: pointer;
+    outline: none;
     transition: all 0.3s linear;
+    width: 12.5rem;
+    height: 3.125rem;
+    margin: 1rem 0;
+  }
+  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:hover {
+    -webkit-backdrop-filter: blur(66px);
+            backdrop-filter: blur(66px);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+    border: 2px solid rgb(90, 136, 255);
+  }
+  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:active {
+    border: 2px solid rgb(13, 36, 92);
+    -webkit-backdrop-filter: blur(66px);
+            backdrop-filter: blur(66px);
+    box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+  }
+  #section1 .section1-block .section-content .phone-mockup {
+    width: 100%;
+    height: 100%;
+  }
+  #section2 {
+    width: 90%;
+    height: 100%;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 10.25rem;
+  }
+  #section2 .section-content {
+    width: 100%;
+  }
+  #section2 .section-content h1 {
+    font-size: 3.5rem;
+    line-height: 3.87rem;
+    margin-bottom: 2.5rem;
+    margin-top: 0;
+  }
+  #section2 .section-content .outsourcing {
+    width: 100%;
+  }
+  #section2 .section-content .outsourcing .second-section-box {
+    border-left: 1px solid #fff;
+    padding: 1em;
+  }
+  #section2 .section-content .outsourcing .second-section-box h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  #section2 .section-content .outsourcing .second-section-box p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    margin: 0 0.5rem;
+  }
+  #section2 .section-content .outsourcing .second-section-box hr {
+    display: none;
+  }
+  #section2 .section-content .outsourcing .active-second-section-box {
+    opacity: 1;
+    border-color: #4169e1;
+  }
+  #section2 .section-content .outsourcing .active-second-section-box h2 {
+    scale: 1.1;
+    transform: translateX(1rem);
+  }
+  #section2 .section-content .video-placeholder {
+    width: 100%;
+    min-height: -moz-max-content;
+    min-height: max-content;
+    margin-top: 5rem;
+  }
+  #section3 {
+    width: 90%;
+    height: 100%;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 10.25rem;
+  }
+  #section3 .section-content {
+    width: 100%;
+  }
+  #section3 .section-content h1 {
+    font-size: 3rem;
+    line-height: 3.43rem;
+    margin-bottom: 4rem;
+    margin-top: 0;
+    word-wrap: break-word;
+  }
+  #section3 .section-content .services-grid {
+    width: 100%;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+  }
+  #section3 .section-content .services-grid .service-item {
+    height: 14.81rem;
+  }
+  #section3 .section-content .services-grid .service-item .service-icon {
+    height: 80%;
+  }
+  #section3 .section-content .services-grid .service-item .service-icon img {
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+  #section3 .section-content .services-bottom h2 {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 37px;
+  }
+  #section3 .section-content .services-bottom p {
+    font-size: 20px;
+    line-height: 31px;
+  }
+  #section3 .section-content .services-bottom button {
+    width: 175px;
+    height: 51px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .last-section {
+    width: 90%;
+    height: 100%;
+    min-height: 45rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .last-section #section4 {
+    width: 100%;
+    height: 50%;
+    align-items: flex-start;
+  }
+  .last-section #section4 .section-content {
+    width: 100%;
+  }
+  .last-section #section4 .section-content h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    margin-top: 0;
+    margin-bottom: 3.5rem;
+  }
+  .last-section #section4 .section-content .stats-container {
+    width: 100%;
+    height: 20rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+  .last-section #section4 .section-content .stats-container .stat-item {
+    border-left: none;
+    padding-left: 0.62rem;
+    padding: 1em;
+  }
+  .last-section #section4 .section-content .stats-container .stat-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .last-section #section4 .section-content .stats-container .stat-item hr {
+    display: block;
+  }
+  .last-section #section4 .section-content .stats-container .stat-item p {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+  }
+  .last-section #section4 .section-content .stats-container .active-stat-item {
+    opacity: 1;
+  }
+  .last-section #section4 .section-content .stats-container .active-stat-item h2 {
+    scale: 1.1;
+    transform: translateX(2rem);
+  }
+  .last-section #section4 .section-content .stats-container .active-stat-item hr {
     border-color: #4169e1;
   }
   .last-section footer {

@@ -35,4 +35,6 @@ export const translationEn ={
     "your-phone": "Your phone",
     "consent": "By clicking the button, you agree to the processing of personal data.",
     "send": "Send",
+    "services": "Services",
+    "contact": "Contacts",
 }
