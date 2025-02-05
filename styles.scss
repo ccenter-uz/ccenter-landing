@@ -59,6 +59,8 @@
 
 html,
 body {
+  width: 100%;
+  height: 100dvh;
   background-image: url("./assets/bg.svg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -213,8 +215,6 @@ aside {
     .outsourcing {
       display: flex;
       justify-content: space-between;
-      height: fit-content;
-      position: relative;
 
       .second-section-box {
         display: flex;
@@ -222,7 +222,6 @@ aside {
         flex-direction: column;
         opacity: 0.5;
         transition: all 0.3s linear;
-        position: relative;
 
         h2 {
           transition: all 0.3s linear;

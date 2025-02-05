@@ -14,6 +14,8 @@
 /* Glass box */
 html,
 body {
+  width: 100%;
+  height: 100dvh;
   background-image: url("./assets/bg.svg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -189,9 +191,6 @@ aside .nav-line .active-dot span {
 #section2 .section-content .outsourcing {
   display: flex;
   justify-content: space-between;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: relative;
 }
 #section2 .section-content .outsourcing .second-section-box {
   display: flex;
@@ -199,7 +198,6 @@ aside .nav-line .active-dot span {
   flex-direction: column;
   opacity: 0.5;
   transition: all 0.3s linear;
-  position: relative;
 }
 #section2 .section-content .outsourcing .second-section-box h2 {
   transition: all 0.3s linear;
