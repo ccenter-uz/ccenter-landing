@@ -84,29 +84,29 @@ main .contact-form .close img:hover {
   opacity: 0.7;
 }
 main .contact-form h1 {
-  font-size: 32px;
-  line-height: 36px;
+  font-size: 2rem;
+  line-height: 2.25rem;
 }
 main .contact-form form {
   display: flex;
   flex-direction: column;
   gap: 1em 0;
-  margin: 42px 0;
+  margin: 2.62rem 0;
   color: rgba(255, 255, 255, 0.5019607843);
 }
 main .contact-form form label {
-  font-size: 20px;
-  line-height: 24.2px;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 main .contact-form form input {
   border: 1px solid rgba(245, 245, 245, 0.103);
   background-color: rgba(255, 255, 255, 0.068);
   backdrop-filter: blur(41px);
   -webkit-backdrop-filter: blur(41px);
-  height: 52px;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-size: 20px;
+  height: 3.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
   color: rgba(255, 255, 255, 0.5019607843);
 }
 main .contact-form form input:user-invalid {
@@ -125,9 +125,9 @@ main .contact-form form button {
   cursor: pointer;
   outline: none;
   transition: all 0.2s linear;
-  width: 175px;
-  height: 51px;
-  font-size: 20px;
+  width: 10.93rem;
+  height: 3.18rem;
+  font-size: 1.25rem;
 }
 main .contact-form form button:hover {
   -webkit-backdrop-filter: blur(66px);
