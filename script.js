@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   setInterval(updateItems, 1800);
-  
+
   // SCROLL-BEHAVIOR
   const body = document.querySelector(".container");
   let isScrolling = false;

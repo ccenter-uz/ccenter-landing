@@ -65,6 +65,8 @@ body {
   -o-background-size: cover;
   background-size: cover;
   color: white;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
 
   overflow: hidden;
 }
@@ -381,18 +383,15 @@ aside {
         .stat-item {
           opacity: 0.5;
           flex: 1;
-          transition: all 0.3s linear;
           will-change: transform, opacity;
           transform: translateZ(0);
 
           h2 {
-            transition: all 0.3s linear;
             font-size: 1.25rem;
             line-height: 1.5rem;
           }
 
           hr {
-            transition: all 0.3s linear;
             margin: 1em 0;
             border-color: #fff;
           }
@@ -405,15 +404,12 @@ aside {
 
         .active-stat-item {
           opacity: 1;
-          transition: all 0.3s linear;
 
           h2 {
-            transition: all 0.3s linear;
             font-size: 2rem;
           }
 
           hr {
-            transition: all 0.3s linear;
             border-color: #4169e1;
           }
         }
@@ -499,6 +495,8 @@ aside {
   }
 
   .container {
+    min-height: fit-content;
+    height: 100%;
     padding: 0 20px;
     scroll-snap-type: none;
     overflow-y: auto;
@@ -617,7 +615,6 @@ aside {
           transition: all 0.3s linear;
 
           h2 {
-            transition: all 0.3s linear;
             font-size: 1.7rem;
           }
         }
@@ -748,15 +745,12 @@ aside {
           .active-stat-item {
             opacity: 1;
             border-color: #4169e1;
-            transition: all 0.3s linear;
 
             h2 {
-              transition: all 0.3s linear;
               font-size: 1.7rem;
             }
 
             hr {
-              transition: all 0.3s linear;
               border-color: #4169e1;
             }
           }
@@ -789,6 +783,8 @@ aside {
   }
 
   .container {
+    min-height: fit-content;
+    height: 100%;
     padding: 0 20px;
     scroll-snap-type: none;
     overflow-y: auto;
@@ -905,10 +901,8 @@ aside {
         .active-second-section-box {
           opacity: 1;
           border-color: #4169e1;
-          transition: all 0.3s linear;
 
           h2 {
-            transition: all 0.3s linear;
             font-size: 1.7rem;
           }
         }
@@ -1038,10 +1032,8 @@ aside {
           .active-stat-item {
             opacity: 1;
             border-color: #4169e1;
-            transition: all 0.3s linear;
 
             h2 {
-              transition: all 0.3s linear;
               font-size: 1.7rem;
             }
 
@@ -1079,6 +1071,8 @@ aside {
   }
 
   .container {
+    min-height: fit-content;
+    height: 100%;
     padding: 0 20px;
     scroll-snap-type: none;
     overflow-y: auto;
@@ -1194,10 +1188,8 @@ aside {
         .active-second-section-box {
           opacity: 1;
           border-color: #4169e1;
-          transition: all 0.3s linear;
 
           h2 {
-            transition: all 0.3s linear;
             font-size: 1.7rem;
           }
         }
@@ -1323,15 +1315,12 @@ aside {
 
           .active-stat-item {
             opacity: 1;
-            transition: all 0.3s linear;
 
             h2 {
-              transition: all 0.3s linear;
               font-size: 1.7rem;
             }
 
             hr {
-              transition: all 0.3s linear;
               border-color: #4169e1;
             }
           }
