@@ -619,8 +619,6 @@ aside {
         .second-section-box {
           border-left: 1px solid #fff;
           padding: 1em;
-          transform: translateZ(0);
-          will-change: transform;
 
           h2 {
             font-size: 1.5rem;
@@ -643,10 +641,21 @@ aside {
         .active-second-section-box {
           opacity: 1;
           border-color: #4169e1;
+          padding: 1em;
           transition: all 0.3s linear;
 
           h2 {
             font-size: 1.7rem;
+            line-height: 2rem;
+            margin-bottom: 0.5rem;
+          }
+          p {
+            font-size: 1rem;
+            line-height: 1.2rem;
+            margin: 0 0.5rem;
+          }
+          hr {
+            display: none;
           }
         }
       }

@@ -595,8 +595,6 @@ aside .nav-line .active-dot span {
   #section2 .section-content .outsourcing .second-section-box {
     border-left: 1px solid #fff;
     padding: 1em;
-    transform: translateZ(0);
-    will-change: transform;
   }
   #section2 .section-content .outsourcing .second-section-box h2 {
     font-size: 1.5rem;
@@ -614,10 +612,21 @@ aside .nav-line .active-dot span {
   #section2 .section-content .outsourcing .active-second-section-box {
     opacity: 1;
     border-color: #4169e1;
+    padding: 1em;
     transition: all 0.3s linear;
   }
   #section2 .section-content .outsourcing .active-second-section-box h2 {
     font-size: 1.7rem;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  #section2 .section-content .outsourcing .active-second-section-box p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    margin: 0 0.5rem;
+  }
+  #section2 .section-content .outsourcing .active-second-section-box hr {
+    display: none;
   }
   #section2 .section-content .video-placeholder {
     width: 100%;
