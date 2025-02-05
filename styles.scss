@@ -63,9 +63,9 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-color: #000;
   scroll-behavior: smooth;
@@ -213,6 +213,8 @@ aside {
     .outsourcing {
       display: flex;
       justify-content: space-between;
+      height: fit-content;
+      position: relative;
 
       .second-section-box {
         display: flex;
@@ -220,6 +222,7 @@ aside {
         flex-direction: column;
         opacity: 0.5;
         transition: all 0.3s linear;
+        position: relative;
 
         h2 {
           transition: all 0.3s linear;
