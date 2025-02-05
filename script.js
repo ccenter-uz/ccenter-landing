@@ -1,7 +1,8 @@
-function updateActiveClass(items, currentIndex, activeClass) {
+function updateActiveClass(items, currentIndex, activeClass,previousClass) {
   items?.forEach((item) => item.classList.remove(`${activeClass}`));
 
   if (items[currentIndex]) {
+    items[currentIndex].classList.remove(`${previousClass}`);
     items[currentIndex].classList.add(`${activeClass}`);
   }
 
@@ -25,7 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
     currentIndexSectionItems = updateActiveClass(
       sectionItems,
       currentIndexSectionItems,
-      "active-second-section-box"
+      "active-second-section-box",
+      "second-section-box"
     );
   }
 
@@ -33,7 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
     currentIndexStatItems = updateActiveClass(
       statItems,
       currentIndexStatItems,
-      "active-stat-item"
+      "active-stat-item",
+      "stat-item"
     );
   }
 
