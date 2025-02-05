@@ -1,37 +1,44 @@
+function updateActiveClass(items, currentIndex, activeClass) {
+  items?.forEach((item) => item.classList.remove(`${activeClass}`));
+
+  if (items[currentIndex]) {
+    items[currentIndex].classList.add(`${activeClass}`);
+  }
+
+  return (currentIndex + 1) % items.length;
+}
+
 document.addEventListener("DOMContentLoaded", function () {
- const sectionItems = document.querySelectorAll(".second-section-box");
+  const sectionItems = document.querySelectorAll(".second-section-box");
   const statItems = document.querySelectorAll(".stat-item");
+let currentIndexSectionItems = 0;
+  let currentIndexStatItems = 0;
 
-  if (!sectionItems.length || !statItems.length) return; // Prevent errors if elements are missing
-
-  let currentIndex = 0;
-
-  function updateActiveClass(items, currentIndex, activeClass) {
-    items.forEach((item) => item.classList.remove(activeClass));
-
-    if (items[currentIndex]) {
-      items[currentIndex].classList.add(activeClass);
-    }
-
-    return (currentIndex + 1) % items.length;
+  function updateSectionItems() {
+    currentIndexSectionItems = updateActiveClass(
+      sectionItems,
+      currentIndexSectionItems,
+      "active-second-section-box"
+    );
   }
 
-  function updateItems() {
-    requestAnimationFrame(() => {
-      currentIndex = updateActiveClass(sectionItems, currentIndex, "active-second-section-box");
-      updateActiveClass(statItems, currentIndex, "active-stat-item");
-    });
+  function updateStatItems() {
+    currentIndexStatItems = updateActiveClass(
+      statItems,
+      currentIndexStatItems,
+      "active-stat-item"
+    );
   }
 
-  setInterval(updateItems, 1800);
+  setInterval(updateSectionItems, 1800);
+  setInterval(updateStatItems, 1800);
 
-  // SCROLL-BEHAVIOR
-  const body = document.querySelector(".container");
-  let isScrolling = false;
+  // ASIDE-ACTIVE-CLASS
   const sections = document.querySelectorAll(".section");
   const dots = document.querySelectorAll(".nav-dot");
   let scrollDirection;
   const handleScroll = (e) => {
+    e.preventDefault();
     if (window.innerWidth > 1024) {
       scrollDirection = e.wheelDeltaY;
       const observer = new IntersectionObserver(
@@ -43,39 +50,19 @@ document.addEventListener("DOMContentLoaded", function () {
             );
 
             if (entry.isIntersecting) {
-              entry.target.classList.add("fadeIn");
-              entry.target.classList.remove("fadeOut");
               dots.forEach((dot) => dot.classList.remove("active-dot"));
-                currentDot.classList.add("active-dot");
-            } else {
-              entry.target.classList.add("fadeOut");
-              entry.target.classList.remove("fadeIn");
+              currentDot.classList.add("active-dot");
             }
           });
         },
-        { threshold: 0.8 }
+        { threshold: 0.5 }
       );
 
       sections.forEach((section) => {
         observer.observe(section);
       });
     }
-
-    e.preventDefault();
-    if (!isScrolling) {
-      isScrolling = true;
-
-      if (e.deltaY > 0) {
-        body.scrollTop += window.innerHeight;
-      } else {
-        body.scrollTop -= window.innerHeight;
-      }
-
-      setTimeout(() => {
-        isScrolling = false;
-      }, 500);
-    }
   };
 
-  window.addEventListener("wheel", handleScroll, { passive: false });
+  window.addEventListener("wheel", handleScroll);
 });
