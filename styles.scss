@@ -8,6 +8,7 @@
   text-decoration: none;
   list-style: none;
 }
+
 a {
   color: white;
 }
@@ -83,6 +84,7 @@ body {
     display: none;
   }
 }
+
 .container {
   width: 100%;
   max-width: 1440px;
@@ -208,6 +210,17 @@ aside {
   @include SECTION;
   min-height: fit-content;
   align-items: flex-start;
+  position: relative;
+  z-index: 2;
+
+  .second-line {
+    max-width: 945px;
+    max-height: 1542px;
+    position: absolute;
+    top: 18%;
+    right: -37%;
+    z-index: 1;
+  }
 
   .section-content {
     h1 {
@@ -289,6 +302,8 @@ aside {
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 
   .section-content {
     h1 {
@@ -367,12 +382,25 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  z-index: 2;
 
   #section4 {
     @include SECTION;
     margin-bottom: 2rem;
 
+    .fourth-line {
+      max-width: 848px;
+      max-height: 858px;
+      position: absolute;
+      top: -27%;
+      right: -12%;
+      z-index: 1;
+    }
+
     .section-content {
+      z-index: 2;
+
       h1 {
         text-align: end;
         font-size: 5.43rem;
@@ -529,6 +557,7 @@ aside {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -540,7 +569,9 @@ aside {
     background-size: cover;
     background-position: fixed;
     z-index: -1;
+    overflow-x: hidden;
   }
+
   header {
     position: static;
     margin: 2rem 0;
@@ -611,6 +642,13 @@ aside {
     min-height: fit-content;
     align-items: center;
     margin-bottom: 6.68rem;
+
+    .second-line {
+      position: absolute;
+      top: 80%;
+      right: -18%;
+      z-index: 1;
+    }
 
     .section-content {
       width: 100%;
@@ -746,6 +784,13 @@ aside {
       height: 50%;
       align-items: flex-start;
 
+      .fourth-line {
+        position: absolute;
+        top: -10%;
+        right: -31%;
+        z-index: 1;
+      }
+
       .section-content {
         width: 100%;
 
@@ -824,7 +869,9 @@ aside {
     background-size: cover;
     background-position: fixed;
     z-index: -1;
+    overflow-x: hidden;
   }
+
   header {
     position: static;
     margin: 2rem 0;
@@ -896,6 +943,13 @@ aside {
     min-height: fit-content;
     align-items: center;
     margin-bottom: 7.68rem;
+
+    .second-line {
+      position: absolute;
+      top: 40%;
+      right: -40%;
+      z-index: 1;
+    }
 
     .section-content {
       width: 100%;
@@ -1109,7 +1163,9 @@ aside {
     background-size: cover;
     background-position: fixed;
     z-index: -1;
+    overflow-x: hidden;
   }
+
   header {
     position: static;
     margin: 2rem 0;
@@ -1181,6 +1237,13 @@ aside {
     min-height: fit-content;
     align-items: center;
     margin-bottom: 10.25rem;
+
+    .second-line {
+      position: absolute;
+      top: 10%;
+      right: -35%;
+      z-index: 1;
+    }
 
     .section-content {
       width: 100%;
@@ -1387,7 +1450,9 @@ aside {
     background-size: cover;
     background-position: fixed;
     z-index: -1;
+    overflow-x: hidden;
   }
+
   header {
     position: static;
     margin: 2rem 0;
