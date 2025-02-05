@@ -9,6 +9,8 @@ function updateActiveClass(items, currentIndex, activeClass) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  window.scrollTo(0, 0);
+
   const sectionItems = document.querySelectorAll(".second-section-box");
   const statItems = document.querySelectorAll(".stat-item");
   let currentIndexSectionItems = 0;
