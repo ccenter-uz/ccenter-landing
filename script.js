@@ -11,7 +11,7 @@ function updateActiveClass(items, currentIndex, activeClass) {
 document.addEventListener("DOMContentLoaded", function () {
   const sectionItems = document.querySelectorAll(".second-section-box");
   const statItems = document.querySelectorAll(".stat-item");
-let currentIndexSectionItems = 0;
+  let currentIndexSectionItems = 0;
   let currentIndexStatItems = 0;
 
   function updateSectionItems() {
