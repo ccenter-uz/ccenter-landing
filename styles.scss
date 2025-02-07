@@ -192,6 +192,7 @@ header {
 .section {
   opacity: 0;
   scale: 0.8;
+  scroll-margin-top: 7rem;
 }
 .active-section {
   animation: slideIn 1s ease both;

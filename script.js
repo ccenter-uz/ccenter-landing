@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
               section.classList.remove("active-section");
             });
             entry.target.classList.add("active-section");
+            window.location.hash = entry.target.id;
           }
         });
       },
