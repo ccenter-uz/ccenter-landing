@@ -194,7 +194,7 @@ header {
   scale: 0.8;
 }
 .active-section {
-  animation: slideIn 1s ease forwards;
+  animation: slideIn 1s ease both;
 }
 #about-us {
   @include SECTION;

@@ -54,12 +54,14 @@ document.addEventListener("DOMContentLoaded", function () {
             );
 
             if (entry.isIntersecting) {
-              dots.forEach((dot) => dot.classList.remove("active-dot"));
+              dots.forEach((dot) => {
+                dot.classList.remove("active-dot");
+              });
               currentDot.classList.add("active-dot");
             }
           });
         },
-        { threshold: 0.3 }
+        { threshold: 0.5 }
       );
 
       sections.forEach((section) => {
@@ -77,13 +79,13 @@ document.addEventListener("DOMContentLoaded", function () {
           if (entry.isIntersecting) {
             sections.forEach((section) => {
               section.classList.remove("active-section");
-              entry.target.classList.add("active-section");
             });
+            entry.target.classList.add("active-section");
           }
         });
       },
       {
-        threshold: 0.3,
+        threshold: 0.4,
       }
     );
 
