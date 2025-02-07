@@ -31,6 +31,7 @@ body {
   background-size: cover;
   background-color: #000;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
@@ -81,12 +82,12 @@ header .header-btn-price:active {
   box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
 }
 
-aside {
+.nav-wrapper {
   width: auto;
   position: fixed;
   top: 30%;
 }
-aside .nav-line {
+.nav-wrapper .nav-line {
   height: 24rem;
   width: 1px;
   border: 1px dashed rgba(255, 255, 255, 0.2862745098);
@@ -95,14 +96,14 @@ aside .nav-line {
   justify-content: space-between;
   align-items: center;
 }
-aside .nav-line .nav-dot {
+.nav-wrapper .nav-line .nav-dot {
   width: 0.32rem;
   height: 0.32rem;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.5960784314);
   cursor: pointer;
 }
-aside .nav-line .nav-dot span {
+.nav-wrapper .nav-line .nav-dot span {
   opacity: 0;
   border: 1px solid rgba(245, 245, 245, 0.103);
   background-color: rgba(255, 255, 255, 0.068);
@@ -121,12 +122,26 @@ aside .nav-line .nav-dot span {
   left: 1em;
   top: -0.8rem;
 }
-aside .nav-line .active-dot {
+.nav-wrapper .nav-line .nav-dot a {
+  position: relative;
+}
+.nav-wrapper .nav-line .nav-dot a::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+}
+.nav-wrapper .nav-line .active-dot {
   background: #4169e1;
   box-shadow: 0 0 10px 0 #4169e1;
   transition: all 0.3s linear;
 }
-aside .nav-line .active-dot span {
+.nav-wrapper .nav-line .active-dot span {
   opacity: 1;
   animation: scaleLittle 0.5s linear both;
 }
@@ -139,7 +154,16 @@ aside .nav-line .active-dot span {
   }
 }
 
-#section1 {
+.section {
+  opacity: 0;
+  scale: 0.8;
+}
+
+.active-section {
+  animation: slideIn 1s ease forwards;
+}
+
+#about-us {
   width: 80%;
   height: 100%;
   min-height: -moz-fit-content;
@@ -152,31 +176,31 @@ aside .nav-line .active-dot span {
   display: flex;
   align-items: center;
 }
-#section1 .section1-block {
+#about-us .section1-block {
   display: flex;
   align-items: center;
   gap: 0 2em;
 }
-#section1 .section1-block p {
+#about-us .section1-block p {
   font-size: 1.25rem;
   line-height: 2.25rem;
   -webkit-hyphens: auto;
           hyphens: auto;
 }
-#section1 .section1-block .section-content {
+#about-us .section1-block .section-content {
   position: relative;
 }
-#section1 .section1-block .section-content h1 {
+#about-us .section1-block .section-content h1 {
   text-align: end;
   font-size: 7rem;
   font-weight: normal;
 }
-#section1 .section1-block .section-content .phone-mockup {
+#about-us .section1-block .section-content .phone-mockup {
   max-width: 50.56rem;
   max-height: 37.06rem;
 }
 
-#section2 {
+#outsourcing {
   width: 80%;
   height: 100%;
   min-height: -moz-fit-content;
@@ -190,7 +214,7 @@ aside .nav-line .active-dot span {
   position: relative;
   z-index: 2;
 }
-#section2 .second-line {
+#outsourcing .second-line {
   max-width: 59.06rem;
   max-height: 96.37rem;
   position: absolute;
@@ -198,52 +222,53 @@ aside .nav-line .active-dot span {
   right: -37%;
   z-index: 1;
 }
-#section2 .section-content h1 {
+#outsourcing .section-content h1 {
   text-align: end;
   font-size: 7rem;
   font-weight: normal;
   margin: 2.37rem 0;
 }
-#section2 .section-content .outsourcing {
+#outsourcing .section-content .outsourcing {
   display: flex;
   justify-content: space-between;
 }
-#section2 .section-content .outsourcing .second-section-box {
+#outsourcing .section-content .outsourcing .second-section-box {
   display: flex;
   flex: 1;
   flex-direction: column;
   opacity: 0.5;
   transition: all 0.3s linear;
 }
-#section2 .section-content .outsourcing .second-section-box h2 {
+#outsourcing .section-content .outsourcing .second-section-box h2 {
   transition: all 0.3s linear;
   font-size: 1.25rem;
   line-height: 2rem;
 }
-#section2 .section-content .outsourcing .second-section-box p {
+#outsourcing .section-content .outsourcing .second-section-box p {
   transition: all 0.3s linear;
   font-size: 0.87rem;
   line-height: 1.31rem;
+  margin-right: 0.5rem;
 }
-#section2 .section-content .outsourcing .second-section-box hr {
+#outsourcing .section-content .outsourcing .second-section-box hr {
   transition: all 0.3s linear;
   margin: 1rem 0;
   border: 1px solid #fff;
 }
-#section2 .section-content .outsourcing .active-second-section-box {
+#outsourcing .section-content .outsourcing .active-second-section-box {
   opacity: 1;
 }
-#section2 .section-content .outsourcing .active-second-section-box h2 {
+#outsourcing .section-content .outsourcing .active-second-section-box h2 {
   font-size: 1.5rem;
 }
-#section2 .section-content .outsourcing .active-second-section-box hr {
+#outsourcing .section-content .outsourcing .active-second-section-box hr {
   max-width: 0;
   animation: fill 2s ease;
   animation-fill-mode: both;
   border-color: #4169e1;
   border-color: #4169e1;
 }
-#section2 .video-placeholder {
+#outsourcing .video-placeholder {
   border: 1px solid rgba(245, 245, 245, 0.103);
   background-color: rgba(255, 255, 255, 0.068);
   backdrop-filter: blur(41px);
@@ -255,11 +280,11 @@ aside .nav-line .active-dot span {
   cursor: pointer;
   transition: all 0.2s linear;
 }
-#section2 .video-placeholder:hover {
+#outsourcing .video-placeholder:hover {
   background-color: rgba(255, 255, 255, 0.164);
 }
 
-#section3 {
+#services {
   width: 80%;
   height: 100%;
   min-height: -moz-fit-content;
@@ -276,20 +301,20 @@ aside .nav-line .active-dot span {
   position: relative;
   z-index: 2;
 }
-#section3 .section-content h1 {
+#services .section-content h1 {
   text-align: end;
   font-size: 5.43rem;
   line-height: 6.56rem;
   font-weight: normal;
   margin-bottom: 3.75rem;
 }
-#section3 .section-content .services-grid {
+#services .section-content .services-grid {
   display: flex;
   gap: 0 2em;
   margin: 2em 0;
   justify-content: flex-end;
 }
-#section3 .section-content .services-grid .service-item {
+#services .section-content .services-grid .service-item {
   border: 1px solid rgba(245, 245, 245, 0.103);
   background-color: rgba(255, 255, 255, 0.068);
   backdrop-filter: blur(41px);
@@ -300,7 +325,7 @@ aside .nav-line .active-dot span {
   border-radius: 0.62rem;
   justify-content: center;
 }
-#section3 .section-content .services-grid .service-item .service-icon {
+#services .section-content .services-grid .service-item .service-icon {
   height: 80%;
   display: flex;
   justify-content: center;
@@ -308,7 +333,7 @@ aside .nav-line .active-dot span {
   border-radius: 0.62rem;
   background-color: rgba(255, 255, 255, 0.096);
 }
-#section3 .section-content .services-grid .service-item p {
+#services .section-content .services-grid .service-item p {
   height: 20%;
   display: flex;
   align-items: center;
@@ -316,23 +341,23 @@ aside .nav-line .active-dot span {
   padding: 0 1em;
   font-size: 0.9rem;
 }
-#section3 .section-content .services-bottom {
+#services .section-content .services-bottom {
   width: 18.75rem;
   display: flex;
   flex-direction: column;
   margin-left: auto;
 }
-#section3 .section-content .services-bottom h2 {
+#services .section-content .services-bottom h2 {
   font-size: 2.25rem;
   line-height: 2.25rem;
   border-bottom: 2px solid #4169e1;
   margin-bottom: 3.75rem;
 }
-#section3 .section-content .services-bottom p {
+#services .section-content .services-bottom p {
   font-size: 1.25rem;
   line-height: 1.93rem;
 }
-#section3 .section-content .services-bottom button {
+#services .section-content .services-bottom button {
   background-color: transparent;
   color: white;
   padding: 0.62rem;
@@ -346,13 +371,13 @@ aside .nav-line .active-dot span {
   height: 3.18rem;
   margin: 1.25rem 0 1.25rem auto;
 }
-#section3 .section-content .services-bottom button:hover {
+#services .section-content .services-bottom button:hover {
   -webkit-backdrop-filter: blur(66px);
           backdrop-filter: blur(66px);
   box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
   border: 2px solid rgb(90, 136, 255);
 }
-#section3 .section-content .services-bottom button:active {
+#services .section-content .services-bottom button:active {
   border: 2px solid rgb(13, 36, 92);
   -webkit-backdrop-filter: blur(66px);
           backdrop-filter: blur(66px);
@@ -368,7 +393,7 @@ aside .nav-line .active-dot span {
   position: relative;
   z-index: 2;
 }
-.last-section #section4 {
+.last-section #contact {
   width: 80%;
   height: 100%;
   min-height: -moz-fit-content;
@@ -379,7 +404,7 @@ aside .nav-line .active-dot span {
   justify-content: flex-end;
   margin-bottom: 2rem;
 }
-.last-section #section4 .fourth-line {
+.last-section #contact .fourth-line {
   max-width: 53rem;
   max-height: 53.6rem;
   position: absolute;
@@ -387,17 +412,17 @@ aside .nav-line .active-dot span {
   right: -12%;
   z-index: 1;
 }
-.last-section #section4 .section-content {
+.last-section #contact .section-content {
   z-index: 2;
 }
-.last-section #section4 .section-content h1 {
+.last-section #contact .section-content h1 {
   text-align: end;
   font-size: 5.43rem;
   line-height: 6.56rem;
   font-weight: normal;
   margin: 3.75rem 0;
 }
-.last-section #section4 .section-content .stats-container {
+.last-section #contact .section-content .stats-container {
   border: 1px solid rgba(245, 245, 245, 0.103);
   background-color: rgba(255, 255, 255, 0.068);
   backdrop-filter: blur(41px);
@@ -410,33 +435,33 @@ aside .nav-line .active-dot span {
   padding: 2em;
   flex-wrap: wrap;
 }
-.last-section #section4 .section-content .stats-container .stat-item {
+.last-section #contact .section-content .stats-container .stat-item {
   opacity: 0.5;
   flex: 1;
   transition: all 0.3s linear;
 }
-.last-section #section4 .section-content .stats-container .stat-item h2 {
+.last-section #contact .section-content .stats-container .stat-item h2 {
   transition: all 0.3s linear;
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
-.last-section #section4 .section-content .stats-container .stat-item hr {
+.last-section #contact .section-content .stats-container .stat-item hr {
   transition: all 0.3s linear;
   margin: 1em 0;
   border-color: #fff;
 }
-.last-section #section4 .section-content .stats-container .stat-item p {
+.last-section #contact .section-content .stats-container .stat-item p {
   transition: all 0.3s linear;
   font-size: 0.87rem;
   line-height: 1.31rem;
 }
-.last-section #section4 .section-content .stats-container .active-stat-item {
+.last-section #contact .section-content .stats-container .active-stat-item {
   opacity: 1;
 }
-.last-section #section4 .section-content .stats-container .active-stat-item h2 {
+.last-section #contact .section-content .stats-container .active-stat-item h2 {
   font-size: 1.5rem;
 }
-.last-section #section4 .section-content .stats-container .active-stat-item hr {
+.last-section #contact .section-content .stats-container .active-stat-item hr {
   border-color: #4169e1;
 }
 .last-section footer {
@@ -486,6 +511,12 @@ aside .nav-line .active-dot span {
   transition: all 0.1s ease-in-out;
 }
 
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
 @keyframes fill {
   to {
     max-width: 100%;
@@ -549,10 +580,10 @@ aside .nav-line .active-dot span {
   header .header-btn-price {
     display: none;
   }
-  aside {
+  .nav-wrapper {
     display: none;
   }
-  #section1 {
+  #about-us {
     width: 100%;
     height: 100%;
     min-height: -moz-fit-content;
@@ -560,25 +591,25 @@ aside .nav-line .active-dot span {
     align-items: center;
     margin-bottom: 6.68rem;
   }
-  #section1 .section1-block p {
+  #about-us .section1-block p {
     display: none;
   }
-  #section1 .section1-block .section-content h1 {
+  #about-us .section1-block .section-content h1 {
     font-size: 4rem;
     line-height: 3.875rem;
     margin: 1.81rem 0;
   }
-  #section1 .section1-block .section-content .section-default-hiddens {
+  #about-us .section1-block .section-content .section-default-hiddens {
     width: 85%;
     margin-left: auto;
     display: block;
   }
-  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-text {
+  #about-us .section1-block .section-content .section-default-hiddens .default-hidden-text {
     display: block;
     font-size: 1.3rem;
     line-height: 1.81rem;
   }
-  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button {
+  #about-us .section1-block .section-content .section-default-hiddens .default-hidden-button {
     background-color: transparent;
     color: white;
     padding: 0.62rem;
@@ -592,23 +623,23 @@ aside .nav-line .active-dot span {
     height: 3.125rem;
     margin: 1rem 0;
   }
-  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:hover {
+  #about-us .section1-block .section-content .section-default-hiddens .default-hidden-button:hover {
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
     box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
     border: 2px solid rgb(90, 136, 255);
   }
-  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:active {
+  #about-us .section1-block .section-content .section-default-hiddens .default-hidden-button:active {
     border: 2px solid rgb(13, 36, 92);
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
     box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
   }
-  #section1 .section1-block .section-content .phone-mockup {
+  #about-us .section1-block .section-content .phone-mockup {
     width: 100%;
     height: 100%;
   }
-  #section2 {
+  #outsourcing {
     width: 100%;
     height: 100%;
     min-height: -moz-fit-content;
@@ -616,103 +647,103 @@ aside .nav-line .active-dot span {
     align-items: center;
     margin-bottom: 6.68rem;
   }
-  #section2 .second-line {
+  #outsourcing .second-line {
     position: absolute;
     top: 80%;
     right: -18%;
     z-index: 1;
   }
-  #section2 .section-content {
+  #outsourcing .section-content {
     width: 100%;
   }
-  #section2 .section-content h1 {
+  #outsourcing .section-content h1 {
     font-size: 3.5rem;
     line-height: 3.87rem;
     margin-bottom: 2.5rem;
     margin-top: 0;
   }
-  #section2 .section-content .outsourcing {
+  #outsourcing .section-content .outsourcing {
     width: 100%;
     flex-direction: column;
   }
-  #section2 .section-content .outsourcing .second-section-box {
+  #outsourcing .section-content .outsourcing .second-section-box {
     border-left: 1px solid #fff;
     padding: 1em;
   }
-  #section2 .section-content .outsourcing .second-section-box h2 {
+  #outsourcing .section-content .outsourcing .second-section-box h2 {
     font-size: 1.5rem;
     line-height: 2rem;
     margin-bottom: 0.5rem;
   }
-  #section2 .section-content .outsourcing .second-section-box p {
+  #outsourcing .section-content .outsourcing .second-section-box p {
     font-size: 1rem;
     line-height: 1.2rem;
     margin: 0 0.5rem;
   }
-  #section2 .section-content .outsourcing .second-section-box hr {
+  #outsourcing .section-content .outsourcing .second-section-box hr {
     display: none;
   }
-  #section2 .section-content .outsourcing .active-second-section-box {
+  #outsourcing .section-content .outsourcing .active-second-section-box {
     opacity: 1;
     border-color: #4169e1;
     transition: all 0.3s linear;
   }
-  #section2 .section-content .outsourcing .active-second-section-box h2 {
+  #outsourcing .section-content .outsourcing .active-second-section-box h2 {
     scale: 1.1;
     transform: translateX(1rem);
   }
-  #section2 .section-content .video-placeholder {
+  #outsourcing .section-content .video-placeholder {
     width: 100%;
     max-height: 11rem;
     margin: 0;
     margin-top: 3rem;
   }
-  #section3 {
+  #services {
     width: 100%;
     height: 100%;
     min-height: -moz-fit-content;
     min-height: fit-content;
     align-items: center;
   }
-  #section3 .section-content {
+  #services .section-content {
     width: 100%;
   }
-  #section3 .section-content h1 {
+  #services .section-content h1 {
     font-size: 3rem;
     line-height: 3.43rem;
     margin-bottom: 4rem;
     margin-top: 0;
     word-wrap: break-word;
   }
-  #section3 .section-content .services-grid {
+  #services .section-content .services-grid {
     width: 100%;
     flex-wrap: wrap;
     gap: 1.2rem;
     justify-content: center;
     margin-bottom: 4rem;
   }
-  #section3 .section-content .services-grid .service-item {
+  #services .section-content .services-grid .service-item {
     width: calc(50% - 0.62rem);
     width: -webkit-calc(100% / 2 - 0.62rem);
     height: 14.81rem;
   }
-  #section3 .section-content .services-grid .service-item .service-icon {
+  #services .section-content .services-grid .service-item .service-icon {
     height: 80%;
   }
-  #section3 .section-content .services-grid .service-item .service-icon img {
+  #services .section-content .services-grid .service-item .service-icon img {
     width: 6.25rem;
     height: 6.25rem;
   }
-  #section3 .section-content .services-bottom h2 {
+  #services .section-content .services-bottom h2 {
     font-size: 2.25rem;
     line-height: 2.25rem;
     margin-bottom: 2.25rem;
   }
-  #section3 .section-content .services-bottom p {
+  #services .section-content .services-bottom p {
     font-size: 1.25rem;
     line-height: 1.93rem;
   }
-  #section3 .section-content .services-bottom button {
+  #services .section-content .services-bottom button {
     width: 10.93rem;
     height: 3.18rem;
     font-size: 1.25rem;
@@ -728,26 +759,26 @@ aside .nav-line .active-dot span {
     margin-top: 4.25rem;
     gap: 1.5rem 0;
   }
-  .last-section #section4 {
+  .last-section #contact {
     width: 100%;
     height: 50%;
     align-items: flex-start;
   }
-  .last-section #section4 .fourth-line {
+  .last-section #contact .fourth-line {
     position: absolute;
     top: -10%;
     right: -31%;
     z-index: 1;
   }
-  .last-section #section4 .section-content {
+  .last-section #contact .section-content {
     width: 100%;
   }
-  .last-section #section4 .section-content h1 {
+  .last-section #contact .section-content h1 {
     font-size: 3rem;
     line-height: 3rem;
     margin-bottom: 1.5rem;
   }
-  .last-section #section4 .section-content .stats-container {
+  .last-section #contact .section-content .stats-container {
     width: 100%;
     height: 100%;
     flex-direction: column;
@@ -755,31 +786,31 @@ aside .nav-line .active-dot span {
     justify-content: flex-start;
     padding: 1rem;
   }
-  .last-section #section4 .section-content .stats-container .stat-item {
+  .last-section #contact .section-content .stats-container .stat-item {
     border-left: 1px solid #fff;
     padding-left: 0.62rem;
     padding: 1em;
   }
-  .last-section #section4 .section-content .stats-container .stat-item h2 {
+  .last-section #contact .section-content .stats-container .stat-item h2 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
-  .last-section #section4 .section-content .stats-container .stat-item hr {
+  .last-section #contact .section-content .stats-container .stat-item hr {
     display: none;
   }
-  .last-section #section4 .section-content .stats-container .stat-item p {
+  .last-section #contact .section-content .stats-container .stat-item p {
     font-size: 1rem;
     margin: 0 0.5rem;
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item {
+  .last-section #contact .section-content .stats-container .active-stat-item {
     opacity: 1;
     border-color: #4169e1;
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item h2 {
+  .last-section #contact .section-content .stats-container .active-stat-item h2 {
     scale: 1.1;
     transform: translateX(0.5rem);
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item hr {
+  .last-section #contact .section-content .stats-container .active-stat-item hr {
     border-color: #4169e1;
   }
   .last-section footer {
@@ -815,10 +846,10 @@ aside .nav-line .active-dot span {
   header .header-btn-price {
     display: none;
   }
-  aside {
+  .nav-wrapper {
     display: none;
   }
-  #section1 {
+  #about-us {
     width: 100%;
     height: 100%;
     min-height: -moz-fit-content;
@@ -827,25 +858,25 @@ aside .nav-line .active-dot span {
     margin: 0 auto;
     margin-bottom: 7.68rem;
   }
-  #section1 .section1-block p {
+  #about-us .section1-block p {
     display: none;
   }
-  #section1 .section1-block .section-content h1 {
+  #about-us .section1-block .section-content h1 {
     font-size: 4rem;
     line-height: 3.875rem;
     margin: 1.81rem 0;
   }
-  #section1 .section1-block .section-content .section-default-hiddens {
+  #about-us .section1-block .section-content .section-default-hiddens {
     width: 85%;
     margin-left: auto;
     display: block;
   }
-  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-text {
+  #about-us .section1-block .section-content .section-default-hiddens .default-hidden-text {
     display: block;
     font-size: 1.3rem;
     line-height: 1.81rem;
   }
-  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button {
+  #about-us .section1-block .section-content .section-default-hiddens .default-hidden-button {
     background-color: transparent;
     color: white;
     padding: 0.62rem;
@@ -859,23 +890,23 @@ aside .nav-line .active-dot span {
     height: 3.125rem;
     margin: 1rem 0;
   }
-  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:hover {
+  #about-us .section1-block .section-content .section-default-hiddens .default-hidden-button:hover {
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
     box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
     border: 2px solid rgb(90, 136, 255);
   }
-  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:active {
+  #about-us .section1-block .section-content .section-default-hiddens .default-hidden-button:active {
     border: 2px solid rgb(13, 36, 92);
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
     box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
   }
-  #section1 .section1-block .section-content .phone-mockup {
+  #about-us .section1-block .section-content .phone-mockup {
     width: 100%;
     height: 100%;
   }
-  #section2 {
+  #outsourcing {
     width: 100%;
     height: 100%;
     min-height: -moz-fit-content;
@@ -883,57 +914,57 @@ aside .nav-line .active-dot span {
     align-items: center;
     margin-bottom: 7.68rem;
   }
-  #section2 .second-line {
+  #outsourcing .second-line {
     position: absolute;
     top: 40%;
     right: -40%;
     z-index: 1;
   }
-  #section2 .section-content {
+  #outsourcing .section-content {
     width: 100%;
   }
-  #section2 .section-content h1 {
+  #outsourcing .section-content h1 {
     font-size: 3.5rem;
     line-height: 3.87rem;
     margin-bottom: 2.5rem;
     margin-top: 0;
   }
-  #section2 .section-content .outsourcing {
+  #outsourcing .section-content .outsourcing {
     width: 100%;
     flex-direction: column;
   }
-  #section2 .section-content .outsourcing .second-section-box {
+  #outsourcing .section-content .outsourcing .second-section-box {
     border-left: 1px solid #fff;
     padding: 1em;
   }
-  #section2 .section-content .outsourcing .second-section-box h2 {
+  #outsourcing .section-content .outsourcing .second-section-box h2 {
     font-size: 1.5rem;
     line-height: 2rem;
     margin-bottom: 0.5rem;
   }
-  #section2 .section-content .outsourcing .second-section-box p {
+  #outsourcing .section-content .outsourcing .second-section-box p {
     font-size: 1rem;
     line-height: 1.2rem;
     margin: 0 0.5rem;
   }
-  #section2 .section-content .outsourcing .second-section-box hr {
+  #outsourcing .section-content .outsourcing .second-section-box hr {
     display: none;
   }
-  #section2 .section-content .outsourcing .active-second-section-box {
+  #outsourcing .section-content .outsourcing .active-second-section-box {
     opacity: 1;
     border-color: #4169e1;
   }
-  #section2 .section-content .outsourcing .active-second-section-box h2 {
+  #outsourcing .section-content .outsourcing .active-second-section-box h2 {
     scale: 1.1;
     transform: translateX(2rem);
   }
-  #section2 .section-content .video-placeholder {
+  #outsourcing .section-content .video-placeholder {
     width: 100%;
     max-height: 15rem;
     margin: 0;
     margin-top: 5rem;
   }
-  #section3 {
+  #services {
     width: 100%;
     height: 100%;
     min-height: -moz-fit-content;
@@ -941,45 +972,45 @@ aside .nav-line .active-dot span {
     align-items: center;
     margin: 0 auto;
   }
-  #section3 .section-content {
+  #services .section-content {
     width: 100%;
   }
-  #section3 .section-content h1 {
+  #services .section-content h1 {
     font-size: 3rem;
     line-height: 3.43rem;
     margin-bottom: 4rem;
     margin-top: 0;
     word-wrap: break-word;
   }
-  #section3 .section-content .services-grid {
+  #services .section-content .services-grid {
     width: 100%;
     flex-wrap: wrap;
     gap: 1.2rem;
     justify-content: center;
     margin-bottom: 4rem;
   }
-  #section3 .section-content .services-grid .service-item {
+  #services .section-content .services-grid .service-item {
     width: calc(50% - 0.62rem);
     width: -webkit-calc(100% / 2 - 0.62rem);
     height: 14.81rem;
   }
-  #section3 .section-content .services-grid .service-item .service-icon {
+  #services .section-content .services-grid .service-item .service-icon {
     height: 80%;
   }
-  #section3 .section-content .services-grid .service-item .service-icon img {
+  #services .section-content .services-grid .service-item .service-icon img {
     width: 6.25rem;
     height: 6.25rem;
   }
-  #section3 .section-content .services-bottom h2 {
+  #services .section-content .services-bottom h2 {
     font-size: 2.25rem;
     line-height: 2.25rem;
     margin-bottom: 2.25rem;
   }
-  #section3 .section-content .services-bottom p {
+  #services .section-content .services-bottom p {
     font-size: 1.25rem;
     line-height: 1.93rem;
   }
-  #section3 .section-content .services-bottom button {
+  #services .section-content .services-bottom button {
     width: 10.93rem;
     height: 3.18rem;
     font-size: 1.25rem;
@@ -994,20 +1025,20 @@ aside .nav-line .active-dot span {
     justify-content: space-between;
     margin-top: 4.25rem;
   }
-  .last-section #section4 {
+  .last-section #contact {
     width: 100%;
     height: 50%;
     align-items: flex-start;
   }
-  .last-section #section4 .section-content {
+  .last-section #contact .section-content {
     width: 100%;
   }
-  .last-section #section4 .section-content h1 {
+  .last-section #contact .section-content h1 {
     font-size: 3rem;
     line-height: 3rem;
     margin-bottom: 1.5rem;
   }
-  .last-section #section4 .section-content .stats-container {
+  .last-section #contact .section-content .stats-container {
     width: 100%;
     height: 100%;
     flex-direction: column;
@@ -1015,31 +1046,31 @@ aside .nav-line .active-dot span {
     justify-content: flex-start;
     padding: 1rem;
   }
-  .last-section #section4 .section-content .stats-container .stat-item {
+  .last-section #contact .section-content .stats-container .stat-item {
     border-left: 1px solid #fff;
     padding-left: 0.62rem;
     padding: 1em;
   }
-  .last-section #section4 .section-content .stats-container .stat-item h2 {
+  .last-section #contact .section-content .stats-container .stat-item h2 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
-  .last-section #section4 .section-content .stats-container .stat-item hr {
+  .last-section #contact .section-content .stats-container .stat-item hr {
     display: none;
   }
-  .last-section #section4 .section-content .stats-container .stat-item p {
+  .last-section #contact .section-content .stats-container .stat-item p {
     font-size: 1rem;
     margin: 0 0.5rem;
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item {
+  .last-section #contact .section-content .stats-container .active-stat-item {
     opacity: 1;
     border-color: #4169e1;
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item h2 {
+  .last-section #contact .section-content .stats-container .active-stat-item h2 {
     scale: 1.1;
     transform: translateX(0.5rem);
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item hr {
+  .last-section #contact .section-content .stats-container .active-stat-item hr {
     transition: all 0.3s linear;
     border-color: #4169e1;
   }
@@ -1076,10 +1107,10 @@ aside .nav-line .active-dot span {
   header .header-btn-price {
     display: none;
   }
-  aside {
+  .nav-wrapper {
     display: none;
   }
-  #section1 {
+  #about-us {
     width: 100%;
     height: 100%;
     min-height: -moz-fit-content;
@@ -1088,25 +1119,25 @@ aside .nav-line .active-dot span {
     margin: 0 auto;
     margin-bottom: 10.25rem;
   }
-  #section1 .section1-block p {
+  #about-us .section1-block p {
     display: none;
   }
-  #section1 .section1-block .section-content h1 {
+  #about-us .section1-block .section-content h1 {
     font-size: 5rem;
     line-height: 3.875rem;
     margin: 2.81rem 0;
   }
-  #section1 .section1-block .section-content .section-default-hiddens {
+  #about-us .section1-block .section-content .section-default-hiddens {
     width: 85%;
     margin-left: auto;
     display: block;
   }
-  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-text {
+  #about-us .section1-block .section-content .section-default-hiddens .default-hidden-text {
     display: block;
     font-size: 1.3rem;
     line-height: 1.81rem;
   }
-  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button {
+  #about-us .section1-block .section-content .section-default-hiddens .default-hidden-button {
     background-color: transparent;
     color: white;
     padding: 0.62rem;
@@ -1120,23 +1151,23 @@ aside .nav-line .active-dot span {
     height: 3.125rem;
     margin: 1rem 0;
   }
-  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:hover {
+  #about-us .section1-block .section-content .section-default-hiddens .default-hidden-button:hover {
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
     box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
     border: 2px solid rgb(90, 136, 255);
   }
-  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:active {
+  #about-us .section1-block .section-content .section-default-hiddens .default-hidden-button:active {
     border: 2px solid rgb(13, 36, 92);
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
     box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
   }
-  #section1 .section1-block .section-content .phone-mockup {
+  #about-us .section1-block .section-content .phone-mockup {
     width: 100%;
     height: 100%;
   }
-  #section2 {
+  #outsourcing {
     width: 100%;
     height: 100%;
     min-height: -moz-fit-content;
@@ -1144,98 +1175,98 @@ aside .nav-line .active-dot span {
     align-items: center;
     margin-bottom: 10.25rem;
   }
-  #section2 .second-line {
+  #outsourcing .second-line {
     position: absolute;
     top: 10%;
     right: -35%;
     z-index: 1;
   }
-  #section2 .section-content {
+  #outsourcing .section-content {
     width: 100%;
   }
-  #section2 .section-content h1 {
+  #outsourcing .section-content h1 {
     font-size: 3.5rem;
     line-height: 3.87rem;
     margin-bottom: 2.5rem;
     margin-top: 0;
   }
-  #section2 .section-content .outsourcing {
+  #outsourcing .section-content .outsourcing {
     width: 100%;
   }
-  #section2 .section-content .outsourcing .second-section-box {
+  #outsourcing .section-content .outsourcing .second-section-box {
     border-left: 1px solid #fff;
     padding: 1em;
   }
-  #section2 .section-content .outsourcing .second-section-box h2 {
+  #outsourcing .section-content .outsourcing .second-section-box h2 {
     font-size: 1.5rem;
     line-height: 2rem;
     margin-bottom: 0.5rem;
   }
-  #section2 .section-content .outsourcing .second-section-box p {
+  #outsourcing .section-content .outsourcing .second-section-box p {
     font-size: 1rem;
     line-height: 1.2rem;
     margin: 0 0.5rem;
   }
-  #section2 .section-content .outsourcing .second-section-box hr {
+  #outsourcing .section-content .outsourcing .second-section-box hr {
     display: none;
   }
-  #section2 .section-content .outsourcing .active-second-section-box {
+  #outsourcing .section-content .outsourcing .active-second-section-box {
     opacity: 1;
     border-color: #4169e1;
   }
-  #section2 .section-content .outsourcing .active-second-section-box h2 {
+  #outsourcing .section-content .outsourcing .active-second-section-box h2 {
     scale: 1.1;
     transform: translateX(1rem);
   }
-  #section2 .section-content .video-placeholder {
+  #outsourcing .section-content .video-placeholder {
     width: 100%;
     max-height: 17rem;
     margin: 0;
     margin-top: 5rem;
   }
-  #section3 {
+  #services {
     width: 100%;
     height: 100%;
     min-height: -moz-fit-content;
     min-height: fit-content;
     align-items: center;
   }
-  #section3 .section-content {
+  #services .section-content {
     width: 100%;
   }
-  #section3 .section-content h1 {
+  #services .section-content h1 {
     font-size: 3rem;
     line-height: 3.43rem;
     margin-bottom: 4rem;
     margin-top: 0;
     word-wrap: break-word;
   }
-  #section3 .section-content .services-grid {
+  #services .section-content .services-grid {
     width: 100%;
     gap: 1.2rem;
     flex-wrap: wrap;
     margin-bottom: 4rem;
   }
-  #section3 .section-content .services-grid .service-item {
+  #services .section-content .services-grid .service-item {
     height: 14.81rem;
   }
-  #section3 .section-content .services-grid .service-item .service-icon {
+  #services .section-content .services-grid .service-item .service-icon {
     height: 80%;
   }
-  #section3 .section-content .services-grid .service-item .service-icon img {
+  #services .section-content .services-grid .service-item .service-icon img {
     width: 6.25rem;
     height: 6.25rem;
   }
-  #section3 .section-content .services-bottom h2 {
+  #services .section-content .services-bottom h2 {
     font-size: 2.25rem;
     line-height: 2.25rem;
     margin-bottom: 2.25rem;
   }
-  #section3 .section-content .services-bottom p {
+  #services .section-content .services-bottom p {
     font-size: 1.25rem;
     line-height: 1.93rem;
   }
-  #section3 .section-content .services-bottom button {
+  #services .section-content .services-bottom button {
     width: 10.93rem;
     height: 3.18rem;
     font-size: 1.25rem;
@@ -1250,20 +1281,20 @@ aside .nav-line .active-dot span {
     justify-content: space-between;
     margin-top: 4.25rem;
   }
-  .last-section #section4 {
+  .last-section #contact {
     width: 100%;
     height: 50%;
     align-items: flex-start;
   }
-  .last-section #section4 .section-content {
+  .last-section #contact .section-content {
     width: 100%;
   }
-  .last-section #section4 .section-content h1 {
+  .last-section #contact .section-content h1 {
     font-size: 3rem;
     line-height: 3rem;
     margin-bottom: 3.5rem;
   }
-  .last-section #section4 .section-content .stats-container {
+  .last-section #contact .section-content .stats-container {
     width: 100%;
     height: 20rem;
     display: grid;
@@ -1272,30 +1303,30 @@ aside .nav-line .active-dot span {
     justify-content: flex-start;
     padding: 1rem;
   }
-  .last-section #section4 .section-content .stats-container .stat-item {
+  .last-section #contact .section-content .stats-container .stat-item {
     border-left: none;
     padding-left: 0.62rem;
     padding: 1em;
   }
-  .last-section #section4 .section-content .stats-container .stat-item h2 {
+  .last-section #contact .section-content .stats-container .stat-item h2 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
-  .last-section #section4 .section-content .stats-container .stat-item hr {
+  .last-section #contact .section-content .stats-container .stat-item hr {
     display: block;
   }
-  .last-section #section4 .section-content .stats-container .stat-item p {
+  .last-section #contact .section-content .stats-container .stat-item p {
     font-size: 1rem;
     margin: 0 0.5rem;
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item {
+  .last-section #contact .section-content .stats-container .active-stat-item {
     opacity: 1;
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item h2 {
+  .last-section #contact .section-content .stats-container .active-stat-item h2 {
     scale: 1.1;
     transform: translateX(1.5rem);
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item hr {
+  .last-section #contact .section-content .stats-container .active-stat-item hr {
     border-color: #4169e1;
   }
   .last-section footer {
@@ -1331,10 +1362,10 @@ aside .nav-line .active-dot span {
   header .header-btn-price {
     display: none;
   }
-  aside {
+  .nav-wrapper {
     display: none;
   }
-  #section1 {
+  #about-us {
     width: 90%;
     height: 100%;
     min-height: -moz-fit-content;
@@ -1343,25 +1374,25 @@ aside .nav-line .active-dot span {
     margin: 0 auto;
     margin-bottom: 10.25rem;
   }
-  #section1 .section1-block p {
+  #about-us .section1-block p {
     display: none;
   }
-  #section1 .section1-block .section-content h1 {
+  #about-us .section1-block .section-content h1 {
     font-size: 5rem;
     line-height: 3.875rem;
     margin: 2.81rem 0;
   }
-  #section1 .section1-block .section-content .section-default-hiddens {
+  #about-us .section1-block .section-content .section-default-hiddens {
     width: 85%;
     margin-left: auto;
     display: block;
   }
-  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-text {
+  #about-us .section1-block .section-content .section-default-hiddens .default-hidden-text {
     display: block;
     font-size: 1.3rem;
     line-height: 1.81rem;
   }
-  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button {
+  #about-us .section1-block .section-content .section-default-hiddens .default-hidden-button {
     background-color: transparent;
     color: white;
     padding: 0.62rem;
@@ -1375,23 +1406,23 @@ aside .nav-line .active-dot span {
     height: 3.125rem;
     margin: 1rem 0;
   }
-  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:hover {
+  #about-us .section1-block .section-content .section-default-hiddens .default-hidden-button:hover {
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
     box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
     border: 2px solid rgb(90, 136, 255);
   }
-  #section1 .section1-block .section-content .section-default-hiddens .default-hidden-button:active {
+  #about-us .section1-block .section-content .section-default-hiddens .default-hidden-button:active {
     border: 2px solid rgb(13, 36, 92);
     -webkit-backdrop-filter: blur(66px);
             backdrop-filter: blur(66px);
     box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
   }
-  #section1 .section1-block .section-content .phone-mockup {
+  #about-us .section1-block .section-content .phone-mockup {
     width: 100%;
     height: 100%;
   }
-  #section2 {
+  #outsourcing {
     width: 90%;
     height: 100%;
     min-height: -moz-fit-content;
@@ -1400,50 +1431,50 @@ aside .nav-line .active-dot span {
     margin: 0 auto;
     margin-bottom: 10.25rem;
   }
-  #section2 .section-content {
+  #outsourcing .section-content {
     width: 100%;
   }
-  #section2 .section-content h1 {
+  #outsourcing .section-content h1 {
     font-size: 3.5rem;
     line-height: 3.87rem;
     margin-bottom: 2.5rem;
     margin-top: 0;
   }
-  #section2 .section-content .outsourcing {
+  #outsourcing .section-content .outsourcing {
     width: 100%;
   }
-  #section2 .section-content .outsourcing .second-section-box {
+  #outsourcing .section-content .outsourcing .second-section-box {
     border-left: 1px solid #fff;
     padding: 1em;
   }
-  #section2 .section-content .outsourcing .second-section-box h2 {
+  #outsourcing .section-content .outsourcing .second-section-box h2 {
     font-size: 1.5rem;
     line-height: 2rem;
     margin-bottom: 0.5rem;
   }
-  #section2 .section-content .outsourcing .second-section-box p {
+  #outsourcing .section-content .outsourcing .second-section-box p {
     font-size: 1rem;
     line-height: 1.2rem;
     margin: 0 0.5rem;
   }
-  #section2 .section-content .outsourcing .second-section-box hr {
+  #outsourcing .section-content .outsourcing .second-section-box hr {
     display: none;
   }
-  #section2 .section-content .outsourcing .active-second-section-box {
+  #outsourcing .section-content .outsourcing .active-second-section-box {
     opacity: 1;
     border-color: #4169e1;
   }
-  #section2 .section-content .outsourcing .active-second-section-box h2 {
+  #outsourcing .section-content .outsourcing .active-second-section-box h2 {
     scale: 1.1;
     transform: translateX(1rem);
   }
-  #section2 .section-content .video-placeholder {
+  #outsourcing .section-content .video-placeholder {
     width: 100%;
     min-height: -moz-max-content;
     min-height: max-content;
     margin-top: 5rem;
   }
-  #section3 {
+  #services {
     width: 90%;
     height: 100%;
     min-height: -moz-fit-content;
@@ -1452,42 +1483,42 @@ aside .nav-line .active-dot span {
     margin: 0 auto;
     margin-bottom: 10.25rem;
   }
-  #section3 .section-content {
+  #services .section-content {
     width: 100%;
   }
-  #section3 .section-content h1 {
+  #services .section-content h1 {
     font-size: 3rem;
     line-height: 3.43rem;
     margin-bottom: 4rem;
     margin-top: 0;
     word-wrap: break-word;
   }
-  #section3 .section-content .services-grid {
+  #services .section-content .services-grid {
     width: 100%;
     gap: 1.2rem;
     flex-wrap: wrap;
     margin-bottom: 4rem;
   }
-  #section3 .section-content .services-grid .service-item {
+  #services .section-content .services-grid .service-item {
     height: 14.81rem;
   }
-  #section3 .section-content .services-grid .service-item .service-icon {
+  #services .section-content .services-grid .service-item .service-icon {
     height: 80%;
   }
-  #section3 .section-content .services-grid .service-item .service-icon img {
+  #services .section-content .services-grid .service-item .service-icon img {
     width: 6.25rem;
     height: 6.25rem;
   }
-  #section3 .section-content .services-bottom h2 {
+  #services .section-content .services-bottom h2 {
     font-size: 2.25rem;
     line-height: 2.25rem;
     margin-bottom: 2.25rem;
   }
-  #section3 .section-content .services-bottom p {
+  #services .section-content .services-bottom p {
     font-size: 1.25rem;
     line-height: 1.93rem;
   }
-  #section3 .section-content .services-bottom button {
+  #services .section-content .services-bottom button {
     width: 10.93;
     height: 3.18rem;
     font-size: 1.25rem;
@@ -1502,21 +1533,21 @@ aside .nav-line .active-dot span {
     flex-direction: column;
     justify-content: space-between;
   }
-  .last-section #section4 {
+  .last-section #contact {
     width: 100%;
     height: 50%;
     align-items: flex-start;
   }
-  .last-section #section4 .section-content {
+  .last-section #contact .section-content {
     width: 100%;
   }
-  .last-section #section4 .section-content h1 {
+  .last-section #contact .section-content h1 {
     font-size: 3rem;
     line-height: 3rem;
     margin-top: 0;
     margin-bottom: 3.5rem;
   }
-  .last-section #section4 .section-content .stats-container {
+  .last-section #contact .section-content .stats-container {
     width: 100%;
     height: 20rem;
     display: grid;
@@ -1525,30 +1556,30 @@ aside .nav-line .active-dot span {
     justify-content: flex-start;
     padding: 1rem;
   }
-  .last-section #section4 .section-content .stats-container .stat-item {
+  .last-section #contact .section-content .stats-container .stat-item {
     border-left: none;
     padding-left: 0.62rem;
     padding: 1em;
   }
-  .last-section #section4 .section-content .stats-container .stat-item h2 {
+  .last-section #contact .section-content .stats-container .stat-item h2 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
-  .last-section #section4 .section-content .stats-container .stat-item hr {
+  .last-section #contact .section-content .stats-container .stat-item hr {
     display: block;
   }
-  .last-section #section4 .section-content .stats-container .stat-item p {
+  .last-section #contact .section-content .stats-container .stat-item p {
     font-size: 1rem;
     margin: 0 0.5rem;
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item {
+  .last-section #contact .section-content .stats-container .active-stat-item {
     opacity: 1;
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item h2 {
+  .last-section #contact .section-content .stats-container .active-stat-item h2 {
     scale: 1.1;
     transform: translateX(2rem);
   }
-  .last-section #section4 .section-content .stats-container .active-stat-item hr {
+  .last-section #contact .section-content .stats-container .active-stat-item hr {
     border-color: #4169e1;
   }
   .last-section footer {
