@@ -44,7 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll(".section");
   const dots = document.querySelectorAll(".nav-dot");
   let scrollDirection;
+
   const handleScroll = (e) => {
+
     if (window.innerWidth > 1024) {
       scrollDirection = e.wheelDeltaY;
       const observer = new IntersectionObserver(
@@ -56,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
             );
 
             if (entry.isIntersecting) {
+              // window.location.hash = sectionId;
               dots.forEach((dot) => dot.classList.remove("active-dot"));
               currentDot.classList.add("active-dot");
             }
@@ -70,5 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
+  // window.addEventListener("load", handleScroll);
   window.addEventListener("wheel", handleScroll);
 });
