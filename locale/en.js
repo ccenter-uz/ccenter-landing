@@ -44,5 +44,5 @@ export const translationEn ={
     "consent-dialog-first-paragraph":"I give my consent to “Contact center” LLC to process my personal data. This consent concerns personal data recorded on electronic, paper and (or) other tangible media information relating to a certain and specific individual or enabling his/her identification.",
     "consent-dialog-second-paragraph":"I have duly been informed that “Contact center” LLC guarantees processing of my personal data in accordance with the current legislation of the Republic of Uzbekistan. The validity of this consent is not limited. The consent may be withdrawn at any time upon my written request.",
     "consent-dialog-third-paragraph":"I confirm that by giving this consent, I am acting without coercion, of my own free will, and in my own interest ☑",
-    "consent-dialog-agree-btn":"I accept and agree"
+    "consent-dialog-agree-btn":"Accept"
 }
