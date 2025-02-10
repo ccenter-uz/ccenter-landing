@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     currentIndexSectionItems = updateActiveClass(
       sectionItems,
       currentIndexSectionItems,
-      "active-second-section-box",
+      "active-second-section-box"
     );
   }
 
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     currentIndexStatItems = updateActiveClass(
       statItems,
       currentIndexStatItems,
-      "active-stat-item",
+      "active-stat-item"
     );
   }
 
@@ -43,10 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // ASIDE-ACTIVE-CLASS
   const sections = document.querySelectorAll(".section");
   const dots = document.querySelectorAll(".nav-dot");
-  let scrollDirection;
   const handleScroll = (e) => {
     if (window.innerWidth > 1024) {
-      scrollDirection = e.wheelDeltaY;
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -56,7 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
             );
 
             if (entry.isIntersecting) {
-              dots.forEach((dot) => dot.classList.remove("active-dot"));
+              dots.forEach((dot) => {
+                dot.classList.remove("active-dot");
+              });
               currentDot.classList.add("active-dot");
             }
           });
@@ -71,4 +71,28 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   window.addEventListener("wheel", handleScroll);
+  window.addEventListener("load", function () {
+    const sections = document.querySelectorAll(".section");
+    const observeSectionsForActiveClass = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            sections.forEach((section) => {
+              section.classList.remove("active-section");
+            });
+            entry.target.classList.add("active-section");
+            window.location.hash = entry.target.id;
+          }
+        });
+      },
+      {
+        threshold: 0.4,
+      }
+    );
+
+    sections.forEach((section) => {
+      observeSectionsForActiveClass.observe(section);
+    });
+  });
 });
+

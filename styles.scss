@@ -79,6 +79,7 @@ body {
   background-size: cover;
   background-color: #000;
   overflow-y: auto;
+  overflow-x: hidden;
 
   &::-webkit-scrollbar {
     display: none;
@@ -110,7 +111,7 @@ header {
   }
 }
 
-aside {
+.nav-wrapper {
   width: auto;
   position: fixed;
   top: 30%;
@@ -146,6 +147,22 @@ aside {
         left: 1em;
         top: -0.8rem;
       }
+
+      a {
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 50px;
+          height: 50px;
+          background-color: transparent;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -80%);
+        }
+      }
     }
 
     // ACTIVE CLASSES
@@ -172,7 +189,15 @@ aside {
   }
 }
 
-#section1 {
+.section {
+  opacity: 0;
+  scale: 0.8;
+  scroll-margin-top: 7rem;
+}
+.active-section {
+  animation: slideIn 1s ease both;
+}
+#about-us {
   @include SECTION;
   min-height: 67.5rem;
   display: flex;
@@ -206,7 +231,7 @@ aside {
   }
 }
 
-#section2 {
+#outsourcing {
   @include SECTION;
   min-height: fit-content;
   align-items: flex-start;
@@ -219,7 +244,7 @@ aside {
     position: absolute;
     top: 18%;
     right: -37%;
-    z-index: 1;
+    z-index: -1;
   }
 
   .section-content {
@@ -252,6 +277,7 @@ aside {
           transition: all 0.3s linear;
           font-size: 0.87rem;
           line-height: 1.31rem;
+          margin-right: 0.5rem;
         }
 
         hr {
@@ -288,14 +314,19 @@ aside {
     border-radius: 1.25rem;
     cursor: pointer;
     transition: all 0.2s linear;
-
+    position: relative;
+    z-index: 2;
+    iframe {
+      @include GLASS-BOX;
+      border-radius: 1.25rem;
+    }
     &:hover {
       background-color: rgba(255, 255, 255, 0.164);
     }
   }
 }
 
-#section3 {
+#services {
   @include SECTION;
   height: 100%;
   min-height: 57.5rem;
@@ -385,7 +416,7 @@ aside {
   position: relative;
   z-index: 2;
 
-  #section4 {
+  #contact {
     @include SECTION;
     margin-bottom: 2rem;
 
@@ -512,6 +543,13 @@ aside {
   transition: all 0.1s ease-in-out;
 }
 
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
 @keyframes fill {
   to {
     max-width: 100%;
@@ -586,11 +624,11 @@ aside {
     }
   }
 
-  aside {
+  .nav-wrapper {
     display: none;
   }
 
-  #section1 {
+  #about-us {
     width: 100%;
     height: 100%;
     min-height: fit-content;
@@ -636,7 +674,7 @@ aside {
     }
   }
 
-  #section2 {
+  #outsourcing {
     width: 100%;
     height: 100%;
     min-height: fit-content;
@@ -707,7 +745,7 @@ aside {
     }
   }
 
-  #section3 {
+  #services {
     width: 100%;
     height: 100%;
     min-height: fit-content;
@@ -779,7 +817,7 @@ aside {
     margin-top: 4.25rem;
     gap: 1.5rem 0;
 
-    #section4 {
+    #contact {
       width: 100%;
       height: 50%;
       align-items: flex-start;
@@ -886,11 +924,11 @@ aside {
     }
   }
 
-  aside {
+  .nav-wrapper {
     display: none;
   }
 
-  #section1 {
+  #about-us {
     width: 100%;
     height: 100%;
     min-height: fit-content;
@@ -937,7 +975,7 @@ aside {
     }
   }
 
-  #section2 {
+  #outsourcing {
     width: 100%;
     height: 100%;
     min-height: fit-content;
@@ -1007,7 +1045,7 @@ aside {
     }
   }
 
-  #section3 {
+  #services {
     width: 100%;
     height: 100%;
     min-height: fit-content;
@@ -1079,7 +1117,7 @@ aside {
     justify-content: space-between;
     margin-top: 4.25rem;
 
-    #section4 {
+    #contact {
       width: 100%;
       height: 50%;
       align-items: flex-start;
@@ -1180,11 +1218,11 @@ aside {
     }
   }
 
-  aside {
+  .nav-wrapper {
     display: none;
   }
 
-  #section1 {
+  #about-us {
     width: 100%;
     height: 100%;
     min-height: fit-content;
@@ -1231,7 +1269,7 @@ aside {
     }
   }
 
-  #section2 {
+  #outsourcing {
     width: 100%;
     height: 100%;
     min-height: fit-content;
@@ -1300,7 +1338,7 @@ aside {
     }
   }
 
-  #section3 {
+  #services {
     width: 100%;
     height: 100%;
     min-height: fit-content;
@@ -1367,7 +1405,7 @@ aside {
     justify-content: space-between;
     margin-top: 4.25rem;
 
-    #section4 {
+    #contact {
       width: 100%;
       height: 50%;
       align-items: flex-start;
@@ -1467,11 +1505,11 @@ aside {
     }
   }
 
-  aside {
+  .nav-wrapper {
     display: none;
   }
 
-  #section1 {
+  #about-us {
     width: 90%;
     height: 100%;
     min-height: fit-content;
@@ -1518,7 +1556,7 @@ aside {
     }
   }
 
-  #section2 {
+  #outsourcing {
     width: 90%;
     height: 100%;
     min-height: fit-content;
@@ -1580,7 +1618,7 @@ aside {
     }
   }
 
-  #section3 {
+  #services {
     width: 90%;
     height: 100%;
     min-height: fit-content;
@@ -1650,7 +1688,7 @@ aside {
     flex-direction: column;
     justify-content: space-between;
 
-    #section4 {
+    #contact {
       width: 100%;
       height: 50%;
       align-items: flex-start;

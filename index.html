@@ -80,21 +80,7 @@
     <meta name="robots" content="index, follow" />
     <meta name="google" content="nositelinkssearchbox" />
     <meta name="google" content="notranslate" />
-    <!-- Analytics (Optional) -->
-    <!-- Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
 
-      gtag("config", "UA-XXXXXXXXX-X");
-    </script>
     <!-- CSS Links -->
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -111,26 +97,34 @@
         </a>
       </header>
 
-      <aside>
-        <nav class="nav-line">
-          <div class="nav-dot active-dot" data-section="section1">
-            <span data-i18n="about-us" class="d-none fadeIn"></span>
-          </div>
-          <div class="nav-dot" data-section="section2">
-            <span data-i18n="outsourcing" class="d-none fadeIn"></span>
-          </div>
-          <div class="nav-dot" data-section="section3">
-            <span data-i18n="services" class="d-none fadeIn"></span>
-          </div>
-          <div class="nav-dot" data-section="section4">
-            <span data-i18n="contact" class="d-none fadeIn"></span>
-          </div>
-        </nav>
-      </aside>
+      <nav class="nav-wrapper">
+        <ul class="nav-line">
+          <li class="nav-dot active-dot" data-section="about-us">
+            <a href="#about-us" data-section="about-us">
+              <span data-i18n="about-us" class="d-none fadeIn"></span>
+            </a>
+          </li>
+          <li class="nav-dot" data-section="outsourcing">
+            <a href="#outsourcing" data-section="outsourcing">
+              <span data-i18n="outsourcing" class="d-none fadeIn"></span>
+            </a>
+          </li>
+          <li class="nav-dot" data-section="services">
+            <a href="#services" data-section="services">
+              <span data-i18n="services" class="d-none fadeIn"></span>
+            </a>
+          </li>
+          <li class="nav-dot" data-section="contact">
+            <a href="#contact" data-section="contact">
+              <span data-i18n="contact" class="d-none fadeIn"></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-      <section class="section" id="section1" aria-labelledby="section1-heading">
+      <section class="section" id="about-us" aria-labelledby="section1-heading">
         <div class="section1-block">
-          <p lang="en" data-i18n="section1-text"></p>
+          <p lang="uz" data-i18n="section1-text"></p>
           <div class="section-content">
             <h1 id="section1-heading" data-i18n="about-us"></h1>
             <div class="d-none section-default-hiddens">
@@ -152,7 +146,11 @@
         </div>
       </section>
 
-      <section class="section" id="section2" aria-labelledby="section2-heading">
+      <section
+        class="section"
+        id="outsourcing"
+        aria-labelledby="section2-heading"
+      >
         <img
           class="second-line"
           sizes="320w, 768w, 1024w"
@@ -182,17 +180,30 @@
               <p data-i18n="outsourcing-box-3-text"></p>
             </div>
           </div>
-          <div class="video-placeholder"></div>
+          <div class="video-placeholder">
+            <iframe
+              id="frame"
+              width="100%"
+              height="100%"
+              src="https://www.youtube-nocookie.com/embed/1WAOAgoCcHE?autoplay=0&rel=0&modestbranding=1"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </section>
 
-      <section class="section" id="section3" aria-labelledby="section3-heading">
+      <section class="section" id="services" aria-labelledby="section3-heading">
         <div class="section-content">
           <h1 id="section3-heading" data-i18n="additional-services"></h1>
           <div class="services-grid">
             <div class="service-item">
               <div class="service-icon">
-                <img src="assets/section-third/camera-icon.svg" alt="camera" />
+                <img
+                  src="assets/section-third/commercial.svg"
+                  alt="commercial"
+                />
               </div>
               <p data-i18n="additional-service-1"></p>
             </div>
@@ -224,7 +235,7 @@
           <div class="services-bottom">
             <h2 data-i18n="price-list"></h2>
             <p data-i18n="price-list-text"></p>
-            <a href="contact.html">
+            <a href="assets/pdf.pdf" target="_blank" rel="noopener noreferrer">
               <button data-i18n="get-price"></button>
             </a>
           </div>
@@ -234,7 +245,7 @@
       <div class="last-section">
         <section
           class="section"
-          id="section4"
+          id="contact"
           aria-labelledby="section4-heading"
         >
           <img
