@@ -314,7 +314,12 @@ header {
     border-radius: 1.25rem;
     cursor: pointer;
     transition: all 0.2s linear;
-
+    position: relative;
+    z-index: 2;
+    iframe {
+      @include GLASS-BOX;
+      border-radius: 1.25rem;
+    }
     &:hover {
       background-color: rgba(255, 255, 255, 0.164);
     }

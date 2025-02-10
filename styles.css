@@ -280,6 +280,15 @@ header .header-btn-price:active {
   border-radius: 1.25rem;
   cursor: pointer;
   transition: all 0.2s linear;
+  position: relative;
+  z-index: 2;
+}
+#outsourcing .video-placeholder iframe {
+  border: 1px solid rgba(245, 245, 245, 0.103);
+  background-color: rgba(255, 255, 255, 0.068);
+  backdrop-filter: blur(41px);
+  -webkit-backdrop-filter: blur(41px);
+  border-radius: 1.25rem;
 }
 #outsourcing .video-placeholder:hover {
   background-color: rgba(255, 255, 255, 0.164);
