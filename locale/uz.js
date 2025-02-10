@@ -15,7 +15,7 @@ export const translationUz ={
     "additional-service-2": "Tabriklash xizmati",
     "additional-service-3": "Axborot-ma‘lumot xizmati",
     "additional-service-4": "1086 & 1064",
-    "price-list": "Narx ro'yxati",
+    "price-list": "Narxnoma",
     "price-list-text": "Shartnoma asosida belgilanadigan xizmatlar uchun narxnoma",
     "section4-title": "10 yildan ortiq siz bilan birgamiz!",
     "section4-stat1-title": "+15 000 000",
@@ -44,5 +44,5 @@ export const translationUz ={
     "consent-dialog-first-paragraph":"Men “Kontakt markazi” MChJga shaxsiy ma’lumotlarimni qayta ishlashga rozilik beraman. Roziligim ma’lum bir shaxsga taalluqli yoki uni identifikatsiya qilish imkonini beruvchi elektron, qog‘oz va (yoki) boshqa moddiy ma’lumotlar tashuvchisida qayd etilgan shaxsiy ma’lumotlarga tegishlidir.",
     "consent-dialog-second-paragraph":"“Kontakt markazi” MChJ mening shaxsiy ma’lumotlarimni O‘zbekiston Respublikasining amaldagi qonunchiligiga muvofiq qayta ishlashga kafolatlashini menga ma’lum qildi. Ushbu rozilikning amal qilish muddati cheklanmagan. Mazkur roziligim mening yozma arizam bo‘yicha istalgan vaqtda qaytarib olinishi mumkin.",
     "consent-dialog-third-paragraph":"Men roziligimni berib, harakatlarimni o‘z xohishimga ko‘ra, majburlashsiz, o‘z manfaatlarimni ko‘zlab amalga oshirayotganimni tasdiqlayman ☑",
-    "consent-dialog-agree-btn":"Men roziman va qa'bul qilaman"
+    "consent-dialog-agree-btn":"Roziman"
 }
