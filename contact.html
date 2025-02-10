@@ -98,13 +98,18 @@
           <h1 id="contact-form-title" data-i18n="request"></h1>
           <form id="contact-form">
             <label for="name" data-i18n="your-name"></label>
-            <input type="text" id="name" required />
+            <input type="text" id="name" required name="name" />
             <label for="email" data-i18n="your-email"></label>
-            <input type="email" id="email" />
+            <input type="email" id="email" name="email" />
             <label for="phone" data-i18n="your-phone"></label>
-            <input type="phone" id="phone" required />
+            <input type="phone" id="phone" required name="phone" />
             <p data-i18n="consent"></p>
-            <button type="submit" data-i18n="send"></button>
+            <button
+              type="submit"
+              data-i18n="send"
+              form="contact-form"
+              id="submit-btn"
+            ></button>
           </form>
         </div>
       </main>
@@ -144,8 +149,10 @@
           </select>
         </div>
       </footer>
+      <output class="success-message" data-i18n="success"></output>
     </div>
 
     <script type="module" src="i18next.js"></script>
+    <script type="module" src="contact.js"></script>
   </body>
 </html>

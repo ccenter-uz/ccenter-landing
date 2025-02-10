@@ -30,12 +30,13 @@ export const translationUz ={
     "ru": "Ру",
     "en": "En",
     "request": "So'rov",
-    "your-name": "Ismingiz",
+    "your-name": "*Ismingiz",
     "your-email": "Emailingiz",
-    "your-phone": "Telefon raqamingiz",
+    "your-phone": "*Telefon raqamingiz",
     "consent": "Butonni bosish orqali siz ro'yxatdan o'chirilgan ma'lumotlarga ega bo'lasiz.",
     "send": "Yuborish",
     "services": "Qo‘shimcha xizmatlar",
     "contact": "Aloqa",
-    "destribution": "© 2025 Kontakt markazi MChJ"
+    "destribution": "© 2025 Kontakt markazi MChJ",
+    "success": "Muvaffaqiyatli"
 }

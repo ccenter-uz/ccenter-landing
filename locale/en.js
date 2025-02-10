@@ -30,12 +30,13 @@ export const translationEn ={
     "ru": "Ru",
     "en": "En",
     "request": "Request",
-    "your-name": "Your name",
+    "your-name": "*Your name",
     "your-email": "Your email",
-    "your-phone": "Your phone",
+    "your-phone": "*Your phone",
     "consent": "By clicking the button, you agree to the processing of personal data.",
     "send": "Send",
     "services": "Additional services",
     "contact": "Contacts",
-    "destribution": "© 2025 Contact Center LLC"
+    "destribution": "© 2025 Contact Center LLC",
+    "success": "Success"
 }

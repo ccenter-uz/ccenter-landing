@@ -196,6 +196,38 @@ footer {
   transition: all 0.5s ease-in-out;
 }
 
+.success-message {
+  opacity: 0;
+  visibility: hidden;
+  width: 250px;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 1.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(2, 190, 18, 0.596);
+  backdrop-filter: blur(41px);
+  -webkit-backdrop-filter: blur(41px);
+  color: white;
+  transform: translateX(200%);
+  transition: all 0.5s ease-in-out;
+}
+
+.active-success-message {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+.disabled-btn {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 @media (width <=640px) {
   body {
     background-size: cover;
@@ -280,6 +312,8 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 0.8rem;
+    position: absolute;
+    bottom: 1.25rem;
 
     .footer-links,
     .footer-lng {
