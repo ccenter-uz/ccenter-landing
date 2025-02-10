@@ -30,13 +30,19 @@ export const translationUz ={
     "ru": "Ру",
     "en": "En",
     "request": "So'rov",
-    "your-name": "*Ismingiz",
-    "your-email": "Emailingiz",
+    "your-name": "*F.I.Sh",
+    "your-email": "E-mail",
     "your-phone": "*Telefon raqamingiz",
-    "consent": "Butonni bosish orqali siz ro'yxatdan o'chirilgan ma'lumotlarga ega bo'lasiz.",
+    "consent": "*Shaxsiy ma’lumotlarimning qayta ishlanishiga roziman!",
     "send": "Yuborish",
     "services": "Qo‘shimcha xizmatlar",
     "contact": "Aloqa",
     "destribution": "© 2025 Kontakt markazi MChJ",
-    "success": "Muvaffaqiyatli"
+    "success": "Muvaffaqiyatli",
+      "consent-dialog-title": "Shaxsiy ma’lumotlarni qayta ishlashga rozilik berish to‘g‘risida",
+    "consent-dialog-text": "Ariza",
+    "consent-dialog-first-paragraph":"Men “Kontakt markazi” MChJga shaxsiy ma’lumotlarimni qayta ishlashga rozilik beraman. Roziligim ma’lum bir shaxsga taalluqli yoki uni identifikatsiya qilish imkonini beruvchi elektron, qog‘oz va (yoki) boshqa moddiy ma’lumotlar tashuvchisida qayd etilgan shaxsiy ma’lumotlarga tegishlidir.",
+    "consent-dialog-second-paragraph":"“Kontakt markazi” MChJ mening shaxsiy ma’lumotlarimni O‘zbekiston Respublikasining amaldagi qonunchiligiga muvofiq qayta ishlashga kafolatlashini menga ma’lum qildi. Ushbu rozilikning amal qilish muddati cheklanmagan. Mazkur roziligim mening yozma arizam bo‘yicha istalgan vaqtda qaytarib olinishi mumkin.",
+    "consent-dialog-third-paragraph":"Men roziligimni berib, harakatlarimni o‘z xohishimga ko‘ra, majburlashsiz, o‘z manfaatlarimni ko‘zlab amalga oshirayotganimni tasdiqlayman ☑",
+    "consent-dialog-agree-btn":"Men roziman va qa'bul qilaman"
 }

@@ -212,6 +212,127 @@ footer #language option {
   transition: all 0.5s ease-in-out;
 }
 
+.consent-block {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.consent-block .consent-input {
+  cursor: pointer;
+  background: transparent;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+}
+.consent-block .consent-label {
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: underline;
+  transition: color 0.3s linear;
+}
+.consent-block .consent-label:hover {
+  color: #4169e1;
+}
+
+.consent-dialog {
+  position: fixed;
+  inset: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 70%;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  max-height: 70%;
+  height: 100%;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(245, 245, 245, 0.103);
+  background-color: rgba(255, 255, 255, 0.068);
+  backdrop-filter: blur(41px);
+  -webkit-backdrop-filter: blur(41px);
+  backdrop-filter: blur(66px);
+  -webkit-backdrop-filter: blur(66px);
+  gap: 0.5rem;
+  color: #fff;
+}
+.consent-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.568627451);
+}
+.consent-dialog .consent-dialog-wrapper {
+  margin: auto;
+  width: 85%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.consent-dialog .consent-dialog-wrapper .consent-dialog-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.consent-dialog .consent-dialog-wrapper .consent-dialog-header .consent-dialog-title {
+  font-size: 1.87rem;
+  font-weight: bold;
+  line-height: 2rem;
+}
+.consent-dialog .consent-dialog-wrapper .consent-dialog-header .consent-dialog-text {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+.consent-dialog .consent-dialog-wrapper .consent-dialog-first-paragraph,
+.consent-dialog .consent-dialog-wrapper .consent-dialog-second-paragraph,
+.consent-dialog .consent-dialog-wrapper .consent-dialog-third-paragraph {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+.consent-dialog .consent-dialog-agree-btn {
+  background-color: transparent;
+  color: white;
+  padding: 0.62rem;
+  border: 2px solid rgb(54, 100, 218);
+  border-radius: 2rem;
+  font-weight: normal;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s linear;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  min-height: 3.18rem;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+.consent-dialog .consent-dialog-agree-btn:hover {
+  -webkit-backdrop-filter: blur(66px);
+          backdrop-filter: blur(66px);
+  box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+  border-color: rgb(90, 136, 255);
+}
+.consent-dialog .consent-dialog-agree-btn:active {
+  border: 2px solid rgb(13, 36, 92);
+  -webkit-backdrop-filter: blur(66px);
+          backdrop-filter: blur(66px);
+  box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+}
+.consent-dialog .consent-dialog-close {
+  position: absolute;
+  font-size: 1.25rem;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  background: transparent;
+  color: #fff;
+  border: none;
+  outline-color: #4169e1;
+  outline-offset: 0.5rem;
+  border-radius: 1rem;
+}
+
 .active-success-message {
   opacity: 1;
   visibility: visible;
@@ -325,5 +446,213 @@ footer #language option {
     background: #1a1a1a;
     color: white;
     cursor: pointer;
+  }
+  .consent-dialog {
+    position: fixed;
+    inset: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 100%;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    height: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 1px solid rgba(245, 245, 245, 0.103);
+    background-color: rgba(255, 255, 255, 0.068);
+    backdrop-filter: blur(41px);
+    -webkit-backdrop-filter: blur(41px);
+    backdrop-filter: blur(66px);
+    -webkit-backdrop-filter: blur(66px);
+    gap: 0.5rem;
+    color: #fff;
+    overflow-y: auto;
+    scroll-margin: 1rem;
+  }
+  .consent-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.568627451);
+  }
+  .consent-dialog .consent-dialog-wrapper {
+    margin: auto;
+    width: 100%;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .consent-dialog .consent-dialog-wrapper .consent-dialog-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .consent-dialog .consent-dialog-wrapper .consent-dialog-header .consent-dialog-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1rem;
+  }
+  .consent-dialog .consent-dialog-wrapper .consent-dialog-header .consent-dialog-text {
+    font-size: 0.87rem;
+    line-height: 1.5rem;
+  }
+  .consent-dialog .consent-dialog-wrapper .consent-dialog-first-paragraph,
+  .consent-dialog .consent-dialog-wrapper .consent-dialog-second-paragraph,
+  .consent-dialog .consent-dialog-wrapper .consent-dialog-third-paragraph {
+    font-size: 0.87rem;
+    line-height: 1.2rem;
+    text-align: center;
+    -webkit-hyphens: auto;
+            hyphens: auto;
+  }
+  .consent-dialog .consent-dialog-agree-btn {
+    background-color: transparent;
+    color: white;
+    padding: 0.62rem;
+    border: 2px solid rgb(54, 100, 218);
+    border-radius: 2rem;
+    font-weight: normal;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s linear;
+    position: none;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    font-size: 0.87rem;
+  }
+  .consent-dialog .consent-dialog-agree-btn:hover {
+    -webkit-backdrop-filter: blur(66px);
+            backdrop-filter: blur(66px);
+    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+    border-color: rgb(90, 136, 255);
+  }
+  .consent-dialog .consent-dialog-agree-btn:active {
+    border: 2px solid rgb(13, 36, 92);
+    -webkit-backdrop-filter: blur(66px);
+            backdrop-filter: blur(66px);
+    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+  }
+  .consent-dialog .consent-dialog-close {
+    position: absolute;
+    font-size: 1.25rem;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline-color: #4169e1;
+    outline-offset: 0.5rem;
+    border-radius: 1rem;
+  }
+}
+@media (640.1px < width < 1024px) {
+  .consent-dialog {
+    position: fixed;
+    inset: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 100%;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    height: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 1px solid rgba(245, 245, 245, 0.103);
+    background-color: rgba(255, 255, 255, 0.068);
+    backdrop-filter: blur(41px);
+    -webkit-backdrop-filter: blur(41px);
+    backdrop-filter: blur(66px);
+    -webkit-backdrop-filter: blur(66px);
+    gap: 0.5rem;
+    color: #fff;
+    overflow-y: auto;
+    scroll-margin: 1rem;
+  }
+  .consent-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.568627451);
+  }
+  .consent-dialog .consent-dialog-wrapper {
+    margin: auto;
+    width: 100%;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .consent-dialog .consent-dialog-wrapper .consent-dialog-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .consent-dialog .consent-dialog-wrapper .consent-dialog-header .consent-dialog-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1rem;
+  }
+  .consent-dialog .consent-dialog-wrapper .consent-dialog-header .consent-dialog-text {
+    font-size: 0.87rem;
+    line-height: 1.5rem;
+  }
+  .consent-dialog .consent-dialog-wrapper .consent-dialog-first-paragraph,
+  .consent-dialog .consent-dialog-wrapper .consent-dialog-second-paragraph,
+  .consent-dialog .consent-dialog-wrapper .consent-dialog-third-paragraph {
+    font-size: 0.87rem;
+    line-height: 1.2rem;
+    text-align: center;
+    -webkit-hyphens: auto;
+            hyphens: auto;
+  }
+  .consent-dialog .consent-dialog-agree-btn {
+    background-color: transparent;
+    color: white;
+    padding: 0.62rem;
+    border: 2px solid rgb(54, 100, 218);
+    border-radius: 2rem;
+    font-weight: normal;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s linear;
+    position: none;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    font-size: 0.87rem;
+  }
+  .consent-dialog .consent-dialog-agree-btn:hover {
+    -webkit-backdrop-filter: blur(66px);
+            backdrop-filter: blur(66px);
+    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+    border-color: rgb(90, 136, 255);
+  }
+  .consent-dialog .consent-dialog-agree-btn:active {
+    border: 2px solid rgb(13, 36, 92);
+    -webkit-backdrop-filter: blur(66px);
+            backdrop-filter: blur(66px);
+    box-shadow: 0 0 15px 10px rgba(42, 75, 160, 0.63);
+  }
+  .consent-dialog .consent-dialog-close {
+    position: absolute;
+    font-size: 1.25rem;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline-color: #4169e1;
+    outline-offset: 0.5rem;
+    border-radius: 1rem;
   }
 }/*# sourceMappingURL=contact.css.map */
