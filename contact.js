@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => {
         if (response.ok) {
           notification.classList.add("active-success-message");
+          window.open("assets/pdf.pdf", "_blank");
           form.reset();
         }
       })
