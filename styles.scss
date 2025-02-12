@@ -975,6 +975,82 @@ header {
       }
     }
   }
+
+  .notification-dialog {
+    position: fixed;
+    inset: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 100%;
+    min-height: fit-content;
+    height: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+    @include GLASS-BOX;
+    backdrop-filter: blur(66px);
+    -webkit-backdrop-filter: blur(66px);
+    gap: 0.5rem;
+    color: #fff;
+    overflow-y: auto;
+    scroll-margin: 1rem;
+    &::backdrop {
+      background-color: #00000091;
+    }
+    .notification-dialog-wrapper {
+      margin: auto;
+      width: 100%;
+      min-height: fit-content;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      .notification-dialog-header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .notification-dialog-title {
+          font-size: 1.25rem;
+          font-weight: bold;
+          line-height: 1rem;
+        }
+        .notification-dialog-text {
+          font-size: 0.87rem;
+          line-height: 1.5rem;
+        }
+      }
+      .notification-dialog-first-paragraph,
+      .notification-dialog-second-paragraph,
+      .notification-dialog-third-paragraph {
+        font-size: 0.87rem;
+        line-height: 1.2rem;
+        text-align: center;
+        hyphens: auto;
+      }
+    }
+    .notification-dialog-agree-btn {
+      @include BUTTON;
+      position: none;
+      min-width: fit-content;
+      min-height: fit-content;
+      margin: 0.5rem auto;
+      padding: 0.5rem;
+      font-size: 0.87rem;
+    }
+    .notification-dialog-close {
+      position: absolute;
+      font-size: 1.25rem;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+      background: transparent;
+      color: #fff;
+      border: none;
+      outline-color: #4169e1;
+      outline-offset: 0.5rem;
+      border-radius: 1rem;
+    }
+  }
 }
 
 @media (440.1px <=width <=768px) {
@@ -1269,6 +1345,82 @@ header {
       }
     }
   }
+
+  .notification-dialog {
+    position: fixed;
+    inset: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 100%;
+    min-height: fit-content;
+    height: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+    @include GLASS-BOX;
+    backdrop-filter: blur(66px);
+    -webkit-backdrop-filter: blur(66px);
+    gap: 0.5rem;
+    color: #fff;
+    overflow-y: auto;
+    scroll-margin: 1rem;
+    &::backdrop {
+      background-color: #00000091;
+    }
+    .notification-dialog-wrapper {
+      margin: auto;
+      width: 100%;
+      min-height: fit-content;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      .notification-dialog-header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .notification-dialog-title {
+          font-size: 1.25rem;
+          font-weight: bold;
+          line-height: 1rem;
+        }
+        .notification-dialog-text {
+          font-size: 0.87rem;
+          line-height: 1.5rem;
+        }
+      }
+      .notification-dialog-first-paragraph,
+      .notification-dialog-second-paragraph,
+      .notification-dialog-third-paragraph {
+        font-size: 0.87rem;
+        line-height: 1.2rem;
+        text-align: center;
+        hyphens: auto;
+      }
+    }
+    .notification-dialog-agree-btn {
+      @include BUTTON;
+      position: none;
+      min-width: fit-content;
+      min-height: fit-content;
+      margin: 0.5rem auto;
+      padding: 0.5rem;
+      font-size: 0.87rem;
+    }
+    .notification-dialog-close {
+      position: absolute;
+      font-size: 1.25rem;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+      background: transparent;
+      color: #fff;
+      border: none;
+      outline-color: #4169e1;
+      outline-offset: 0.5rem;
+      border-radius: 1rem;
+    }
+  }
 }
 
 @media (768.1px <=width <=1024px) {
@@ -1556,6 +1708,82 @@ header {
       }
     }
   }
+
+  .notification-dialog {
+    position: fixed;
+    inset: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 100%;
+    min-height: fit-content;
+    height: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+    @include GLASS-BOX;
+    backdrop-filter: blur(66px);
+    -webkit-backdrop-filter: blur(66px);
+    gap: 0.5rem;
+    color: #fff;
+    overflow-y: auto;
+    scroll-margin: 1rem;
+    &::backdrop {
+      background-color: #00000091;
+    }
+    .notification-dialog-wrapper {
+      margin: auto;
+      width: 100%;
+      min-height: fit-content;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      .notification-dialog-header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .notification-dialog-title {
+          font-size: 1.25rem;
+          font-weight: bold;
+          line-height: 1rem;
+        }
+        .notification-dialog-text {
+          font-size: 0.87rem;
+          line-height: 1.5rem;
+        }
+      }
+      .notification-dialog-first-paragraph,
+      .notification-dialog-second-paragraph,
+      .notification-dialog-third-paragraph {
+        font-size: 0.87rem;
+        line-height: 1.2rem;
+        text-align: center;
+        hyphens: auto;
+      }
+    }
+    .notification-dialog-agree-btn {
+      @include BUTTON;
+      position: none;
+      min-width: fit-content;
+      min-height: fit-content;
+      margin: 0.5rem auto;
+      padding: 0.5rem;
+      font-size: 0.87rem;
+    }
+    .notification-dialog-close {
+      position: absolute;
+      font-size: 1.25rem;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+      background: transparent;
+      color: #fff;
+      border: none;
+      outline-color: #4169e1;
+      outline-offset: 0.5rem;
+      border-radius: 1rem;
+    }
+  }
 }
 
 @media (1024.1px <=width <=1440px) {
@@ -1838,6 +2066,78 @@ header {
       select {
         font-size: 1rem;
       }
+    }
+  }
+
+  .notification-dialog {
+    position: fixed;
+    inset: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 80%;
+    min-height: fit-content;
+    height: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+    @include GLASS-BOX;
+    backdrop-filter: blur(66px);
+    -webkit-backdrop-filter: blur(66px);
+    gap: 0.5rem;
+    color: #fff;
+    overflow-y: auto;
+    scroll-margin: 1rem;
+    &::backdrop {
+      background-color: #00000091;
+    }
+    .notification-dialog-wrapper {
+      margin: auto;
+      width: 100%;
+      min-height: fit-content;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      .notification-dialog-header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .notification-dialog-title {
+          font-size: 1.5rem;
+          font-weight: bold;
+          line-height: 1rem;
+        }
+      }
+      .notification-dialog-first-paragraph,
+      .notification-dialog-second-paragraph,
+      .notification-dialog-third-paragraph {
+        font-size: 1rem;
+        line-height: 1.2rem;
+        text-align: center;
+        hyphens: auto;
+      }
+    }
+    .notification-dialog-agree-btn {
+      @include BUTTON;
+      position: none;
+      min-width: fit-content;
+      min-height: fit-content;
+      margin: 0.5rem auto;
+      padding: 0.5rem 1.5rem;
+      font-size: 1rem;
+    }
+    .notification-dialog-close {
+      position: absolute;
+      font-size: 1.25rem;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+      background: transparent;
+      color: #fff;
+      border: none;
+      outline-color: #4169e1;
+      outline-offset: 0.5rem;
+      border-radius: 1rem;
     }
   }
 }

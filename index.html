@@ -22,8 +22,6 @@
       content="The team at the Contact Center has been operating for over 10 years. During this time, the number of clients using our services has been increasing, as well as the size of our team each year"
     />
     <meta property="og:image" content="https://www.ccenter.uz/logo.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="logo.svg" />
@@ -36,8 +34,8 @@
     <meta property="twitter:image" content="https://www.ccenter.uz/logo.png" />
 
     <!-- Favicon -->
-    <link rel="icon" href="logo.svg" type="image/x-icon" />
-    <link rel="shortcut icon" href="logo.svg" type="image/x-icon" />
+    <link rel="icon" href="/logo.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="/logo.svg" type="image/x-icon" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.ccenter.uz" />
@@ -91,10 +89,11 @@
     <div id="loader">
       <div class="spinner"></div>
     </div>
+
     <div class="container d-none" id="container">
       <header class="fadeIn">
         <img src="assets/dark/logo.svg" alt="logo" id="logo" />
-        <a href="contact.html">
+        <a href="contact">
           <button class="header-btn-price" data-i18n="order-service"></button>
         </a>
       </header>
@@ -131,7 +130,7 @@
             <h1 id="section1-heading" data-i18n="about-us"></h1>
             <div class="d-none section-default-hiddens">
               <p class="default-hidden-text" data-i18n="section1-text"></p>
-              <a href="contact.html">
+              <a href="contact">
                 <button
                   class="default-hidden-button"
                   data-i18n="order-service"
@@ -237,7 +236,7 @@
           <div class="services-bottom">
             <h2 data-i18n="price-list"></h2>
             <p data-i18n="price-list-text"></p>
-            <a href="contact.html">
+            <a href="assets/pdf.pdf" target="_blank">
               <button data-i18n="get-price"></button>
             </a>
           </div>
@@ -323,50 +322,51 @@
           </div>
         </footer>
       </div>
-    </div>
 
-    <dialog
-      class="notification-dialog"
-      aria-labelledby="notification-dialog-title"
-    >
-      <button
-        type="button"
-        class="notification-dialog-close"
-        title="Close"
-        aria-label="close-dialog"
+      <!-- DIALOG -->
+      <dialog
+        class="notification-dialog"
+        aria-labelledby="notification-dialog-title"
       >
-        X
-      </button>
-      <div class="notification-dialog-wrapper">
-        <div class="notification-dialog-header">
-          <h2
-            class="notification-dialog-title"
-            data-i18n="notification-dialog-title"
-          ></h2>
-        </div>
+        <button
+          type="button"
+          class="notification-dialog-close"
+          title="Close"
+          aria-label="close-dialog"
+        >
+          X
+        </button>
+        <div class="notification-dialog-wrapper">
+          <div class="notification-dialog-header">
+            <h2
+              class="notification-dialog-title"
+              data-i18n="notification-dialog-title"
+            ></h2>
+          </div>
 
-        <p
-          class="notification-dialog-first-paragraph"
-          data-i18n="notification-dialog-first-paragraph"
-        ></p>
-        <p
-          class="notification-dialog-second-paragraph"
-          data-i18n="notification-dialog-second-paragraph"
-        ></p>
-        <p
-          class="notification-dialog-third-paragraph"
-          data-i18n="notification-dialog-third-paragraph"
-        ></p>
-      </div>
-      <button
-        autofocus
-        type="button"
-        class="notification-dialog-agree-btn"
-        data-i18n="notification-dialog-agree-btn"
-        title="agree and close"
-        aria-label="agree-and-close"
-      ></button>
-    </dialog>
+          <p
+            class="notification-dialog-first-paragraph"
+            data-i18n="notification-dialog-first-paragraph"
+          ></p>
+          <p
+            class="notification-dialog-second-paragraph"
+            data-i18n="notification-dialog-second-paragraph"
+          ></p>
+          <p
+            class="notification-dialog-third-paragraph"
+            data-i18n="notification-dialog-third-paragraph"
+          ></p>
+        </div>
+        <button
+          autofocus
+          type="button"
+          class="notification-dialog-agree-btn"
+          data-i18n="notification-dialog-agree-btn"
+          title="agree and close"
+          aria-label="agree-and-close"
+        ></button>
+      </dialog>
+    </div>
 
     <script type="module" src="i18next.js"></script>
     <script type="module" src="script.js"></script>

@@ -1,3 +1,8 @@
+window.onload = function () {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("container").style.display = "block";
+};
+
 document.addEventListener("DOMContentLoaded", function () {
   // DIALOG-CONTENT
   const dialog = document.querySelector(".consent-dialog");
@@ -62,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => {
         if (response.ok) {
           notification.classList.add("active-success-message");
-          window.open("assets/pdf.pdf", "_blank");
           form.reset();
         }
       })
