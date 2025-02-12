@@ -21,17 +21,17 @@
       property="og:description"
       content="The team at the Contact Center has been operating for over 10 years. During this time, the number of clients using our services has been increasing, as well as the size of our team each year"
     />
-    <meta property="og:image" content="https://www.ccenter.uz/logo.svg" />
+    <meta property="og:image" content="logo.svg" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:card" content="logo.svg" />
     <meta property="twitter:url" content="https://www.ccenter.uz" />
     <meta property="twitter:title" content="Contact center LLC" />
     <meta
       property="twitter:description"
       content="The team at the Contact Center has been operating for over 10 years. During this time, the number of clients using our services has been increasing, as well as the size of our team each year"
     />
-    <meta property="twitter:image" content="https://www.ccenter.uz/logo.svg" />
+    <meta property="twitter:image" content="logo.svg" />
 
     <!-- Favicon -->
     <link rel="icon" href="logo.svg" type="image/x-icon" />
@@ -53,7 +53,7 @@
           "name": "Kontakt Markazi MChJ",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.ccenter.uz/logo.svg"
+            "url": "logo.svg"
           }
         },
         "mainEntityOfPage": {
@@ -322,6 +322,49 @@
         </footer>
       </div>
     </div>
+
+    <dialog
+      class="notification-dialog"
+      aria-labelledby="notification-dialog-title"
+    >
+      <button
+        type="button"
+        class="notification-dialog-close"
+        title="Close"
+        aria-label="close-dialog"
+      >
+        X
+      </button>
+      <div class="notification-dialog-wrapper">
+        <div class="notification-dialog-header">
+          <h2
+            class="notification-dialog-title"
+            data-i18n="notification-dialog-title"
+          ></h2>
+        </div>
+
+        <p
+          class="notification-dialog-first-paragraph"
+          data-i18n="notification-dialog-first-paragraph"
+        ></p>
+        <p
+          class="notification-dialog-second-paragraph"
+          data-i18n="notification-dialog-second-paragraph"
+        ></p>
+        <p
+          class="notification-dialog-third-paragraph"
+          data-i18n="notification-dialog-third-paragraph"
+        ></p>
+      </div>
+      <button
+        autofocus
+        type="button"
+        class="notification-dialog-agree-btn"
+        data-i18n="notification-dialog-agree-btn"
+        title="agree and close"
+        aria-label="agree-and-close"
+      ></button>
+    </dialog>
 
     <script type="module" src="i18next.js"></script>
     <script type="module" src="script.js"></script>

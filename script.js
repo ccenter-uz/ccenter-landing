@@ -16,6 +16,30 @@ window.onload = function () {
 document.addEventListener("DOMContentLoaded", function () {
   window.scrollTo(0, 0);
 
+  // DIALOG
+  const dialog = document.querySelector(".notification-dialog");
+  const closeDialogBtn = document.querySelector(".notification-dialog-close");
+  const dialogAgreeBtn = document.querySelector(
+    ".notification-dialog-agree-btn"
+  );
+  (function openDialog() {
+    dialog.showModal();
+    dialog.focus();
+    requestAnimationFrame(() => {
+      dialog.style.opacity = 1;
+    });
+  })();
+
+  function closeDialog() {
+    requestAnimationFrame(() => {
+      dialog.style.opacity = 0;
+    });
+    dialog.close();
+  }
+
+  closeDialogBtn.addEventListener("click", closeDialog);
+  dialogAgreeBtn.addEventListener("click", closeDialog);
+
   const sectionItems = document.querySelectorAll(".second-section-box");
   const statItems = document.querySelectorAll(".stat-item");
   let currentIndexSectionItems = 0;
@@ -36,8 +60,20 @@ document.addEventListener("DOMContentLoaded", function () {
       "active-stat-item"
     );
   }
+  // CLOSURE-FOR-INITIAL-UPDATE
+  function initialUpdateSectionItems() {
+    let firstRender = true;
+    return function run() {
+      if (firstRender) {
+        updateSectionItems();
+        firstRender = false;
+      }
+    };
+  }
 
-  setInterval(updateSectionItems, 1800);
+  initialUpdateSectionItems()();
+
+  setInterval(updateSectionItems, 5500);
   setInterval(updateStatItems, 1800);
 
   // ASIDE-ACTIVE-CLASS
@@ -95,4 +131,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-

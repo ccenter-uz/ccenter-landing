@@ -264,9 +264,8 @@ header .header-btn-price:active {
 }
 #outsourcing .section-content .outsourcing .active-second-section-box hr {
   max-width: 0;
-  animation: fill 2s ease;
+  animation: fill 5.5s linear;
   animation-fill-mode: both;
-  border-color: #4169e1;
   border-color: #4169e1;
 }
 #outsourcing .video-placeholder {
@@ -509,6 +508,104 @@ header .header-btn-price:active {
   background: #1a1a1a;
   color: white;
   cursor: pointer;
+}
+
+.notification-dialog {
+  position: fixed;
+  inset: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 9999;
+  width: 70%;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  max-height: 70%;
+  height: 100%;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(245, 245, 245, 0.103);
+  background-color: rgba(255, 255, 255, 0.068);
+  backdrop-filter: blur(41px);
+  -webkit-backdrop-filter: blur(41px);
+  backdrop-filter: blur(66px);
+  -webkit-backdrop-filter: blur(66px);
+  gap: 0.5rem;
+  color: #fff;
+  transition: opacity 0.2s linear;
+}
+.notification-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.568627451);
+}
+.notification-dialog .notification-dialog-wrapper {
+  margin: auto;
+  width: 85%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.notification-dialog .notification-dialog-wrapper .notification-dialog-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.notification-dialog .notification-dialog-wrapper .notification-dialog-header .notification-dialog-title {
+  font-size: 1.87rem;
+  font-weight: bold;
+  line-height: 2rem;
+}
+.notification-dialog .notification-dialog-wrapper .notification-dialog-first-paragraph,
+.notification-dialog .notification-dialog-wrapper .notification-dialog-second-paragraph,
+.notification-dialog .notification-dialog-wrapper .notification-dialog-third-paragraph {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+.notification-dialog .notification-dialog-agree-btn {
+  background-color: transparent;
+  color: white;
+  padding: 0.62rem;
+  border: 2px solid rgb(54, 100, 218);
+  border-radius: 2rem;
+  font-weight: normal;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s linear;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  min-height: 3.18rem;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+.notification-dialog .notification-dialog-agree-btn:hover {
+  -webkit-backdrop-filter: blur(66px);
+          backdrop-filter: blur(66px);
+  box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+  border: 2px solid rgb(90, 136, 255);
+}
+.notification-dialog .notification-dialog-agree-btn:active {
+  border: 2px solid rgb(13, 36, 92);
+  -webkit-backdrop-filter: blur(66px);
+          backdrop-filter: blur(66px);
+  box-shadow: 1px 20px 46px 0px rgba(42, 75, 160, 0.63);
+}
+.notification-dialog .notification-dialog-close {
+  position: absolute;
+  font-size: 1.25rem;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  background: transparent;
+  color: #fff;
+  border: none;
+  outline-color: #4169e1;
+  outline-offset: 0.5rem;
+  border-radius: 1rem;
 }
 
 .fadeIn {

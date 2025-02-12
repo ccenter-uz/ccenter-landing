@@ -241,6 +241,7 @@ footer {
   position: fixed;
   inset: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
   z-index: 9999;
   width: 70%;
   min-height: fit-content;
@@ -253,6 +254,8 @@ footer {
   -webkit-backdrop-filter: blur(66px);
   gap: 0.5rem;
   color: #fff;
+
+  transition: opacity 0.2s linear;
 
   &::backdrop {
     background-color: #00000091;
