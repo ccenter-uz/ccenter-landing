@@ -10,9 +10,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const openDialog = () => {
     dialog.showModal();
     dialog.focus();
+    requestAnimationFrame(() => {
+      dialog.style.opacity = 1;
+    });
   };
 
-  const closeDialog = () => {
+  const closeDialog = async () => {
+    requestAnimationFrame(() => {
+      dialog.style.opacity = 0;
+    });
     dialog.close();
   };
 

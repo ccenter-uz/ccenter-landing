@@ -297,9 +297,8 @@ header {
 
         hr {
           max-width: 0;
-          animation: fill 2s ease;
+          animation: fill 5.5s linear;
           animation-fill-mode: both;
-          border-color: #4169e1;
           border-color: #4169e1;
         }
       }
@@ -530,6 +529,82 @@ header {
       color: white;
       cursor: pointer;
     }
+  }
+}
+
+// DIALOG
+.notification-dialog {
+  position: fixed;
+  inset: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 9999;
+  width: 70%;
+  min-height: fit-content;
+  max-height: 70%;
+  height: 100%;
+  border-radius: 1rem;
+  padding: 1rem;
+  @include GLASS-BOX;
+  backdrop-filter: blur(66px);
+  -webkit-backdrop-filter: blur(66px);
+  gap: 0.5rem;
+  color: #fff;
+
+  transition: opacity 0.2s linear;
+
+  &::backdrop {
+    background-color: #00000091;
+  }
+  .notification-dialog-wrapper {
+    margin: auto;
+    width: 85%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .notification-dialog-header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      .notification-dialog-title {
+        font-size: 1.87rem;
+        font-weight: bold;
+        line-height: 2rem;
+      }
+    }
+    .notification-dialog-first-paragraph,
+    .notification-dialog-second-paragraph,
+    .notification-dialog-third-paragraph {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      text-align: center;
+    }
+  }
+  .notification-dialog-agree-btn {
+    @include BUTTON;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    min-width: fit-content;
+    min-height: 3.18rem;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  .notification-dialog-close {
+    position: absolute;
+    font-size: 1.25rem;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline-color: #4169e1;
+    outline-offset: 0.5rem;
+    border-radius: 1rem;
   }
 }
 

@@ -8,7 +8,7 @@ const translations = {
   uz: { ...translationUz },
 };
 
-let currentLanguage = localStorage.getItem("language") || "en";
+let currentLanguage = localStorage.getItem("language") || navigator.language;
 
 function translate(key) {
   return translations[currentLanguage][key] || key;
