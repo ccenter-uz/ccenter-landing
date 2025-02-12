@@ -18,9 +18,8 @@
   <meta property="og:title" content="Contact center LLC" />
   <meta property="og:description"
     content="The team at the Contact Center has been operating for over 10 years. During this time, the number of clients using our services has been increasing, as well as the size of our team each year" />
-  <meta property="og:image" content="https://www.ccenter.uz/forward-logo.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:image" content="https://www.ccenter.uz/logo.png" />
+
 
   <!-- Twitter -->
   <meta property="twitter:card" content="logo.svg" />
@@ -28,11 +27,11 @@
   <meta property="twitter:title" content="Contact center LLC" />
   <meta property="twitter:description"
     content="The team at the Contact Center has been operating for over 10 years. During this time, the number of clients using our services has been increasing, as well as the size of our team each year" />
-  <meta property="twitter:image" content="https://www.ccenter.uz/forward-logo.png" />
+  <meta property="twitter:image" content="https://www.ccenter.uz/logo.png" />
 
   <!-- Favicon -->
-  <link rel="icon" href="./logo.svg" type="image/x-icon" />
-  <link rel="shortcut icon" href="./logo.svg" type="image/x-icon" />
+  <link rel="icon" href="/logo.svg" type="image/x-icon" />
+  <link rel="shortcut icon" href="/logo.svg" type="image/x-icon" />
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.ccenter.uz/contact" />
@@ -50,7 +49,7 @@
           "name": "Kontakt Markazi MChJ",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.ccenter.uz/forward-logo.png"
+            "url": "https://www.ccenter.uz/logo.png"
           }
         },
         "mainEntityOfPage": {
@@ -74,20 +73,23 @@
   <meta name="google" content="nositelinkssearchbox" />
   <meta name="google" content="notranslate" />
   <!-- CSS Links -->
-  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="./contact.css" />
 </head>
 
 <body>
-  <div class="fadeIn">
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
+  <div class="fadeIn" id="container">
     <header>
-      <a href="index.html" title="Home">
-        <img src="assets/dark/logo.svg" alt="logo" id="logo" />
+      <a href="/" title="Home">
+        <img src="/assets/dark/logo.svg" alt="logo" id="logo" />
       </a>
     </header>
     <main>
       <div class="contact-form" aria-labelledby="contact-form-title">
-        <a href="index.html" class="close" title="Close">
-          <img src="assets/close.svg" alt="close" />
+        <a href="/" class="close" title="Close">
+          <img src="/assets/close.svg" alt="close" />
         </a>
         <h1 id="contact-form-title" data-i18n="request"></h1>
         <form id="contact-form">
@@ -111,13 +113,13 @@
     <footer class="footer">
       <div class="footer-links">
         <a href="https://facebook.com/contactcenteruz/" target="_blank">
-          <img src="assets/footer/facebook-icon.svg" alt="facebook-icon" title="facebook" />
+          <img src="/assets/footer/facebook-icon.svg" alt="facebook-icon" title="facebook" />
         </a>
         <a href="https://instagram.com/contactcenter.uz/" target="_blank">
-          <img src="assets/footer/instagram-icon.svg" alt="instagram-icon" title="instagram" />
+          <img src="/assets/footer/instagram-icon.svg" alt="instagram-icon" title="instagram" />
         </a>
         <a href="https://t.me/contactcenteruz" target="_blank">
-          <img src="assets/footer/telegram-icon.svg" alt="telegram-icon" title="telegram" />
+          <img src="/assets/footer/telegram-icon.svg" alt="telegram-icon" title="telegram" />
         </a>
       </div>
       <p data-i18n="destribution"></p>
@@ -151,8 +153,8 @@
     <button autofocus type="button" class="consent-dialog-agree-btn" data-i18n="consent-dialog-agree-btn" title="agree and close" aria-label="agree-and-close"></button>
   </dialog>
 
-  <script type="module" src="contact.js"></script>
-  <script type="module" src="i18next.js"></script>
+  <script type="module" src="./contact.js"></script>
+  <script type="module" src="/i18next.js"></script>
 </body>
 
 </html>
