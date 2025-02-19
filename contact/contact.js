@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (
       !formData.get("name") ||
-      !formData.get("email") ||
       !formData.get("phone")
     )
       return null;

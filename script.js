@@ -16,29 +16,29 @@ window.onload = function () {
 document.addEventListener("DOMContentLoaded", function () {
   window.scrollTo(0, 0);
 
-  // DIALOG
-  const dialog = document.querySelector(".notification-dialog");
-  const closeDialogBtn = document.querySelector(".notification-dialog-close");
-  const dialogAgreeBtn = document.querySelector(
-    ".notification-dialog-agree-btn"
-  );
-  (function openDialog() {
-    dialog.showModal();
-    dialog.focus();
-    requestAnimationFrame(() => {
-      dialog.style.opacity = 1;
-    });
-  })();
+  // // DIALOG
+  // const dialog = document.querySelector(".notification-dialog");
+  // const closeDialogBtn = document.querySelector(".notification-dialog-close");
+  // const dialogAgreeBtn = document.querySelector(
+  //   ".notification-dialog-agree-btn"
+  // );
+  // (function openDialog() {
+  //   dialog.showModal();
+  //   dialog.focus();
+  //   requestAnimationFrame(() => {
+  //     dialog.style.opacity = 1;
+  //   });
+  // })();
 
-  function closeDialog() {
-    requestAnimationFrame(() => {
-      dialog.style.opacity = 0;
-    });
-    dialog.close();
-  }
+  // function closeDialog() {
+  //   requestAnimationFrame(() => {
+  //     dialog.style.opacity = 0;
+  //   });
+  //   dialog.close();
+  // }
 
-  closeDialogBtn.addEventListener("click", closeDialog);
-  dialogAgreeBtn.addEventListener("click", closeDialog);
+  // closeDialogBtn.addEventListener("click", closeDialog);
+  // dialogAgreeBtn.addEventListener("click", closeDialog);
 
   const sectionItems = document.querySelectorAll(".second-section-box");
   const statItems = document.querySelectorAll(".stat-item");
